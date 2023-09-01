@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\hvtan\\Desktop\\Working Project\\Winged Metal\\Assembly-CSharp.csproj",
+      "projectUniqueName": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj",
       "projectName": "Assembly-CSharp",
-      "projectPath": "c:\\Users\\hvtan\\Desktop\\Working Project\\Winged Metal\\Assembly-CSharp.csproj",
+      "projectPath": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj",
       "packagesPath": "C:\\Users\\hvtan\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\hvtan\\Desktop\\Working Project\\Winged Metal\\obj\\",
+      "outputPath": "d:\\Github\\Winged_Metal\\Winged Metal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hvtan\\AppData\\Roaming\\NuGet\\NuGet.Config"
