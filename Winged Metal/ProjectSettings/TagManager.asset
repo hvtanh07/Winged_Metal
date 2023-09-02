@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Move joystick
   - Shoot joystick
+  - View marker
   layers:
   - Default
   - TransparentFX

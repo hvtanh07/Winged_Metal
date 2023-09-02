@@ -12,6 +12,8 @@ public class HandleInput : MonoBehaviour
     private TankAttack playerTankAttack;
     public CinemachineVirtualCamera cinemachine;
     public Transform viewMarker;
+    [Range(0,10)]
+    public float lookAheadDistance;
     private void Awake()
     {
         cinemachine = FindObjectOfType<CinemachineVirtualCamera>();
@@ -24,6 +26,10 @@ public class HandleInput : MonoBehaviour
     {
         playerTank.direction = moveJoystick.Direction;
         playerTankAttack.direction = shootJoystick.Direction;
+        if (shootJoystick.Direction != Vector2.zero)
+        viewMarker.position = Vector3.MoveTowards(viewMarker.position,transform.position + (Vector3)shootJoystick.Direction.normalized * lookAheadDistance, 0.5f);
+        else
+        viewMarker.position = transform.position;
     }
     public void Dash()
     {
