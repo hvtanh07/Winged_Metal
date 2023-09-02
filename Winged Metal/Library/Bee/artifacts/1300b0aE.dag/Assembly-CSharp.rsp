@@ -388,7 +388,9 @@
 "Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs"
 "Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs"
 "Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs"
-"Assets/Scripts/Player Scripts/PlayerMovement.cs"
+"Assets/Scripts/Player Scripts/HandleInput.cs"
+"Assets/Scripts/Vehicle Scripts/TankAttack.cs"
+"Assets/Scripts/Vehicle Scripts/TankMovement.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 
