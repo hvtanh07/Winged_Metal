@@ -16,6 +16,10 @@ Library\Bee\artifacts\mvdfrm\Unity.2D.SpriteShape.Runtime.ref.dll_61D32A7E920E67
 Library\Bee\artifacts\mvdfrm\Unity.2D.Tilemap.Editor.ref.dll_C349DCD839D8880B.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.2D.Tilemap.Extras.Editor.ref.dll_4442349F8547BCD0.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.2D.Tilemap.Extras.ref.dll_B6FC041F98ADC4F1.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.AI.Navigation.Editor.ConversionSystem.ref.dll_9957BA1AF208A4B4.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.AI.Navigation.Editor.ref.dll_61B1FDAFDA0EF665.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.AI.Navigation.Updater.ref.dll_EBACA68F09445567.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.AI.Navigation.ref.dll_B8DD527C37A2B60C.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.AdaptivePerformance.Editor.ref.dll_7BC90D75A0876365.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.AdaptivePerformance.Profiler.Editor.ref.dll_610F961792FD6D80.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.AdaptivePerformance.Simulator.Editor.ref.dll_9391FC36B17305CF.mvfrm

@@ -121,6 +121,8 @@
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -define:UNITY_EDITOR_ONLY_COMPILATION
+-r:"Assets/BehaviorBricks/Editor/Bin/BBEditor.dll"
+-r:"Assets/BehaviorBricks/Runtime/BehaviorBricks.dll"
 -r:"D:/Program Files/Unity Editor/2022.3.8f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"D:/Program Files/Unity Editor/2022.3.8f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/Program Files/Unity Editor/2022.3.8f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
@@ -345,6 +347,8 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/Assembly-CSharp.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Cinemachine.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/com.unity.cinemachine.editor.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/NavMeshPlus.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/NavMeshPlusEditor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/PsdPlugin.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.2D.Animation.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.2D.Animation.Runtime.ref.dll"
@@ -370,6 +374,10 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.AdaptivePerformance.Simulator.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.AdaptivePerformance.Simulator.Extension.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.AdaptivePerformance.UI.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Unity.AI.Navigation.Editor.ConversionSystem.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Unity.AI.Navigation.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Unity.AI.Navigation.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Unity.AI.Navigation.Updater.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Burst.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Burst.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Collections.ref.dll"
@@ -397,11 +405,11 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"D:/Program Files/Unity Editor/2022.3.8f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/Program Files/Unity Editor/2022.3.8f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/BehaviorBricks/Editor/BehaviorExecutorEditor.cs"
 "Assets/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs"
 "Assets/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs"
 "Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs"
 "Assets/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs"
-"Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs"
 -langversion:9.0
 
 /deterministic
