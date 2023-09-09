@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         path = new NavMeshPath();
-        index = 1;
+        index = 0;
 
         NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path);
         //var agent = GetComponent<NavMeshAgent>();
@@ -37,29 +37,30 @@ public class EnemyAI : MonoBehaviour
         {
             NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path);
             targetLastPos = target.position;
-            index = 1;
+            index = 0;
         }
 
-        if (path != null && path.corners.Length > 0)
+        //if there is path with 2 points to move AND AI haven't reached the target
+        if (path != null && path.corners.Length >= 2 && index <= path.corners.Length - 1) 
         {
             path.corners[index].z = 0f;
+            movementS.direction = Vector3.ClampMagnitude(path.corners[index] - transform.position, 1);//move toward points on path
+
             float distance = (path.corners[index] - transform.position).magnitude;
-            if (distance <= 0.2f)
+            if (distance <= 0.5f) //check if target reached. If yes goes to the next point
             {
-                index = (int)Mathf.Clamp(index + 1, 0, path.corners.Length - 1);
-                //index++;
+                //index = Mathf.Clamp(++index, 0, path.corners.Length - 1);
+                index++;
             }
-            path.corners[index].z = 0f;
-            Vector3 direction =  Vector3.ClampMagnitude((path.corners[index] - transform.position),1);
-            print(direction);
-            movementS.direction = direction;
+
+            
         }
-
-
-
+        else
+        {
+            movementS.direction = Vector3.zero;
+        }
 
         for (int i = 0; i < path.corners.Length - 1; i++)
             Debug.DrawLine(path.corners[i], path.corners[i + 1], Color.red);
-
     }
 }
