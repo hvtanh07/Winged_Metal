@@ -438,6 +438,7 @@
 "Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs"
 "Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs"
 "Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs"
+"Assets/Scripts/AI Scripts/AIParent.cs"
 "Assets/Scripts/AI Scripts/EnemyAI.cs"
 "Assets/Scripts/Player Scripts/HandleInput.cs"
 "Assets/Scripts/Vehicle Scripts/TankAttack.cs"

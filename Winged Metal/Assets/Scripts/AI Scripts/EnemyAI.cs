@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAI : AIParent
 {
-    public float targetOffsetRecalculate;
-    public Transform target;
-    private Vector3 targetLastPos;
-    private NavMeshPath path;
-    private float elapsed = 0.0f;
+    
+
     private TankMovement movementS;
     private TankAttack attackS;
-    private int index;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,10 +19,11 @@ public class EnemyAI : MonoBehaviour
     }
     private void Start()
     {
-        path = new NavMeshPath();
-        index = 0;
+        InitParameters();
+        //NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path);
+        RecalculatePath(); //calculate path for the first time.
 
-        NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path);
+        //ONLY USE WHEN SWITCHING TO NAVMESH AGENT COMPONENT
         //var agent = GetComponent<NavMeshAgent>();
         //agent.updateRotation = false;
         //agent.updateUpAxis = false;
@@ -35,11 +33,10 @@ public class EnemyAI : MonoBehaviour
     {
         if ((targetLastPos - target.position).magnitude > targetOffsetRecalculate) //If target has moved too far from last pos then recalculate the path
         {
-            NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path);
-            targetLastPos = target.position;
-            index = 0;
+            RecalculatePath();
         }
 
+        //IF THIS PART WAS USED BY MOST OTHER AI THEN MOVE IT TO THE PARENT CLASS
         //if there is path with 2 points to move AND AI haven't reached the target
         if (path != null && path.corners.Length >= 2 && index <= path.corners.Length - 1) 
         {
@@ -52,15 +49,13 @@ public class EnemyAI : MonoBehaviour
                 //index = Mathf.Clamp(++index, 0, path.corners.Length - 1);
                 index++;
             }
-
-            
         }
         else
         {
-            movementS.direction = Vector3.zero;
+            movementS.direction = Vector3.zero; //if there's no path or AI have reached target then don't move around
         }
 
-        for (int i = 0; i < path.corners.Length - 1; i++)
-            Debug.DrawLine(path.corners[i], path.corners[i + 1], Color.red);
+        //for (int i = 0; i < path.corners.Length - 1; i++)
+        //    Debug.DrawLine(path.corners[i], path.corners[i + 1], Color.red);
     }
 }
