@@ -43,6 +43,7 @@ public class HandleInput : MonoBehaviour
             viewMarker.position = Vector3.MoveTowards(viewMarker.position, transform.position + (Vector3)shootJoystick.Direction.normalized * lookAheadDistance, 0.5f);
         else // if not. move back to the tank
             viewMarker.position = transform.position;
+        
     }
     public void Dash()
     {

@@ -9,27 +9,33 @@ public class TankMovement : MonoBehaviour
     public float thursterForce;
     public float dashingTime;
     public float steeringTorque;
-    public float weight;
+    public int weight;
     [Range(0.0f, 10.0f)]
     public float sideSlideAllowance;
     [HideInInspector]
     public Vector2 direction;
-    public CinemachineVirtualCamera cinemachine;
+    private TankResources resources;
     private Rigidbody2D rb;
     private bool dashing;
 
+    public void InitiateParameter(float EnginePower, float ThursterForce, int TurretWeight, int SecWeponWeight, int BodyWeight, int AutoGunWeight, int EngineWeight, int GeneratorWeight, int RepairKitWeight)
+    {
+        enginePower = EnginePower;
+        thursterForce = ThursterForce;
+        weight = TurretWeight + SecWeponWeight + BodyWeight + AutoGunWeight + EngineWeight + GeneratorWeight + RepairKitWeight;
+    }
 
     // Start is called before the first frame update
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        resources = GetComponent<TankResources>();
         dashing = false;
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
-
         if (dashing) return; // if player is dashing we won't do anything related to moving or turning
 
         rb.AddForce(direction * enginePower / weight, ForceMode2D.Force); //move the tank
@@ -49,16 +55,16 @@ public class TankMovement : MonoBehaviour
         }
     }
 
-    public bool IsAbleToDash(){
+    public bool IsAbleToDash()
+    {
         //also check if there's still energy left
         if (dashing) return false; //already dashing? nothing to do here
+        if (!resources.ConsumeEnergy(weight)) return false;//insufficient energy? nothing to do here
         return true;
     }
     public IEnumerator DashToggle()
     {
         dashing = true;
-        //cinemachine.GetCinemachineComponent<CinemachineFramingTransposer>().m_XDamping = 0.2f;
-        //cinemachine.GetCinemachineComponent<CinemachineFramingTransposer>().m_YDamping = 0.2f;
         if (direction != Vector2.zero) // if player is holding joystick then dash with it
         {
             rb.AddForce(direction.normalized * thursterForce / weight, ForceMode2D.Impulse);
@@ -68,6 +74,6 @@ public class TankMovement : MonoBehaviour
             rb.AddForce(transform.up * thursterForce / weight, ForceMode2D.Impulse);
         }
         yield return new WaitForSeconds(dashingTime);
-        dashing = false;  
+        dashing = false;
     }
 }
