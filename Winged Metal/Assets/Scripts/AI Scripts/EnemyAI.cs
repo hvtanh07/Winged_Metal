@@ -10,6 +10,8 @@ public class EnemyAI : AIParent
     private TankMovement movementS;
     private TankAttack attackS;
 
+    private bool openFire;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -27,6 +29,17 @@ public class EnemyAI : AIParent
         //var agent = GetComponent<NavMeshAgent>();
         //agent.updateRotation = false;
         //agent.updateUpAxis = false;
+    }
+
+    public void ToggleFire(bool shouldOpenFire){
+        openFire = shouldOpenFire;
+    }
+
+    public void DashEvade(Vector2 dashDirection){
+        if (movementS.IsAbleToDash()){
+            movementS.direction = dashDirection;
+            StartCoroutine(movementS.DashToggle());
+        }
     }
 
     void Update()
@@ -54,8 +67,12 @@ public class EnemyAI : AIParent
         {
             movementS.direction = Vector3.zero; //if there's no path or AI have reached target then don't move around
         }
+        
+        //behavior.p,
 
-        //for (int i = 0; i < path.corners.Length - 1; i++)
-        //    Debug.DrawLine(path.corners[i], path.corners[i + 1], Color.red);
+        //CANON
+
+        if(!openFire) return;
+        attackS.direction = (Vector2)(target.position - transform.position);
     }
 }

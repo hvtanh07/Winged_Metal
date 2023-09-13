@@ -1,26 +1,45 @@
 {
   "version": 3,
   "targets": {
-    ".NETStandard,Version=v2.0": {}
+    ".NETStandard,Version=v2.0": {
+      "Assembly-CSharp/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Assembly-CSharp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Assembly-CSharp.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Assembly-CSharp/1.0.0": {
+      "type": "project",
+      "path": "Assembly-CSharp.csproj",
+      "msbuildProject": "Assembly-CSharp.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v2.0": []
+    ".NETStandard,Version=v2.0": [
+      "Assembly-CSharp >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\hvtan\\.nuget\\packages\\": {}
+    "C:\\Users\\C8\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj",
-      "projectName": "Assembly-CSharp",
-      "projectPath": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj",
-      "packagesPath": "C:\\Users\\hvtan\\.nuget\\packages\\",
+      "projectUniqueName": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj",
+      "projectName": "Assembly-CSharp-Editor",
+      "projectPath": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj",
+      "packagesPath": "C:\\Users\\C8\\.nuget\\packages\\",
       "outputPath": "d:\\Github\\Winged_Metal\\Winged Metal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hvtan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\C8\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -31,7 +50,11 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj": {
+              "projectPath": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -49,11 +72,12 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
