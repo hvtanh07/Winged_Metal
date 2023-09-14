@@ -121,8 +121,6 @@
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -define:UNITY_EDITOR_ONLY_COMPILATION
--r:"Assets/BehaviorBricks/Editor/Bin/BBEditor.dll"
--r:"Assets/BehaviorBricks/Runtime/BehaviorBricks.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
@@ -405,11 +403,17 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/BehaviorBricks/Editor/BehaviorExecutorEditor.cs"
 "Assets/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs"
 "Assets/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs"
 "Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs"
 "Assets/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs"
+"Assets/TheKiwiCoder/BehaviourTree/Scripts/Editor/BehaviourTreeEditor.cs"
+"Assets/TheKiwiCoder/BehaviourTree/Scripts/Editor/BehaviourTreeSettings.cs"
+"Assets/TheKiwiCoder/BehaviourTree/Scripts/Editor/BehaviourTreeView.cs"
+"Assets/TheKiwiCoder/BehaviourTree/Scripts/Editor/DoubleClickSelection.cs"
+"Assets/TheKiwiCoder/BehaviourTree/Scripts/Editor/InspectorView.cs"
+"Assets/TheKiwiCoder/BehaviourTree/Scripts/Editor/NodeView.cs"
+"Assets/TheKiwiCoder/BehaviourTree/Scripts/Editor/SplitView.cs"
 -langversion:9.0
 
 /deterministic
