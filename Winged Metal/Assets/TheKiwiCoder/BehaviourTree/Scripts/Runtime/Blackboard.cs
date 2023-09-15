@@ -9,10 +9,12 @@ namespace TheKiwiCoder {
     // Add other properties here that make sense for your specific use case.
     [System.Serializable]
     public class Blackboard {
-        public Vector3 moveToPosition;
+        public Collider2D randomArea;
+        public Transform randomPosition;
         public Transform playerPos;
-        public Transform selfPos;
+        public Vector2 target;
         public bool openFire;
         public LayerMask bulletBlock;
+        public LayerMask viewBlock;
     }
 }

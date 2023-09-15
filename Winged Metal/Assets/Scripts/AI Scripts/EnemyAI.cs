@@ -42,13 +42,9 @@ public class EnemyAI : AIParent
 
     void Update()
     {
-        if (target == null)
-        {
-            target = behaviour.tree.blackboard.playerPos; //get player pos from behavior tree
-            if (target == null) return;//no target? then don't do anything.
-        }
+        if (behaviour.tree.blackboard.target == null) return;
         
-        if ((targetLastPos - target.position).magnitude > targetOffsetRecalculate) //If target has moved too far from last pos then recalculate the path
+        if ((targetLastPos - behaviour.tree.blackboard.target).magnitude > targetOffsetRecalculate) //If target has moved too far from last pos then recalculate the path
         {
             RecalculatePath();
         }
@@ -76,6 +72,6 @@ public class EnemyAI : AIParent
         //CANON
 
         if (!openFire) return;
-        attackS.direction = (Vector2)(target.position - transform.position);
+        attackS.direction = (Vector2)((Vector3)behaviour.tree.blackboard.target - transform.position);
     }
 }

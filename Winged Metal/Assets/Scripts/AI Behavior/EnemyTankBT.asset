@@ -1,5 +1,133 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8621187917480525565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: 13270ed7270ed8044a9f0d18d4d2c73f
+  position: {x: 341, y: 278}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 8167085349546844640}
+  - {fileID: -1237630469874594821}
+--- !u!114 &-7472336636166868137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 01bcbe4ba806730469d21e1b1c6b0546
+  position: {x: 141, y: 729}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 8916944088975427307}
+--- !u!114 &-5464259901458567646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: f5cbd25d1cac2ad468b8afa6aa9b9d7b
+  position: {x: 340.9999, y: 153.99998}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: -8621187917480525565}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &-5317087394703041918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a055ff4bd9e6642b3f0dff32a86e1d, type: 3}
+  m_Name: RandomPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0c192c4a7a50ffb4fbf7a44eb3c4c201
+  position: {x: 795.7762, y: 768.23114}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+  description: 
+  drawGizmos: 0
 --- !u!114 &-3149218573423280174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,20 +141,88 @@ MonoBehaviour:
   m_Name: RootNode
   m_EditorClassIdentifier: 
   state: 0
-  started: 0
+  started: 1
   guid: 83ccb18abfe30e54e8b5e6606e043fc4
   position: {x: 191, y: -128}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
     playerPos: {fileID: 0}
-    selfPos: {fileID: 0}
+    target: {x: 0, y: 0}
     openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+  description: 
+  drawGizmos: 1
+  child: {fileID: 3976025970289811109}
+--- !u!114 &-1892871397973743931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5fbbe66d641c9db44864bd56f6fba44a
+  position: {x: 141, y: 593}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
   description: 
   drawGizmos: 0
-  child: {fileID: 3976025970289811109}
+  child: {fileID: -7472336636166868137}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &-1237630469874594821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9e411f4095d0a44acd9a25323f5e73, type: 3}
+  m_Name: Log
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 872c3c7a2e60f164e85d7a153db4e8d6
+  position: {x: 518.80005, y: 444.00006}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+  description: 
+  drawGizmos: 0
+  message: Lost player
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,15 +241,28 @@ MonoBehaviour:
   - {fileID: -3149218573423280174}
   - {fileID: 3976025970289811109}
   - {fileID: 6855194441862281800}
+  - {fileID: -5464259901458567646}
+  - {fileID: 8167085349546844640}
+  - {fileID: -8621187917480525565}
+  - {fileID: -5317087394703041918}
+  - {fileID: 3580372634807297153}
+  - {fileID: 8916944088975427307}
+  - {fileID: -1237630469874594821}
+  - {fileID: -1892871397973743931}
+  - {fileID: -7472336636166868137}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
     playerPos: {fileID: 0}
-    selfPos: {fileID: 0}
+    target: {x: 0, y: 0}
     openFire: 0
     bulletBlock:
       serializedVersion: 2
-      m_Bits: 0
---- !u!114 &3976025970289811109
+      m_Bits: 128
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 128
+--- !u!114 &3580372634807297153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,20 +276,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: f96837f284ec5984caf3904c1ee9f63c
-  position: {x: 191, y: -3}
+  guid: 3bfb3c09ae9a3084a9122ddd7e16b1c1
+  position: {x: 795.7762, y: 617.23114}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
     playerPos: {fileID: 0}
-    selfPos: {fileID: 0}
+    target: {x: 0, y: 0}
     openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
-  description: 
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+  description: If player haven't detected player then he goes wander in an area
   drawGizmos: 0
   children:
+  - {fileID: -5317087394703041918}
+--- !u!114 &3976025970289811109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: f96837f284ec5984caf3904c1ee9f63c
+  position: {x: 191, y: -3}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+  description: 
+  drawGizmos: 1
+  children:
   - {fileID: 6855194441862281800}
+  - {fileID: -5464259901458567646}
 --- !u!114 &6855194441862281800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,16 +339,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4304a40b67c6b3f48b98a4e2414c97e2, type: 3}
   m_Name: GetPlayerPosition
   m_EditorClassIdentifier: 
-  state: 0
+  state: 2
   started: 0
   guid: 41b54b3708e776346a1ee92a6459c5c6
-  position: {x: -11, y: 162.99998}
+  position: {x: -5, y: 154}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
     playerPos: {fileID: 0}
-    selfPos: {fileID: 0}
+    target: {x: 0, y: 0}
     openFire: 0
     bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+  description: 
+  drawGizmos: 0
+--- !u!114 &8167085349546844640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1625eeec58240b45b5b11a1ec30fed2, type: 3}
+  m_Name: CheckPlayerDistance
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: a7a7240d148cfd64fbe3367bb48b25d2
+  position: {x: 141, y: 444}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+  description: Check if player has goes to detect range
+  drawGizmos: 0
+  child: {fileID: -1892871397973743931}
+  detectingDistance: 20
+--- !u!114 &8916944088975427307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aeeca4774e6e7c429e8f09f2bb56867, type: 3}
+  m_Name: UpdateTargetPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 61b432f3a76defc40a45dc1b1905794a
+  position: {x: -75.79993, y: 905.3002}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {fileID: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
       serializedVersion: 2
       m_Bits: 0
   description: 

@@ -5,8 +5,6 @@ using TheKiwiCoder;
 
 public class RandomPosition : ActionNode
 {
-    public Vector2 min = Vector2.one * -10;
-    public Vector2 max = Vector2.one * 10;
 
     protected override void OnStart() {
     }
@@ -15,8 +13,15 @@ public class RandomPosition : ActionNode
     }
 
     protected override State OnUpdate() {
-        blackboard.moveToPosition.x = Random.Range(min.x, max.x);
-        blackboard.moveToPosition.z = Random.Range(min.y, max.y);
+        float x = 0;
+        float y = 0;
+        do {
+            x = Random.Range(blackboard.randomArea.bounds.min.x, blackboard.randomArea.bounds.max.x);
+            y = Random.Range(blackboard.randomArea.bounds.min.y, blackboard.randomArea.bounds.max.y);
+        } while (blackboard.randomArea.OverlapPoint(new Vector2(x, y)));
+        Debug.Log("Run");
+        blackboard.target = new Vector2(x,y);
+        //check player reach target
         return State.Success;
     }
 }

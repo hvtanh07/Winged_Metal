@@ -18,6 +18,14 @@ MonoBehaviour:
   position: {x: -22, y: 4}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    playerPos: {fileID: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
   description: 
   drawGizmos: 0
   child: {fileID: -5660333016957678146}
@@ -41,6 +49,14 @@ MonoBehaviour:
   position: {x: -22, y: 118}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    playerPos: {fileID: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
   description: 
   drawGizmos: 0
   children:
@@ -65,6 +81,14 @@ MonoBehaviour:
   position: {x: 148, y: 289}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    playerPos: {fileID: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
   description: 
   drawGizmos: 0
   duration: 1
@@ -86,6 +110,14 @@ MonoBehaviour:
   position: {x: -22, y: 289}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    playerPos: {fileID: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
   description: 
   drawGizmos: 0
   speed: 5
@@ -116,6 +148,14 @@ MonoBehaviour:
   - {fileID: -2247863421084346560}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    playerPos: {fileID: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
 --- !u!114 &4300890025194573056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +174,14 @@ MonoBehaviour:
   position: {x: -22, y: -102}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    playerPos: {fileID: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
   description: 
   drawGizmos: 0
   child: {fileID: -8754077107127582826}
@@ -155,6 +203,14 @@ MonoBehaviour:
   position: {x: -194, y: 289}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    playerPos: {fileID: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
   description: 
   drawGizmos: 0
   min: {x: -20, y: -20}
