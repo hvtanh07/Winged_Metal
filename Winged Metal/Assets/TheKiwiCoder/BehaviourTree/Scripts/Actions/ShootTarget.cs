@@ -12,6 +12,7 @@ public class ShootTarget : ActionNode
     }
 
     protected override State OnUpdate() {
+        if(blackboard.openFire == false) blackboard.openFire = true;
         return State.Success;
     }
 }

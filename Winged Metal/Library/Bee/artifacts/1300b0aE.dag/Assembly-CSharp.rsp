@@ -407,6 +407,7 @@
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/RandomFailure.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/RandomPosition.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/ShootTarget.cs"
+"Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/StopShooting.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/UpdateTargetPosition.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/Wait.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Composites/InterruptSelector.cs"
