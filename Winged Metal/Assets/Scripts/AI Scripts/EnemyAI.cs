@@ -22,8 +22,6 @@ public class EnemyAI : AIParent
     private void Start()
     {
         InitParameters();
-        //NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path);
-        RecalculatePath(); //calculate path for the first time.
 
         //ONLY USE WHEN SWITCHING TO NAVMESH AGENT COMPONENT
         //var agent = GetComponent<NavMeshAgent>();
@@ -44,6 +42,7 @@ public class EnemyAI : AIParent
 
     void Update()
     {
+        if(target == null) target = behaviour.tree.blackboard.playerPos; //get player pos from behavior tree
         if ((targetLastPos - target.position).magnitude > targetOffsetRecalculate) //If target has moved too far from last pos then recalculate the path
         {
             RecalculatePath();
@@ -67,8 +66,7 @@ public class EnemyAI : AIParent
         {
             movementS.direction = Vector3.zero; //if there's no path or AI have reached target then don't move around
         }
-        
-        //behavior.p,
+
 
         //CANON
 

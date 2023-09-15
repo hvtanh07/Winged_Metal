@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TheKiwiCoder;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,17 +11,15 @@ public class AIParent : MonoBehaviour
     protected Vector3 targetLastPos;
     protected NavMeshPath path;
     protected int index;
+    protected BehaviourTreeRunner behaviour;
+    public LayerMask bulletBlock;
     // Start is called before the first frame update
     protected void InitParameters(){ //called in Start() of child class
         path = new NavMeshPath();
+        behaviour = GetComponent<BehaviourTreeRunner>();
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     protected void RecalculatePath()
     {
         NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, path);

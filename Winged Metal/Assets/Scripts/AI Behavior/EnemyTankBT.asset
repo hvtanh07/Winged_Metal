@@ -18,6 +18,12 @@ MonoBehaviour:
   position: {x: 191, y: -128}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    playerPos: {fileID: 0}
+    selfPos: {fileID: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
   description: 
   drawGizmos: 0
   child: {fileID: 3976025970289811109}
@@ -38,8 +44,15 @@ MonoBehaviour:
   nodes:
   - {fileID: -3149218573423280174}
   - {fileID: 3976025970289811109}
+  - {fileID: 6855194441862281800}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    playerPos: {fileID: 0}
+    selfPos: {fileID: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
 --- !u!114 &3976025970289811109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +71,39 @@ MonoBehaviour:
   position: {x: 191, y: -3}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    playerPos: {fileID: 0}
+    selfPos: {fileID: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
   description: 
   drawGizmos: 0
-  children: []
+  children:
+  - {fileID: 6855194441862281800}
+--- !u!114 &6855194441862281800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4304a40b67c6b3f48b98a4e2414c97e2, type: 3}
+  m_Name: GetPlayerPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 41b54b3708e776346a1ee92a6459c5c6
+  position: {x: -11, y: 162.99998}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    playerPos: {fileID: 0}
+    selfPos: {fileID: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+  description: 
+  drawGizmos: 0
