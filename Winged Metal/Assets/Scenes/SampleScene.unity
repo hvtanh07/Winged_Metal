@@ -36589,9 +36589,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetOffsetRecalculate: 2
   target: {fileID: 0}
+  behaviour: {fileID: 0}
   bulletBlock:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &1839519171
 MonoBehaviour:
   m_ObjectHideFlags: 0

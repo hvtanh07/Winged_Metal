@@ -11,7 +11,7 @@ public class AIParent : MonoBehaviour
     protected Vector3 targetLastPos;
     protected NavMeshPath path;
     protected int index;
-    protected BehaviourTreeRunner behaviour;
+    public BehaviourTreeRunner behaviour;
     public LayerMask bulletBlock;
     // Start is called before the first frame update
     protected void InitParameters(){ //called in Start() of child class
