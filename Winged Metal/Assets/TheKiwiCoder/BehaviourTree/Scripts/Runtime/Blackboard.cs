@@ -10,7 +10,7 @@ namespace TheKiwiCoder {
     [System.Serializable]
     public class Blackboard {
         public Collider2D randomArea;
-        public Transform randomPosition;
+        public Vector2 randomPosition;
         public Transform playerPos;
         public Vector2 target;
         public bool openFire;
