@@ -21,7 +21,6 @@ public class RandomPosition : ActionNode
             y = Random.Range(blackboard.randomArea.bounds.min.y + 2, blackboard.randomArea.bounds.max.y - 2);
             RanPos = new Vector2(x,y);
         } while (blackboard.randomArea.OverlapPoint(RanPos) && (RanPos - blackboard.randomPosition).magnitude < 3);
-        Debug.Log("Run");
         blackboard.randomPosition = new Vector2(x,y);
         //check player reach target
         return State.Success;

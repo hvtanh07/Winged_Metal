@@ -28,6 +28,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 0
   children:
@@ -61,6 +62,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-5464259901458567646
@@ -91,6 +93,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 0
   child: {fileID: 4953501379448784630}
@@ -111,7 +114,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0c192c4a7a50ffb4fbf7a44eb3c4c201
-  position: {x: 402.31943, y: 786.39996}
+  position: {x: 364.59607, y: 673.5999}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -124,6 +127,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-4608374739500681382
@@ -141,7 +145,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 78784e4e860bd93498dbf6335c703cba
-  position: {x: 551.91943, y: 786.39996}
+  position: {x: 514.1962, y: 673.5999}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -154,6 +158,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-3149218573423280174
@@ -184,6 +189,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 1
   child: {fileID: 3976025970289811109}
@@ -202,7 +208,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 5fbbe66d641c9db44864bd56f6fba44a
-  position: {x: 83.20002, y: 674.79987}
+  position: {x: 83.20002, y: 684.00006}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -215,6 +221,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 0
   child: {fileID: -156427131428506197}
@@ -248,6 +255,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 0
 --- !u!114 &-156427131428506197
@@ -278,6 +286,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: Chase down and shoot target
   drawGizmos: 0
   children:
@@ -314,10 +323,9 @@ MonoBehaviour:
   - {fileID: 4953501379448784630}
   - {fileID: -4608374739500681382}
   - {fileID: 7239214763634053632}
-  - {fileID: 2240391211688290309}
   blackboard:
     randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
+    randomPosition: {x: 21.34, y: 2.17}
     playerPos: {fileID: 0}
     target: {x: 0, y: 0}
     openFire: 0
@@ -327,38 +335,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 128
---- !u!114 &2240391211688290309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96d3ab6a69b81c5419737c718f2cc759, type: 3}
-  m_Name: CheckPositionTooFarGuardingArea
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: b6ccd6f8ab1e94840ad310d24f6dd388
-  position: {x: 514.7999, y: 450.40002}
-  blackboard:
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    playerPos: {fileID: 0}
-    target: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-  description: 
-  drawGizmos: 0
-  child: {fileID: 3580372634807297153}
-  checkDistance: 30
+    detectingDistance: 20
 --- !u!114 &3580372634807297153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +351,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3bfb3c09ae9a3084a9122ddd7e16b1c1
-  position: {x: 566.31946, y: 604}
+  position: {x: 528.59607, y: 491.19995}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -387,6 +364,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: if ai has gone too far from guarding area then return to the guarding
     area
   drawGizmos: 0
@@ -422,6 +400,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 1
   children:
@@ -440,7 +419,7 @@ MonoBehaviour:
   m_Name: Sequencer
   m_EditorClassIdentifier: 
   state: 0
-  started: 0
+  started: 1
   guid: 9e16f05907c90c542b81935414a59308
   position: {x: 341.60007, y: 279.5843}
   blackboard:
@@ -455,11 +434,12 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 0
   children:
   - {fileID: -8621187917480525565}
-  - {fileID: 2240391211688290309}
+  - {fileID: 3580372634807297153}
 --- !u!114 &6855194441862281800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,6 +468,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 0
 --- !u!114 &7239214763634053632
@@ -505,7 +486,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 630acb95af3fd754d9548e80d979dd73
-  position: {x: 729.5194, y: 786.39996}
+  position: {x: 691.79614, y: 673.5999}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -518,6 +499,7 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: 
   drawGizmos: 0
   duration: 2
@@ -549,10 +531,10 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: Check if player has goes to detect range
   drawGizmos: 0
   child: {fileID: -1892871397973743931}
-  detectingDistance: 20
 --- !u!114 &8916944088975427307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,5 +563,6 @@ MonoBehaviour:
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
+    detectingDistance: 0
   description: Get target last seen position
   drawGizmos: 0

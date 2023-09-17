@@ -16,5 +16,6 @@ namespace TheKiwiCoder {
         public bool openFire;
         public LayerMask bulletBlock;
         public LayerMask viewBlock;
+        public float detectingDistance;
     }
 }

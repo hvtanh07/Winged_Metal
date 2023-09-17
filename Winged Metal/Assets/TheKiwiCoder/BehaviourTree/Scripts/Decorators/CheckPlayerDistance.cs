@@ -5,7 +5,6 @@ using TheKiwiCoder;
 
 public class CheckPlayerDistance : DecoratorNode
 {
-    public float detectingDistance;
     protected override void OnStart()
     {
 
@@ -17,7 +16,7 @@ public class CheckPlayerDistance : DecoratorNode
 
     protected override State OnUpdate()
     {
-        if ((blackboard.playerPos.position - context.transform.position).magnitude <= detectingDistance &&
+        if ((blackboard.playerPos.position - context.transform.position).magnitude <= blackboard.detectingDistance &&
             !Physics2D.Linecast(blackboard.playerPos.position,context.transform.position, blackboard.viewBlock))
         {
             var state = child.Update();
