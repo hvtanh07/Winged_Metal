@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1625eeec58240b45b5b11a1ec30fed2, type: 3}
-  m_Name: CheckPlayerDistance
+  m_Name: CheckPlayerDetected
   m_EditorClassIdentifier: 
   state: 0
   started: 1
