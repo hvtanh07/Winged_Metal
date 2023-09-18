@@ -418,7 +418,6 @@
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Composites/Selector.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Composites/Sequencer.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Decorators/CheckPlayerDetected.cs"
-"Assets/TheKiwiCoder/BehaviourTree/Scripts/Decorators/CheckPositionTooFarGuardingArea.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Decorators/CheckReachedTarget.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Decorators/Failure.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Decorators/Inverter.cs"

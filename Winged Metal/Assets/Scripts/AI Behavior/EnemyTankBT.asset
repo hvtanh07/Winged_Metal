@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8621187917480525565
+--- !u!114 &-6434386032281758074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,13 +9,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
-  m_Name: Selector
+  m_Script: {fileID: 11500000, guid: a1625eeec58240b45b5b11a1ec30fed2, type: 3}
+  m_Name: CheckPlayerDetected
   m_EditorClassIdentifier: 
   state: 0
-  started: 1
-  guid: 13270ed7270ed8044a9f0d18d4d2c73f
-  position: {x: 191.20004, y: 411.5999}
+  started: 0
+  guid: b5d1f2ccf7d0aa74cb1390b35a1281a0
+  position: {x: 297.74954, y: 464.00003}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    detectingDistance: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: 1127346770621191707}
+--- !u!114 &-5576421070825505074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 954eabcfb49d79b4fa43b247115bc952
+  position: {x: 233.00003, y: 754}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -32,39 +64,8 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   children:
-  - {fileID: 8167085349546844640}
-  - {fileID: -8039286740610838343}
---- !u!114 &-8039286740610838343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 160a86a38ca096b4cb049f9056d3bab2, type: 3}
-  m_Name: StopShooting
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 5255f828e4bfdb34f908cedad3c74617
-  position: {x: 266.40005, y: 539.2}
-  blackboard:
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    playerPos: {fileID: 0}
-    target: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    detectingDistance: 0
-  description: 
-  drawGizmos: 0
+  - {fileID: 5381723919444264989}
+  - {fileID: 7376962899481565226}
 --- !u!114 &-5464259901458567646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +81,7 @@ MonoBehaviour:
   state: 0
   started: 1
   guid: f5cbd25d1cac2ad468b8afa6aa9b9d7b
-  position: {x: 340.9999, y: 153.99998}
+  position: {x: 517.99994, y: 174.11357}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -96,7 +97,7 @@ MonoBehaviour:
     detectingDistance: 0
   description: 
   drawGizmos: 0
-  child: {fileID: 4953501379448784630}
+  child: {fileID: -2477931535577651643}
   restartOnSuccess: 1
   restartOnFailure: 0
 --- !u!114 &-5317087394703041918
@@ -114,7 +115,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0c192c4a7a50ffb4fbf7a44eb3c4c201
-  position: {x: 364.59607, y: 673.5999}
+  position: {x: 591.7276, y: 647}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -145,7 +146,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 78784e4e860bd93498dbf6335c703cba
-  position: {x: 514.1962, y: 673.5999}
+  position: {x: 740.7277, y: 647}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -176,7 +177,7 @@ MonoBehaviour:
   state: 0
   started: 1
   guid: 83ccb18abfe30e54e8b5e6606e043fc4
-  position: {x: 340.8, y: -129.31525}
+  position: {x: 516.9999, y: -108.88641}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -193,7 +194,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 1
   child: {fileID: 3976025970289811109}
---- !u!114 &-1892871397973743931
+--- !u!114 &-2477931535577651643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,13 +203,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
-  m_Name: Repeat
+  m_Script: {fileID: 11500000, guid: a7bf77e26564daa41815cba042a730aa, type: 3}
+  m_Name: InterruptSelector
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 5fbbe66d641c9db44864bd56f6fba44a
-  position: {x: 83.20002, y: 684.00006}
+  guid: ecf0b4b0b8817864da0b84715cac6682
+  position: {x: 518.0875, y: 339.945}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -223,75 +224,10 @@ MonoBehaviour:
       m_Bits: 0
     detectingDistance: 0
   description: 
-  drawGizmos: 0
-  child: {fileID: -156427131428506197}
-  restartOnSuccess: 1
-  restartOnFailure: 0
---- !u!114 &-288121885900597452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 994b5d23df7cff94a98123082fb9077d, type: 3}
-  m_Name: ShootTarget
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 110e75ff277c3c0498d9c9e8b67723a3
-  position: {x: 183.20001, y: 992.39996}
-  blackboard:
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    playerPos: {fileID: 0}
-    target: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    detectingDistance: 0
-  description: 
-  drawGizmos: 0
---- !u!114 &-156427131428506197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2932073b8a6c3b34391576c45d359457, type: 3}
-  m_Name: Parallel
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: edb0b7d025e145647b55d21efce86020
-  position: {x: 83.20002, y: 813.99994}
-  blackboard:
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    playerPos: {fileID: 0}
-    target: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    detectingDistance: 0
-  description: Chase down and shoot target
   drawGizmos: 0
   children:
-  - {fileID: 8916944088975427307}
-  - {fileID: -288121885900597452}
+  - {fileID: -6434386032281758074}
+  - {fileID: 3580372634807297153}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,18 +247,17 @@ MonoBehaviour:
   - {fileID: 3976025970289811109}
   - {fileID: 6855194441862281800}
   - {fileID: -5464259901458567646}
-  - {fileID: 8167085349546844640}
-  - {fileID: -8621187917480525565}
   - {fileID: -5317087394703041918}
   - {fileID: 3580372634807297153}
-  - {fileID: 8916944088975427307}
-  - {fileID: -1892871397973743931}
-  - {fileID: -288121885900597452}
-  - {fileID: -8039286740610838343}
-  - {fileID: -156427131428506197}
-  - {fileID: 4953501379448784630}
   - {fileID: -4608374739500681382}
   - {fileID: 7239214763634053632}
+  - {fileID: -2477931535577651643}
+  - {fileID: 1127346770621191707}
+  - {fileID: 1579418440519297306}
+  - {fileID: -5576421070825505074}
+  - {fileID: 5381723919444264989}
+  - {fileID: 7376962899481565226}
+  - {fileID: -6434386032281758074}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 21.34, y: 2.17}
@@ -336,6 +271,71 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 128
     detectingDistance: 20
+--- !u!114 &1127346770621191707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a85c93ba8812d4f4699883de4e82b5b3
+  position: {x: 298.00003, y: 603}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    detectingDistance: 0
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -5576421070825505074}
+  - {fileID: 1579418440519297306}
+--- !u!114 &1579418440519297306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160a86a38ca096b4cb049f9056d3bab2, type: 3}
+  m_Name: StopShooting
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: de1f0300ace667949917103f807ee20e
+  position: {x: 415, y: 750}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    detectingDistance: 0
+  description: 
+  drawGizmos: 0
 --- !u!114 &3580372634807297153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3bfb3c09ae9a3084a9122ddd7e16b1c1
-  position: {x: 528.59607, y: 491.19995}
+  position: {x: 755.72766, y: 464.00003}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -387,7 +387,7 @@ MonoBehaviour:
   state: 0
   started: 1
   guid: f96837f284ec5984caf3904c1ee9f63c
-  position: {x: 340.8, y: 5.5449715}
+  position: {x: 516.9999, y: 26.11359}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -406,7 +406,7 @@ MonoBehaviour:
   children:
   - {fileID: 6855194441862281800}
   - {fileID: -5464259901458567646}
---- !u!114 &4953501379448784630
+--- !u!114 &5381723919444264989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -415,13 +415,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
-  m_Name: Sequencer
+  m_Script: {fileID: 11500000, guid: 0aeeca4774e6e7c429e8f09f2bb56867, type: 3}
+  m_Name: UpdateTargetPosition
   m_EditorClassIdentifier: 
   state: 0
-  started: 1
-  guid: 9e16f05907c90c542b81935414a59308
-  position: {x: 341.60007, y: 279.5843}
+  started: 0
+  guid: d129e9bfbb9c4934788e18eceb4c11c1
+  position: {x: 153, y: 904}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -437,9 +437,6 @@ MonoBehaviour:
     detectingDistance: 0
   description: 
   drawGizmos: 0
-  children:
-  - {fileID: -8621187917480525565}
-  - {fileID: 3580372634807297153}
 --- !u!114 &6855194441862281800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,7 +452,7 @@ MonoBehaviour:
   state: 2
   started: 0
   guid: 41b54b3708e776346a1ee92a6459c5c6
-  position: {x: 166.25276, y: 154.4}
+  position: {x: 341.99994, y: 174.11357}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -486,7 +483,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 630acb95af3fd754d9548e80d979dd73
-  position: {x: 691.79614, y: 673.5999}
+  position: {x: 918.72766, y: 647}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -503,7 +500,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   duration: 2
---- !u!114 &8167085349546844640
+--- !u!114 &7376962899481565226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -512,45 +509,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1625eeec58240b45b5b11a1ec30fed2, type: 3}
-  m_Name: CheckPlayerDetected
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 1
-  guid: a7a7240d148cfd64fbe3367bb48b25d2
-  position: {x: 83.20002, y: 538.7999}
-  blackboard:
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    playerPos: {fileID: 0}
-    target: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    detectingDistance: 0
-  description: Check if player has goes to detect range
-  drawGizmos: 0
-  child: {fileID: -1892871397973743931}
---- !u!114 &8916944088975427307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aeeca4774e6e7c429e8f09f2bb56867, type: 3}
-  m_Name: UpdateTargetPosition
+  m_Script: {fileID: 11500000, guid: 994b5d23df7cff94a98123082fb9077d, type: 3}
+  m_Name: ShootTarget
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 61b432f3a76defc40a45dc1b1905794a
-  position: {x: -31.999914, y: 991.5999}
+  guid: 11844e1ac47466a4cbe5c79ba30de248
+  position: {x: 314, y: 904}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -564,5 +529,5 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 0
     detectingDistance: 0
-  description: Get target last seen position
+  description: 
   drawGizmos: 0
