@@ -7,6 +7,8 @@ public class UpdateTargetPosition : ActionNode
 {
     protected override void OnStart() {
         blackboard.target = blackboard.playerPos.position;
+        blackboard.lastSeenPosition = blackboard.target;
+        if(!blackboard.haveLastSeenPos) blackboard.haveLastSeenPos = true;
     }
 
     protected override void OnStop() {
