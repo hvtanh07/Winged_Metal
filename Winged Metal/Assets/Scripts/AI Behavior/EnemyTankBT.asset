@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b5d1f2ccf7d0aa74cb1390b35a1281a0
-  position: {x: 297.74954, y: 464.00003}
+  position: {x: 337.749, y: 604}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -31,41 +31,7 @@ MonoBehaviour:
     detectingDistance: 0
   description: 
   drawGizmos: 0
-  child: {fileID: 1127346770621191707}
---- !u!114 &-5576421070825505074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
-  m_Name: Sequencer
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 954eabcfb49d79b4fa43b247115bc952
-  position: {x: 233.00003, y: 754}
-  blackboard:
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    playerPos: {fileID: 0}
-    target: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    detectingDistance: 0
-  description: 
-  drawGizmos: 0
-  children:
-  - {fileID: 5381723919444264989}
-  - {fileID: 7376962899481565226}
+  child: {fileID: 920872801428038930}
 --- !u!114 &-5464259901458567646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +81,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0c192c4a7a50ffb4fbf7a44eb3c4c201
-  position: {x: 591.7276, y: 647}
+  position: {x: 563.6368, y: 674.99994}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -146,7 +112,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 78784e4e860bd93498dbf6335c703cba
-  position: {x: 740.7277, y: 647}
+  position: {x: 713.63684, y: 674.99994}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -252,12 +218,10 @@ MonoBehaviour:
   - {fileID: -4608374739500681382}
   - {fileID: 7239214763634053632}
   - {fileID: -2477931535577651643}
-  - {fileID: 1127346770621191707}
-  - {fileID: 1579418440519297306}
-  - {fileID: -5576421070825505074}
   - {fileID: 5381723919444264989}
   - {fileID: 7376962899481565226}
   - {fileID: -6434386032281758074}
+  - {fileID: 920872801428038930}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 21.34, y: 2.17}
@@ -271,7 +235,7 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 128
     detectingDistance: 20
---- !u!114 &1127346770621191707
+--- !u!114 &920872801428038930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,13 +244,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
-  m_Name: Selector
+  m_Script: {fileID: 11500000, guid: 2932073b8a6c3b34391576c45d359457, type: 3}
+  m_Name: Parallel
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: a85c93ba8812d4f4699883de4e82b5b3
-  position: {x: 298.00003, y: 603}
+  guid: 61c39796f7b32574bab764bd937640fc
+  position: {x: 337.749, y: 743}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -303,39 +267,8 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   children:
-  - {fileID: -5576421070825505074}
-  - {fileID: 1579418440519297306}
---- !u!114 &1579418440519297306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 160a86a38ca096b4cb049f9056d3bab2, type: 3}
-  m_Name: StopShooting
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: de1f0300ace667949917103f807ee20e
-  position: {x: 415, y: 750}
-  blackboard:
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    playerPos: {fileID: 0}
-    target: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    detectingDistance: 0
-  description: 
-  drawGizmos: 0
+  - {fileID: 5381723919444264989}
+  - {fileID: 7376962899481565226}
 --- !u!114 &3580372634807297153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,7 +284,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3bfb3c09ae9a3084a9122ddd7e16b1c1
-  position: {x: 755.72766, y: 464.00003}
+  position: {x: 728.63684, y: 492}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -421,7 +354,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d129e9bfbb9c4934788e18eceb4c11c1
-  position: {x: 153, y: 904}
+  position: {x: 251.749, y: 900.99994}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -483,7 +416,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 630acb95af3fd754d9548e80d979dd73
-  position: {x: 918.72766, y: 647}
+  position: {x: 891.6368, y: 674.99994}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -515,7 +448,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 11844e1ac47466a4cbe5c79ba30de248
-  position: {x: 314, y: 904}
+  position: {x: 412.749, y: 900.99994}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
