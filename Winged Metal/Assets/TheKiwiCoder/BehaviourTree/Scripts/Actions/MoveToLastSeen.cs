@@ -15,7 +15,8 @@ public class MoveToLastSeen : ActionNode
     protected override State OnUpdate() {
         if (((Vector2)context.transform.position - blackboard.lastSeenPosition).magnitude <= 1f){
             blackboard.haveLastSeenPos = false;
-            return State.Failure;
+            //return State.Failure;
+            return State.Success;
         }
             
         else

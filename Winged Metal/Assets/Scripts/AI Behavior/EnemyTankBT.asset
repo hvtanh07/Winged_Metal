@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b5d1f2ccf7d0aa74cb1390b35a1281a0
-  position: {x: 261.99997, y: 488}
+  position: {x: 13.876099, y: 488.00006}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 96e27d0647ddf1547b3cafcc45347bb5
-  position: {x: 592.99994, y: 802}
+  position: {x: 281.35, y: 635.0001}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -202,7 +202,7 @@ MonoBehaviour:
     detectingDistance: 0
   description: 
   drawGizmos: 0
-  child: {fileID: -2692557029673652251}
+  child: {fileID: -876337138272789899}
 --- !u!114 &-3149218573423280174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c582b327f9b010f4b98f41e9d4945e4e
-  position: {x: 517.99994, y: 635}
+  position: {x: 520.99994, y: 738}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -307,6 +307,40 @@ MonoBehaviour:
   - {fileID: -6434386032281758074}
   - {fileID: -3560474819245438500}
   - {fileID: 3580372634807297153}
+--- !u!114 &-876337138272789899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e658b1bd308bc5c429f5a9b404a04943, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b65c45ef9a1ecf74c8f2f970bd0a7983
+  position: {x: 520.9998, y: 610.99994}
+  blackboard:
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    playerPos: {fileID: 0}
+    target: {x: 0, y: 0}
+    openFire: 0
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    detectingDistance: 0
+  description: 
+  drawGizmos: 0
+  child: {fileID: -2692557029673652251}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +372,7 @@ MonoBehaviour:
   - {fileID: -3560474819245438500}
   - {fileID: -2692557029673652251}
   - {fileID: -5264704054413267342}
+  - {fileID: -876337138272789899}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 21.34, y: 2.17}
@@ -368,7 +403,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 61c39796f7b32574bab764bd937640fc
-  position: {x: 261.99997, y: 644}
+  position: {x: 13.876099, y: 644}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -478,7 +513,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d129e9bfbb9c4934788e18eceb4c11c1
-  position: {x: 163.00003, y: 802}
+  position: {x: -85.12392, y: 802.0001}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -578,7 +613,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 11844e1ac47466a4cbe5c79ba30de248
-  position: {x: 363, y: 802}
+  position: {x: 114.8761, y: 802.0001}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
