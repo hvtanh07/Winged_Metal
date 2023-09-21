@@ -19,7 +19,9 @@ MonoBehaviour:
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_AndroidNotificationSettingsValues.m_Values__UnityEngine.UIElements.ListView
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-DrawableResources__UnityEngine.UIElements.ListView
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-nodes__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-pooledObjects__UnityEngine.UIElements.ListView
   m_Values:
+  - '{}'
   - '{}'
   - '{}'
   - '{}'

@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class TankResources : MonoBehaviour
 {
+    //Armor
     public int tankMaxArmor;
-    private float tankCurrentArmor;
-    public int recoveryEfficiency;
-    private float lastDamageTime;
+    protected float tankCurrentArmor;
+    protected float lastDamageTime;
 
+
+    //Energy
     public int tankMaxEnergy;
-    private float tankCurrentEnergy;
-    public int energySupply;
-    private float lastEnergyUsedTime;
+    protected float tankCurrentEnergy;
+    protected float lastEnergyUsedTime;
 
     public Slider slider;
 
@@ -22,6 +23,7 @@ public class TankResources : MonoBehaviour
         tankCurrentArmor = tankMaxArmor;
         tankCurrentEnergy = tankMaxEnergy;
 
+        if(slider != null)
         slider.maxValue = tankMaxEnergy;
     }
     public void InitiateParameter(int maxArmor, int maxEnergy)
@@ -53,25 +55,6 @@ public class TankResources : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (tankCurrentArmor < tankMaxArmor && Time.time - lastDamageTime > 5.0f)
-        {
-
-            tankCurrentArmor += recoveryEfficiency * Time.deltaTime;
-            if (tankCurrentArmor > tankMaxArmor)
-                tankCurrentArmor = tankMaxArmor;
-        }
-
-        if (tankCurrentEnergy < tankMaxEnergy && Time.time - lastEnergyUsedTime > 3.0f)
-        {
-            tankCurrentEnergy += energySupply * Time.deltaTime;
-
-            if (tankCurrentEnergy > tankMaxEnergy)
-                tankCurrentEnergy = tankMaxEnergy;
-        }
-
-        slider.value = tankCurrentEnergy;
-    }
+    
 
 }

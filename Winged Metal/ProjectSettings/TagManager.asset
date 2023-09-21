@@ -7,6 +7,8 @@ TagManager:
   - Move joystick
   - Shoot joystick
   - View marker
+  - Enemy
+  - Ally
   layers:
   - Default
   - TransparentFX
