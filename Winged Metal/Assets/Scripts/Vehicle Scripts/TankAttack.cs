@@ -11,6 +11,7 @@ public class TankAttack : MonoBehaviour
     }
     [HideInInspector]
     public Vector2 direction;
+    public int enConsum;
     public BulletOwner bulletOwner;
     public int damage;
     public Transform shootingPoint;
@@ -20,6 +21,9 @@ public class TankAttack : MonoBehaviour
     public float fireRate;
     private float lastShotTime;
     // Start is called before the first frame update
+    void Start(){
+        resources = GetComponentInParent<TankResources>();
+    }
     private void FixedUpdate()
     {
         if (direction != Vector2.zero) // check moving and rotate to the moving direction
@@ -37,6 +41,7 @@ public class TankAttack : MonoBehaviour
         GameObject bullet = ObjectPooler.SharedInstance.GetPooledObject("Bullet");
         if (bullet != null)
         {
+            resources.ConsumeEnergy(enConsum);
             bullet.transform.position = shootingPoint.transform.position;
             bullet.transform.rotation = shootingPoint.transform.rotation;
             bullet.SetActive(true);

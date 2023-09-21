@@ -9,15 +9,21 @@ namespace TheKiwiCoder {
     // Add other properties here that make sense for your specific use case.
     [System.Serializable]
     public class Blackboard {
-        public Collider2D randomArea;
-        public Vector2 randomPosition;
+        [Header("Target data--------")]
+        public Vector2 target;
+        public float detectingDistance;   
+        [HideInInspector]
         public Vector2 lastSeenPosition;
         public bool haveLastSeenPos;
         public Transform playerPos;
-        public Vector2 target;
+        public Collider2D randomArea;
+        [HideInInspector]
+        public Vector2 randomPosition;
+
+        [Header("Combat data--------")]
         public bool openFire;
         public LayerMask bulletBlock;
         public LayerMask viewBlock;
-        public float detectingDistance;
+        public float currentEn;
     }
 }

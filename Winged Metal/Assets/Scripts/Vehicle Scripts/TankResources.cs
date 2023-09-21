@@ -25,8 +25,20 @@ public class TankResources : MonoBehaviour
         tankCurrentArmor = tankMaxArmor;
         tankCurrentEnergy = tankMaxEnergy;
 
-        if(slider != null)
-        slider.maxValue = tankMaxEnergy;
+        if (slider != null)
+            slider.maxValue = tankMaxEnergy;
+    }
+
+    private void Update()
+    {
+
+        if (tankCurrentEnergy < tankMaxEnergy && Time.time - lastEnergyUsedTime > 3.0f)
+        {
+            tankCurrentEnergy += energySupply * Time.deltaTime;
+
+            if (tankCurrentEnergy > tankMaxEnergy)
+                tankCurrentEnergy = tankMaxEnergy;
+        }
     }
     public void InitiateParameter(int maxArmor, int maxEnergy)
     {
@@ -57,6 +69,11 @@ public class TankResources : MonoBehaviour
         }
     }
 
-    
+    public float GetCurrentEn()
+    {
+        return tankCurrentEnergy;
+    }
+
+
 
 }

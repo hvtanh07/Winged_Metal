@@ -70,7 +70,6 @@ public class EnemyAI : AIParent
 
 
         //CANON
-
         if (behaviour.tree.blackboard.openFire)
         {
             attackS.direction = behaviour.tree.blackboard.playerPos.position - transform.position;
@@ -80,5 +79,7 @@ public class EnemyAI : AIParent
             attackS.direction = Vector2.zero;
         }
 
+        //Update BT data
+        behaviour.tree.blackboard.currentEn = GetComponent<TankResources>().GetCurrentEn();
     }
 }
