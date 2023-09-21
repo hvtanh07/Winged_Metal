@@ -11,6 +11,8 @@ namespace TheKiwiCoder {
     public class Blackboard {
         public Collider2D randomArea;
         public Vector2 randomPosition;
+        public Vector2 lastSeenPosition;
+        public bool haveLastSeenPos;
         public Transform playerPos;
         public Vector2 target;
         public bool openFire;
