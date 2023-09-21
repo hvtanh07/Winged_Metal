@@ -7,7 +7,7 @@ public class EnemyAI : AIParent
 {
     private TankMovement movementS;
     private TankAttack attackS;
-    private bool openFire;
+    //private bool openFire;
 
     // Start is called before the first frame update
     void Awake()
@@ -28,7 +28,7 @@ public class EnemyAI : AIParent
 
     public void ToggleFire(bool shouldOpenFire)
     {
-        openFire = shouldOpenFire;
+        //openFire = shouldOpenFire;
     }
 
     public void DashEvade(Vector2 dashDirection)
@@ -43,7 +43,7 @@ public class EnemyAI : AIParent
     void Update()
     {
         if (behaviour.tree.blackboard.target == null) return;
-        
+
         if ((targetLastPos - behaviour.tree.blackboard.target).magnitude > targetOffsetRecalculate) //If target has moved too far from last pos then recalculate the path
         {
             RecalculatePath();
@@ -71,7 +71,14 @@ public class EnemyAI : AIParent
 
         //CANON
 
-        if (!openFire) return;
-        attackS.direction = (Vector2)((Vector3)behaviour.tree.blackboard.target - transform.position);
+        if (behaviour.tree.blackboard.openFire)
+        {
+            attackS.direction = behaviour.tree.blackboard.playerPos.position - transform.position;
+        }
+        else
+        {
+            attackS.direction = Vector2.zero;
+        }
+
     }
 }

@@ -971,10 +971,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tankMaxArmor: 100
+  tankCurrentArmor: 0
   tankMaxEnergy: 1000
+  energySupply: 100
   slider: {fileID: 582372407}
   recoveryEfficiency: 0
-  energySupply: 0
 --- !u!1 &843449002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,11 +1109,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  bulletOwner: 0
-  damage: 0
+  bulletOwner: 1
+  damage: 10
   shootingPoint: {fileID: 1255578946}
   rotatingSpeed: 180
-  fireRate: 0
+  fireRate: 2
 --- !u!212 &1104449181
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34979,8 +34980,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pooledObjects: []
-  objectToPool: {fileID: 6112343945182863881, guid: 48a9355cc1e451b45a9e0487c8722f44, type: 3}
-  amountToPool: 5
+  itemsToPool:
+  - amountToPool: 10
+    objectToPool: {fileID: 6112343945182863881, guid: 48a9355cc1e451b45a9e0487c8722f44, type: 3}
+    shouldExpand: 1
 --- !u!4 &1520730025
 Transform:
   m_ObjectHideFlags: 0
@@ -39019,7 +39022,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tankMaxArmor: 100
+  tankCurrentArmor: 0
   tankMaxEnergy: 1000
+  energySupply: 0
   slider: {fileID: 0}
 --- !u!61 &1839519173
 BoxCollider2D:
@@ -39767,7 +39772,7 @@ MonoBehaviour:
   damage: 0
   shootingPoint: {fileID: 1136615891}
   rotatingSpeed: 180
-  fireRate: 1
+  fireRate: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -406,7 +406,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 61c39796f7b32574bab764bd937640fc
-  position: {x: -9, y: 611}
+  position: {x: 1.0000458, y: 634}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
@@ -615,7 +615,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 11844e1ac47466a4cbe5c79ba30de248
-  position: {x: -8.671326, y: 746}
+  position: {x: 1.0000439, y: 778}
   blackboard:
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}

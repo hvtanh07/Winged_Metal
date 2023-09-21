@@ -7,6 +7,7 @@ public class TankResources : MonoBehaviour
 {
     //Armor
     public int tankMaxArmor;
+    [SerializeField]
     protected float tankCurrentArmor;
     protected float lastDamageTime;
 
@@ -15,10 +16,11 @@ public class TankResources : MonoBehaviour
     public int tankMaxEnergy;
     protected float tankCurrentEnergy;
     protected float lastEnergyUsedTime;
+    public int energySupply;
 
     public Slider slider;
 
-    private void Start() //REMOVE WHEN THERE's SCRIPT TO READ FROM SCRIPTABLE OBJECT
+    protected void Start() //REMOVE WHEN THERE's SCRIPT TO READ FROM SCRIPTABLE OBJECT
     {
         tankCurrentArmor = tankMaxArmor;
         tankCurrentEnergy = tankMaxEnergy;

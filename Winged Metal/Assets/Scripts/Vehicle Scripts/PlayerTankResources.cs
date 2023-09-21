@@ -6,19 +6,17 @@ public class PlayerTankResources : TankResources
 {
     public int recoveryEfficiency;
 
-    public int energySupply;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-
+        base.Start();
     }
 
     private void Update()
     {
         if (tankCurrentArmor < tankMaxArmor && Time.time - lastDamageTime > 5.0f)
         {
-
             tankCurrentArmor += recoveryEfficiency * Time.deltaTime;
             if (tankCurrentArmor > tankMaxArmor)
                 tankCurrentArmor = tankMaxArmor;
