@@ -12,6 +12,7 @@ public class CheckHaveLastSeen : DecoratorNode
     }
 
     protected override State OnUpdate() {
+        
         if(blackboard.haveLastSeenPos){
             var state = child.Update();
             return state;
