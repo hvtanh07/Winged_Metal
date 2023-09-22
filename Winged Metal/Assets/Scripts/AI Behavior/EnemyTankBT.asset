@@ -155,7 +155,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9a209daebc510e644a0455c63801c64e
-  position: {x: 517.99994, y: 487.99994}
+  position: {x: 514.9999, y: 488}
   blackboard:
     target: {x: 0, y: 0}
     detectingDistance: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c1251401f4585ed488fe2d9cac339dcf
-  position: {x: 520.99994, y: 721.7751}
+  position: {x: 518, y: 722}
   blackboard:
     target: {x: 0, y: 0}
     detectingDistance: 0
@@ -334,7 +334,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b65c45ef9a1ecf74c8f2f970bd0a7983
-  position: {x: 520.9998, y: 610.99994}
+  position: {x: 518.00006, y: 611}
   blackboard:
     target: {x: 0, y: 0}
     detectingDistance: 0
@@ -389,7 +389,7 @@ MonoBehaviour:
   - {fileID: 3552615407794599456}
   blackboard:
     target: {x: 0, y: 0}
-    detectingDistance: 20
+    detectingDistance: 30
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     playerPos: {fileID: 0}
@@ -418,7 +418,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 61c39796f7b32574bab764bd937640fc
-  position: {x: 72.70922, y: 634}
+  position: {x: 63.00001, y: 643.0001}
   blackboard:
     target: {x: 0, y: 0}
     detectingDistance: 0

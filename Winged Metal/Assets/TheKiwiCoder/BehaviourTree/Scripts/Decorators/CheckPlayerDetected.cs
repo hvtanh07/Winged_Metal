@@ -19,6 +19,7 @@ public class CheckPlayerDetected : DecoratorNode
         if ((blackboard.playerPos.position - context.transform.position).magnitude <= blackboard.detectingDistance &&
             !Physics2D.Linecast(blackboard.playerPos.position,context.transform.position, blackboard.viewBlock))
         {
+            blackboard.target = context.transform.position;
             blackboard.lastSeenPosition = blackboard.playerPos.position;
             if(!blackboard.haveLastSeenPos) blackboard.haveLastSeenPos = true;
             var state = child.Update();

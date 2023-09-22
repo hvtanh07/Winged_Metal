@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TankAttack : MonoBehaviour
 {
-    public enum BulletOwner{
+    public enum BulletOwner
+    {
         player,
         enemy,
         ally
@@ -21,7 +22,8 @@ public class TankAttack : MonoBehaviour
     public float fireRate;
     private float lastShotTime;
     // Start is called before the first frame update
-    void Start(){
+    void Start()
+    {
         resources = GetComponentInParent<TankResources>();
     }
     private void FixedUpdate()
@@ -41,12 +43,14 @@ public class TankAttack : MonoBehaviour
         GameObject bullet = ObjectPooler.SharedInstance.GetPooledObject("Bullet");
         if (bullet != null)
         {
-            resources.ConsumeEnergy(enConsum);
-            bullet.transform.position = shootingPoint.transform.position;
-            bullet.transform.rotation = shootingPoint.transform.rotation;
-            bullet.SetActive(true);
-            bullet.GetComponent<BulletScript>().SetParameter(damage, bulletOwner);
-            bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * 35f;
+            if (resources.ConsumeEnergy(enConsum))
+            {
+                bullet.transform.position = shootingPoint.transform.position;
+                bullet.transform.rotation = shootingPoint.transform.rotation;
+                bullet.SetActive(true);
+                bullet.GetComponent<BulletScript>().SetParameter(damage, bulletOwner);
+                bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * 35f;
+            }
         }
         lastShotTime = Time.time;
         //print("shoot");

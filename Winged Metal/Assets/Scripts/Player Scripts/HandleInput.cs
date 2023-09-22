@@ -52,11 +52,11 @@ public class HandleInput : MonoBehaviour
             cinemachine.GetCinemachineComponent<CinemachineFramingTransposer>().m_XDamping = 0.2f;
             cinemachine.GetCinemachineComponent<CinemachineFramingTransposer>().m_YDamping = 0.2f;
             StartCoroutine(playerTankMovement.DashToggle());
-            StartCoroutine(ResetDampingResetDamping());
+            StartCoroutine(ResetDamping());
         }
 
     }
-    public IEnumerator ResetDampingResetDamping()
+    public IEnumerator ResetDamping()
     {
         yield return new WaitForSeconds(playerTankMovement.dashingTime);
         cinemachine.GetCinemachineComponent<CinemachineFramingTransposer>().m_XDamping = 1f;
