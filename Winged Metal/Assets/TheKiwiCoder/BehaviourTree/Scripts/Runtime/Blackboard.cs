@@ -12,6 +12,8 @@ namespace TheKiwiCoder {
         [Header("Target data--------")]
         public Vector2 target;
         public float detectingDistance;   
+        public float guardingViewDistance;
+        public float attackingDistance;
         [HideInInspector]
         public Vector2 lastSeenPosition;
         public bool haveLastSeenPos;

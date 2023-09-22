@@ -5,8 +5,10 @@ using TheKiwiCoder;
 
 public class CheckRemainEn : DecoratorNode
 {
+    public float energyLevelThreshold;
     protected override void OnStart()
     {
+
     }
 
     protected override void OnStop()
@@ -15,9 +17,12 @@ public class CheckRemainEn : DecoratorNode
 
     protected override State OnUpdate()
     {
-        if (blackboard.currentEn >= 300)
-            return State.Success;
+        if (blackboard.currentEn >= energyLevelThreshold)
+        {
+            var state = child.Update();
+            return state;
+        }
         else
-            return State.Failure;
+            return State.Success;
     }
 }
