@@ -27,5 +27,8 @@ namespace TheKiwiCoder {
         public LayerMask bulletBlock;
         public LayerMask viewBlock;
         public float currentEn;
+        public bool beingHit;
+        //[HideInInspector]
+        public Vector2 bulletPos;
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TheKiwiCoder;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -61,6 +62,11 @@ public class TankResources : MonoBehaviour
     {
         tankCurrentArmor -= damage;
         lastDamageTime = Time.time;
+        BehaviourTreeRunner bt = GetComponent<BehaviourTreeRunner>();
+        if (bt != null){
+            GetComponent<BehaviourTreeRunner>().tree.blackboard.beingHit = true;
+        }
+        
 
         if (tankCurrentArmor <= 0)
         {

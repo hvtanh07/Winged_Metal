@@ -76,4 +76,17 @@ public class TankMovement : MonoBehaviour
         yield return new WaitForSeconds(dashingTime);
         dashing = false;
     }
+    public IEnumerator DashToggle(Vector2 dashDirection)
+    {
+        if (!dashing)
+        {
+            dashing = true;
+            if (direction != Vector2.zero) // if player is holding joystick then dash with it
+            {
+                rb.AddForce(dashDirection.normalized * thursterForce / weight, ForceMode2D.Impulse);
+            }
+            yield return new WaitForSeconds(dashingTime);
+            dashing = false;
+        }
+    }
 }

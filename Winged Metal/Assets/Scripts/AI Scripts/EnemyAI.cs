@@ -82,4 +82,18 @@ public class EnemyAI : AIParent
         //Update BT data
         behaviour.tree.blackboard.currentEn = GetComponent<TankResources>().GetCurrentEn();
     }
+    public void Dash()
+    {
+        if (movementS.IsAbleToDash())
+        {
+            StartCoroutine(movementS.DashToggle());
+        }
+    }
+    public void Dash(Vector2 dashDirection)
+    {
+        if (movementS.IsAbleToDash())
+        {
+            StartCoroutine(movementS.DashToggle(dashDirection));
+        }
+    }
 }

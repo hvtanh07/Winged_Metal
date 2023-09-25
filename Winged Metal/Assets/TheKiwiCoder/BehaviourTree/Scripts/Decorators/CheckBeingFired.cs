@@ -22,6 +22,7 @@ public class CheckBeingFired : DecoratorNode
         if (hit == null) return State.Success;
         if (hit.gameObject.GetComponent<BulletScript>().bulletOwner == TankAttack.BulletOwner.player)
         {
+            blackboard.bulletPos = hit.gameObject.transform.position;
             var state = child.Update();
             return state;
         }

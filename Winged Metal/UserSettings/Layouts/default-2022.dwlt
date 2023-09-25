@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1007
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: BehaviourTreeEditor
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 28
+  controlID: 18
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -320,14 +320,14 @@ MonoBehaviour:
     y: 0
     width: 492
     height: 371
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -884,9 +884,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.504069, y: 1.362816, z: 0.05914063}
+    m_Target: {x: 3.1518312, y: -1.4543887, z: 0.08758744}
     speed: 2
-    m_Value: {x: 6.504069, y: 1.362816, z: 0.05914063}
+    m_Value: {x: 3.1518312, y: -1.4543887, z: 0.08758744}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -936,9 +936,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 24.964167
+    m_Target: 21.55533
     speed: 2
-    m_Value: 24.964167
+    m_Value: 21.55533
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1002,7 +1002,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 005a0000
       m_LastClickedID: 23040
-      m_ExpandedIDs: fafaffff
+      m_ExpandedIDs: fafaffff005a00002e5a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1105,7 +1105,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/TheKiwiCoder/BehaviourTree/Scripts/Composites
+    - Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1113,16 +1113,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/TheKiwiCoder/BehaviourTree/Scripts/Composites
+  - Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Github\Winged_Metal\Winged Metal
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 58}
-    m_SelectedIDs: 645b0000
-    m_LastClickedID: 23396
-    m_ExpandedIDs: 00000000005b0000025b0000045b0000065b0000085b00000a5b00000c5b00000e5b0000105b0000125b0000145b0000165b0000185b00001a5b00001c5b00001e5b0000205b0000225b00005e5b000000ca9a3b
+    scrollPos: {x: 0, y: 138}
+    m_SelectedIDs: 5e5f0000
+    m_LastClickedID: 24414
+    m_ExpandedIDs: 00000000005b0000025b0000045b0000065b0000085b00000a5b00000c5b00000e5b0000105b0000125b0000145b0000165b0000185b00001a5b00001c5b00001e5b0000205b0000225b0000245b0000585f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1175,24 +1175,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 005a0000
-    m_LastClickedInstanceID: 23040
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: eac0feff28450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Dash
+      m_OriginalName: Dash
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 26608
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 13}
     m_CreateAssetUtility:

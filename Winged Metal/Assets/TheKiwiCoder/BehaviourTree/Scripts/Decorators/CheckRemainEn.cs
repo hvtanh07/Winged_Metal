@@ -23,6 +23,6 @@ public class CheckRemainEn : DecoratorNode
             return state;
         }
         else
-            return State.Success;
+            return State.Failure;
     }
 }

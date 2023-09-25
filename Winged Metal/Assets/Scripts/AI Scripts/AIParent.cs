@@ -22,7 +22,7 @@ public class AIParent : MonoBehaviour
     }
 
 
-    protected void RecalculatePath()
+    public void RecalculatePath()
     {
         NavMesh.CalculatePath(transform.position, behaviour.tree.blackboard.target, NavMesh.AllAreas, path);
         targetLastPos = behaviour.tree.blackboard.target;

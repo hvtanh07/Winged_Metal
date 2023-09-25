@@ -32,4 +32,5 @@ public class PlayerTankResources : TankResources
 
         slider.value = tankCurrentEnergy;
     }
+
 }
