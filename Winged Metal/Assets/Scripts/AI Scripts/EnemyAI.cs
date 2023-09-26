@@ -26,19 +26,6 @@ public class EnemyAI : AIParent
         //agent.updateUpAxis = false;
     }
 
-    public void ToggleFire(bool shouldOpenFire)
-    {
-        //openFire = shouldOpenFire;
-    }
-
-    public void DashEvade(Vector2 dashDirection)
-    {
-        if (movementS.IsAbleToDash())
-        {
-            movementS.direction = dashDirection;
-            StartCoroutine(movementS.DashToggle());
-        }
-    }
 
     void Update()
     {
@@ -87,6 +74,7 @@ public class EnemyAI : AIParent
         if (movementS.IsAbleToDash())
         {
             StartCoroutine(movementS.DashToggle());
+            RecalculatePath();
         }
     }
     public void Dash(Vector2 dashDirection)
@@ -94,6 +82,7 @@ public class EnemyAI : AIParent
         if (movementS.IsAbleToDash())
         {
             StartCoroutine(movementS.DashToggle(dashDirection));
+            RecalculatePath();
         }
     }
 }

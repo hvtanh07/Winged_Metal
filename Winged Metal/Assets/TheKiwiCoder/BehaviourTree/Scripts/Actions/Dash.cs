@@ -1,10 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 using TheKiwiCoder;
 
 public class Dash : ActionNode
 {
+    public UnityEvent DashEvent;
     protected override void OnStart() {
     }
 
@@ -12,7 +13,7 @@ public class Dash : ActionNode
     }
 
     protected override State OnUpdate() {
-        Vector2 dashDirection = Vector2.Perpendicular(blackboard.bulletPos);
+        Vector2 dashDirection = Vector2.Perpendicular((Vector2)context.gameObject.transform.position - blackboard.bulletPos);
         context.gameObject.GetComponent<EnemyAI>().Dash(dashDirection);
         return State.Success;
     }
