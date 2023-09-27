@@ -12,6 +12,18 @@ public class PlayerTankResources : TankResources
     {
         base.Start();
     }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (!col.CompareTag("Bullet")) return;
+
+        BulletScript bullet = col.gameObject.GetComponent<BulletScript>();
+        if (bullet == null) return;
+
+        if(bullet.bulletOwner == TankAttack.BulletOwner.enemy){
+            TakeDamage(bullet.GetDamage());
+            col.gameObject.SetActive(false);
+        }
+    }
 
     private void Update()
     {

@@ -23,23 +23,19 @@ public class BulletScript : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public int GetDamage()
+    {
+        return damage;
+    }
+
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if ((bulletOwner == TankAttack.BulletOwner.ally || bulletOwner == TankAttack.BulletOwner.player) && col.CompareTag("Enemy"))
-        {
-            col.gameObject.GetComponent<TankResources>().TakeDamage(damage);
+        if ((bulletBlock.value & (1 << col.gameObject.layer)) > 0){
+            print(col.name);
             gameObject.SetActive(false);
         }
-        if (bulletOwner == TankAttack.BulletOwner.enemy && (col.CompareTag("Player") || col.CompareTag("Ally")))
-        {
-            col.gameObject.GetComponent<TankResources>().TakeDamage(damage);
-            gameObject.SetActive(false);
-        }
-        if ((bulletBlock & (1 << col.gameObject.layer)) != 0)
-        {
-            gameObject.SetActive(false);
-        }           
+            
     }
 
 

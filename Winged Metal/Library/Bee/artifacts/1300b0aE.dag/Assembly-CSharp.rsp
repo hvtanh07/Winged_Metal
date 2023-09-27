@@ -401,6 +401,7 @@
 "Assets/Scripts/Vehicle Scripts/BulletScript.cs"
 "Assets/Scripts/Vehicle Scripts/PlayerTankResources.cs"
 "Assets/Scripts/Vehicle Scripts/TankAttack.cs"
+"Assets/Scripts/Vehicle Scripts/TankBaseData.cs"
 "Assets/Scripts/Vehicle Scripts/TankMovement.cs"
 "Assets/Scripts/Vehicle Scripts/TankResources.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/Breakpoint.cs"

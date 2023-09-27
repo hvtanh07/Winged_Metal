@@ -9,7 +9,9 @@ namespace TheKiwiCoder {
     // Add other properties here that make sense for your specific use case.
     [System.Serializable]
     public class Blackboard {
-        [Header("Target data--------")]
+        [Header("Movement data--------")]
+        public TankResources resources;
+        public TankMovement movement;
         public Vector2 target;
         public float detectingDistance;   
         public float guardingViewDistance;
@@ -23,7 +25,7 @@ namespace TheKiwiCoder {
         public Vector2 randomPosition;
 
         [Header("Combat data--------")]
-        public bool openFire;
+        public TankAttack attack;
         public LayerMask bulletBlock;
         public LayerMask viewBlock;
         public float currentEn;

@@ -12,7 +12,7 @@ public class StopShooting : ActionNode
     }
 
     protected override State OnUpdate() {
-        if(blackboard.openFire == true) blackboard.openFire = false;
+        blackboard.attack.direction = Vector2.zero;
         return State.Success;
     }
 }

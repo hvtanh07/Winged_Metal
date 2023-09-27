@@ -45,6 +45,7 @@ public class TankAttack : MonoBehaviour
         {
             if (resources.ConsumeEnergy(enConsum))
             {
+                print("shooting");
                 bullet.transform.position = shootingPoint.transform.position;
                 bullet.transform.rotation = shootingPoint.transform.rotation;
                 bullet.SetActive(true);
