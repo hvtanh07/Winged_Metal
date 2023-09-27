@@ -55,9 +55,23 @@ public class TankMovement : MonoBehaviour
         }
     }
 
+    public bool Dash()
+    {
+        if(!IsAbleToDash()) return false;
+
+        StartCoroutine(DashToggle());
+        return true;
+    }
+
+     public bool Dash(Vector2 dashDirection)
+    {
+        if(!IsAbleToDash()) return false;
+        StartCoroutine(DashToggle(dashDirection));
+        return true;
+    }
+    
     public bool IsAbleToDash()
     {
-        //also check if there's still energy left
         if (dashing) return false; //already dashing? nothing to do here
         if (!resources.ConsumeEnergy(weight)) return false;//insufficient energy? nothing to do here
         return true;

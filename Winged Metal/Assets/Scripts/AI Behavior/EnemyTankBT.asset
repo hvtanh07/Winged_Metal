@@ -581,7 +581,7 @@ MonoBehaviour:
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
-  child: {fileID: 1137140220148505664}
+  child: {fileID: 6650925679856595465}
   projectileRadarRadius: 5
   projectile:
     serializedVersion: 2

@@ -14,7 +14,7 @@ public class Dash : ActionNode
 
     protected override State OnUpdate() {
         Vector2 dashDirection = Vector2.Perpendicular((Vector2)context.gameObject.transform.position - blackboard.bulletPos);
-        context.gameObject.GetComponent<EnemyAI>().Dash(dashDirection);
+        blackboard.movement.Dash(dashDirection);
         return State.Success;
     }
 }

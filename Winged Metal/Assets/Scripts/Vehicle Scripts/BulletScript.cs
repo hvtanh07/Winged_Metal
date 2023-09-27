@@ -32,7 +32,6 @@ public class BulletScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         if ((bulletBlock.value & (1 << col.gameObject.layer)) > 0){
-            print(col.name);
             gameObject.SetActive(false);
         }
             
