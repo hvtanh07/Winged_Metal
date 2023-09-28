@@ -38975,7 +38975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enginePower: 3000
-  thursterForce: 5000
+  thursterForce: 3000
   dashingTime: 0.5
   steeringTorque: 160
   weight: 70

@@ -95,7 +95,7 @@ public class TankMovement : MonoBehaviour
         if (!dashing)
         {
             dashing = true;
-            if (direction != Vector2.zero) // if player is holding joystick then dash with it
+            if (dashDirection != Vector2.zero)
             {
                 rb.AddForce(dashDirection.normalized * thursterForce / weight, ForceMode2D.Impulse);
             }

@@ -168,7 +168,7 @@ MonoBehaviour:
   drawGizmos: 0
   child: {fileID: -2477931535577651643}
   restartOnSuccess: 1
-  restartOnFailure: 0
+  restartOnFailure: 1
 --- !u!114 &-5317087394703041918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +708,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9366bb8580839904ea6e8b62648a6b15
-  position: {x: 343.00003, y: 964.0001}
+  position: {x: 342.99997, y: 1082.6283}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -958,7 +958,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 57c4835e75c1cba4581c052340d83429
-  position: {x: 192.99997, y: 960}
+  position: {x: 247, y: 935.9999}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
