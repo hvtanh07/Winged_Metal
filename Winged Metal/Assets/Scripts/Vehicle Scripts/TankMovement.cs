@@ -55,9 +55,23 @@ public class TankMovement : MonoBehaviour
         }
     }
 
+    public bool Dash()
+    {
+        if(!IsAbleToDash()) return false;
+
+        StartCoroutine(DashToggle());
+        return true;
+    }
+
+     public bool Dash(Vector2 dashDirection)
+    {
+        if(!IsAbleToDash()) return false;
+        StartCoroutine(DashToggle(dashDirection));
+        return true;
+    }
+    
     public bool IsAbleToDash()
     {
-        //also check if there's still energy left
         if (dashing) return false; //already dashing? nothing to do here
         if (!resources.ConsumeEnergy(weight)) return false;//insufficient energy? nothing to do here
         return true;
@@ -81,7 +95,7 @@ public class TankMovement : MonoBehaviour
         if (!dashing)
         {
             dashing = true;
-            if (direction != Vector2.zero) // if player is holding joystick then dash with it
+            if (dashDirection != Vector2.zero)
             {
                 rb.AddForce(dashDirection.normalized * thursterForce / weight, ForceMode2D.Impulse);
             }

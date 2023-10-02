@@ -15,8 +15,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 461aa9e7ce5793e4dae09e343ce2d5e6
-  position: {x: 96.55162, y: 1225}
+  position: {x: 306.1076, y: 1237.0001}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -26,20 +29,58 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
   children:
   - {fileID: 8660968929561085194}
+--- !u!114 &-7656846187745920301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5c02c66787df3324dad0ff3461039f17
+  position: {x: 1272.1252, y: 832}
+  blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
+    target: {x: 0, y: 0}
+    detectingDistance: 0
+    guardingViewDistance: 0
+    attackingDistance: 0
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    playerPos: {fileID: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    beingHit: 0
+    bulletPos: {x: 0, y: 0}
+  description: 
+  drawGizmos: 0
+  duration: 1
 --- !u!114 &-7306593742041954706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,8 +96,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: dd42259e34a41244fa278ffc8ca050bd
-  position: {x: 21.551605, y: 936}
+  position: {x: 231.10759, y: 948}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -66,14 +110,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -81,45 +123,6 @@ MonoBehaviour:
   children:
   - {fileID: 7376962899481565226}
   - {fileID: 6785311346264664767}
---- !u!114 &-6434386032281758074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1625eeec58240b45b5b11a1ec30fed2, type: 3}
-  m_Name: CheckPlayerDetected
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 1
-  guid: b5d1f2ccf7d0aa74cb1390b35a1281a0
-  position: {x: 131.55162, y: 516}
-  blackboard:
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    currentEn: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  child: {fileID: 920872801428038930}
 --- !u!114 &-5464259901458567646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +140,9 @@ MonoBehaviour:
   guid: f5cbd25d1cac2ad468b8afa6aa9b9d7b
   position: {x: 517.99994, y: 174.11357}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -146,22 +152,60 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
-  child: {fileID: -2477931535577651643}
+  child: {fileID: -1536950340880430774}
   restartOnSuccess: 1
   restartOnFailure: 0
---- !u!114 &-5317087394703041918
+--- !u!114 &-4495896854219428192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798d0bf513235514f8681fa128919d02, type: 3}
+  m_Name: Alerted
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d2162ada81608f14a90cb3638b0b7c19
+  position: {x: 231.10759, y: 685}
+  blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
+    target: {x: 0, y: 0}
+    detectingDistance: 0
+    guardingViewDistance: 0
+    attackingDistance: 0
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    playerPos: {fileID: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    beingHit: 0
+    bulletPos: {x: 0, y: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: 3552615407794599456}
+--- !u!114 &-3394211539413373595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,9 +219,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 0c192c4a7a50ffb4fbf7a44eb3c4c201
-  position: {x: 930.7506, y: 695.14294}
+  guid: 8c1a6fd670344f64eb6a91fa29f4afef
+  position: {x: 945.1252, y: 832}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -187,95 +234,16 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
---- !u!114 &-4608374739500681382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c908e2eebf008414d93b4de1a923e50f, type: 3}
-  m_Name: MoveToRandomPosition
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 78784e4e860bd93498dbf6335c703cba
-  position: {x: 1014.7506, y: 774.14294}
-  blackboard:
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    currentEn: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
---- !u!114 &-3560474819245438500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c469d0e19af42a4ca90acb95feb73b4, type: 3}
-  m_Name: CheckHaveLastSeen
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 9a209daebc510e644a0455c63801c64e
-  position: {x: 662.7506, y: 516.143}
-  blackboard:
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    currentEn: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  child: {fileID: -876337138272789899}
 --- !u!114 &-3149218573423280174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +261,9 @@ MonoBehaviour:
   guid: 83ccb18abfe30e54e8b5e6606e043fc4
   position: {x: 516.9999, y: -108.88641}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -302,20 +273,18 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 1
   child: {fileID: 3976025970289811109}
---- !u!114 &-2692557029673652251
+--- !u!114 &-2607415212526695931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -324,14 +293,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0fdbee927d2004a9c78d1aadb18afb, type: 3}
-  m_Name: MoveToLastSeen
+  m_Script: {fileID: 11500000, guid: c908e2eebf008414d93b4de1a923e50f, type: 3}
+  m_Name: MoveToRandomPosition
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: c582b327f9b010f4b98f41e9d4945e4e
-  position: {x: 741, y: 900}
+  guid: 6aa60d32d4be5e546ba7786c975df03a
+  position: {x: 1095.1252, y: 832}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -341,59 +313,16 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
---- !u!114 &-2530999953707978300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2932073b8a6c3b34391576c45d359457, type: 3}
-  m_Name: Parallel
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: c1251401f4585ed488fe2d9cac339dcf
-  position: {x: 665.7506, y: 750.14294}
-  blackboard:
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    currentEn: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  children:
-  - {fileID: 1269800544702574624}
-  - {fileID: -2692557029673652251}
 --- !u!114 &-2477931535577651643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,8 +338,11 @@ MonoBehaviour:
   state: 0
   started: 1
   guid: ecf0b4b0b8817864da0b84715cac6682
-  position: {x: 518, y: 296}
+  position: {x: 341.9999, y: 483}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -420,144 +352,61 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
+    beingHit: 0
+    bulletPos: {x: 0, y: 0}
+  description: Canon Control
+  drawGizmos: 0
+  children:
+  - {fileID: -4495896854219428192}
+  - {fileID: 1269800544702574624}
+--- !u!114 &-1536950340880430774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2932073b8a6c3b34391576c45d359457, type: 3}
+  m_Name: Parallel
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7c0422137b6b9a24fb3792bbf7038669
+  position: {x: 517.99994, y: 297.43738}
+  blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
+    target: {x: 0, y: 0}
+    detectingDistance: 0
+    guardingViewDistance: 0
+    attackingDistance: 0
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    playerPos: {fileID: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
   children:
-  - {fileID: -6434386032281758074}
-  - {fileID: -1320712905736487236}
-  - {fileID: -3560474819245438500}
-  - {fileID: 3580372634807297153}
---- !u!114 &-1320712905736487236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d7be70cfd440446ba96dd610825578, type: 3}
-  m_Name: IsBeingHit
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 0b69d85709ef5294682263b5543478ae
-  position: {x: 396.99997, y: 516}
-  blackboard:
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    currentEn: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  child: {fileID: 5241715107007246761}
---- !u!114 &-876337138272789899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e658b1bd308bc5c429f5a9b404a04943, type: 3}
-  m_Name: Inverter
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: b65c45ef9a1ecf74c8f2f970bd0a7983
-  position: {x: 665.7506, y: 639.14307}
-  blackboard:
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    currentEn: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  child: {fileID: -2530999953707978300}
---- !u!114 &-451133784526011412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f58d4ce1b75683248b108be7d1ca599b, type: 3}
-  m_Name: CheckBeingFired
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 7686c858460a6204380aa55dd4ec5887
-  position: {x: 246.55167, y: 795.99994}
-  blackboard:
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    currentEn: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  child: {fileID: 6650925679856595465}
-  projectileRadarRadius: 5
-  projectile:
-    serializedVersion: 2
-    m_Bits: 256
+  - {fileID: -2477931535577651643}
+  - {fileID: 1042115592671385950}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,30 +426,32 @@ MonoBehaviour:
   - {fileID: 3976025970289811109}
   - {fileID: 6855194441862281800}
   - {fileID: -5464259901458567646}
-  - {fileID: -5317087394703041918}
-  - {fileID: 3580372634807297153}
-  - {fileID: -4608374739500681382}
-  - {fileID: 7239214763634053632}
   - {fileID: -2477931535577651643}
   - {fileID: 7376962899481565226}
-  - {fileID: -6434386032281758074}
-  - {fileID: 920872801428038930}
-  - {fileID: -3560474819245438500}
-  - {fileID: -2692557029673652251}
-  - {fileID: -876337138272789899}
-  - {fileID: -2530999953707978300}
   - {fileID: 1269800544702574624}
   - {fileID: 3552615407794599456}
-  - {fileID: -451133784526011412}
   - {fileID: -7306593742041954706}
   - {fileID: 6785311346264664767}
-  - {fileID: 1137140220148505664}
   - {fileID: 8660968929561085194}
   - {fileID: -8404802319423541279}
-  - {fileID: -1320712905736487236}
-  - {fileID: 5241715107007246761}
-  - {fileID: 6650925679856595465}
+  - {fileID: -1536950340880430774}
+  - {fileID: 1042115592671385950}
+  - {fileID: 3031321792646179376}
+  - {fileID: 4237024048356510416}
+  - {fileID: 4912250204176178014}
+  - {fileID: -3394211539413373595}
+  - {fileID: -2607415212526695931}
+  - {fileID: -7656846187745920301}
+  - {fileID: 7539700167854075536}
+  - {fileID: 1652449810437900057}
+  - {fileID: 1769462779950047592}
+  - {fileID: 3709142604895544348}
+  - {fileID: 6970256378768892782}
+  - {fileID: -4495896854219428192}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 30
     guardingViewDistance: 20
@@ -610,17 +461,15 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 21.34, y: 2.17}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 128
     viewBlock:
       serializedVersion: 2
       m_Bits: 128
-    currentEn: 1000
     beingHit: 0
     bulletPos: {x: 0, y: 0}
---- !u!114 &920872801428038930
+--- !u!114 &1042115592671385950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -629,14 +478,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2932073b8a6c3b34391576c45d359457, type: 3}
-  m_Name: Parallel
+  m_Script: {fileID: 11500000, guid: a7bf77e26564daa41815cba042a730aa, type: 3}
+  m_Name: InterruptSelector
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 61c39796f7b32574bab764bd937640fc
-  position: {x: 131.55162, y: 652.99994}
+  guid: 6d36eb7e7acdab24e8768e5c1d45bb54
+  position: {x: 695.8516, y: 483.00006}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -646,60 +498,20 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
-  description: 
+  description: Movement Control
   drawGizmos: 0
   children:
-  - {fileID: 3552615407794599456}
-  - {fileID: -451133784526011412}
---- !u!114 &1137140220148505664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df9e411f4095d0a44acd9a25323f5e73, type: 3}
-  m_Name: Log
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 9366bb8580839904ea6e8b62648a6b15
-  position: {x: 343.00003, y: 964.0001}
-  blackboard:
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    openFire: 0
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    currentEn: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  message: Dash
+  - {fileID: 1652449810437900057}
+  - {fileID: 3031321792646179376}
+  - {fileID: 4912250204176178014}
 --- !u!114 &1269800544702574624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,8 +527,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0915a35e0f92e6941bc6c9ac948ef07f
-  position: {x: 588, y: 900}
+  position: {x: 401.4425, y: 685}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -726,18 +541,138 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
+--- !u!114 &1652449810437900057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798d0bf513235514f8681fa128919d02, type: 3}
+  m_Name: Alerted
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 81446624483447040b71b8d13c1f6eb4
+  position: {x: 593.85156, y: 685.00006}
+  blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
+    target: {x: 0, y: 0}
+    detectingDistance: 0
+    guardingViewDistance: 0
+    attackingDistance: 0
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    playerPos: {fileID: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    beingHit: 0
+    bulletPos: {x: 0, y: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: 1769462779950047592}
+--- !u!114 &1769462779950047592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2932073b8a6c3b34391576c45d359457, type: 3}
+  m_Name: Parallel
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 40b525a48d1892b4f827137d59c6d565
+  position: {x: 593.85156, y: 832.00006}
+  blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
+    target: {x: 0, y: 0}
+    detectingDistance: 0
+    guardingViewDistance: 0
+    attackingDistance: 0
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    playerPos: {fileID: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    beingHit: 0
+    bulletPos: {x: 0, y: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 7539700167854075536}
+  - {fileID: 3709142604895544348}
+--- !u!114 &3031321792646179376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c469d0e19af42a4ca90acb95feb73b4, type: 3}
+  m_Name: CheckHaveLastSeen
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b86abb5685a3fb446852000287e9a793
+  position: {x: 769.8516, y: 685.00006}
+  blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
+    target: {x: 0, y: 0}
+    detectingDistance: 0
+    guardingViewDistance: 0
+    attackingDistance: 0
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    playerPos: {fileID: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    beingHit: 0
+    bulletPos: {x: 0, y: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: 4237024048356510416}
 --- !u!114 &3552615407794599456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,8 +688,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a12b193485ab8ac4cb34c283a4707567
-  position: {x: 21.551605, y: 795.99994}
+  position: {x: 231.10759, y: 808}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -764,21 +702,19 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
   child: {fileID: -7306593742041954706}
   energyLevelThreshold: 100
---- !u!114 &3580372634807297153
+--- !u!114 &3709142604895544348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -787,14 +723,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
-  m_Name: Sequencer
+  m_Script: {fileID: 11500000, guid: f58d4ce1b75683248b108be7d1ca599b, type: 3}
+  m_Name: CheckBeingFired
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 3bfb3c09ae9a3084a9122ddd7e16b1c1
-  position: {x: 1028.7506, y: 516.143}
+  guid: 4b24097d1e73e944ab8f26fad44cc5cf
+  position: {x: 681.8517, y: 1002.0001}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -804,22 +743,21 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
-  children:
-  - {fileID: -5317087394703041918}
-  - {fileID: -4608374739500681382}
-  - {fileID: 7239214763634053632}
+  child: {fileID: 6970256378768892782}
+  projectileRadarRadius: 10
+  projectile:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &3976025970289811109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -837,6 +775,9 @@ MonoBehaviour:
   guid: f96837f284ec5984caf3904c1ee9f63c
   position: {x: 516.9999, y: 26.11359}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -846,14 +787,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -861,7 +800,7 @@ MonoBehaviour:
   children:
   - {fileID: 6855194441862281800}
   - {fileID: -5464259901458567646}
---- !u!114 &5241715107007246761
+--- !u!114 &4237024048356510416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -870,14 +809,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69c1069f3d273e846b6251e7e67386ad, type: 3}
-  m_Name: UpdateLastSeenPos
+  m_Script: {fileID: 11500000, guid: dd0fdbee927d2004a9c78d1aadb18afb, type: 3}
+  m_Name: MoveToLastSeen
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 4417af77b81637243a43a6f1f49860f5
-  position: {x: 396.99997, y: 662.99994}
+  guid: a095e00dc5afa3145b4b06b70c4c21eb
+  position: {x: 772.8516, y: 832.00006}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -887,19 +829,17 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
---- !u!114 &6650925679856595465
+--- !u!114 &4912250204176178014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -908,14 +848,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b23b620925a9f6048910dd9514235407, type: 3}
-  m_Name: Dash
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 57c4835e75c1cba4581c052340d83429
-  position: {x: 192.99997, y: 960}
+  guid: 0749f092c5a22ce4c843ce7f1949bd10
+  position: {x: 958.12524, y: 685}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -925,33 +868,20 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
-  DashEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  children:
+  - {fileID: -3394211539413373595}
+  - {fileID: -2607415212526695931}
+  - {fileID: -7656846187745920301}
 --- !u!114 &6785311346264664767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,8 +897,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 30a7657f7e891fe40bc623ae355e7a46
-  position: {x: 96.55162, y: 1102}
+  position: {x: 306.1076, y: 1114}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -978,14 +911,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -1009,6 +940,9 @@ MonoBehaviour:
   guid: 41b54b3708e776346a1ee92a6459c5c6
   position: {x: 341.99994, y: 174.11357}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1018,19 +952,17 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
---- !u!114 &7239214763634053632
+--- !u!114 &6970256378768892782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1039,14 +971,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
-  m_Name: Wait
+  m_Script: {fileID: 11500000, guid: b23b620925a9f6048910dd9514235407, type: 3}
+  m_Name: Dash
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 630acb95af3fd754d9548e80d979dd73
-  position: {x: 1128.7505, y: 695.14294}
+  guid: fb25d7bc38ce5144d9db4399d14ed9e8
+  position: {x: 681.8517, y: 1138}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1056,19 +991,16 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
-  duration: 2
 --- !u!114 &7376962899481565226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1084,8 +1016,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 11844e1ac47466a4cbe5c79ba30de248
-  position: {x: -81.448364, y: 1102}
+  position: {x: 156.00005, y: 1114}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1095,14 +1030,51 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
+    beingHit: 0
+    bulletPos: {x: 0, y: 0}
+  description: 
+  drawGizmos: 0
+--- !u!114 &7539700167854075536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c1069f3d273e846b6251e7e67386ad, type: 3}
+  m_Name: UpdateLastSeenPos
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: aca43e7f750f1954ca4b976724869fdb
+  position: {x: 518.8516, y: 1002.0001}
+  blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
+    target: {x: 0, y: 0}
+    detectingDistance: 0
+    guardingViewDistance: 0
+    attackingDistance: 0
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    playerPos: {fileID: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -1122,8 +1094,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3cec8334a19560f48802cd967adc111f
-  position: {x: 96.55162, y: 1355}
+  position: {x: 306.1076, y: 1367}
   blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1133,14 +1108,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    openFire: 0
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 

@@ -12,7 +12,7 @@ public class ShootTarget : ActionNode
     }
 
     protected override State OnUpdate() {
-        if(blackboard.openFire == false) blackboard.openFire = true;
+        blackboard.attack.direction = blackboard.playerPos.position - context.transform.position;
         return State.Success;
     }
 }

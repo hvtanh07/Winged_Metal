@@ -8,6 +8,7 @@ public class TankResources : MonoBehaviour
 {
     //Armor
     public int tankMaxArmor;
+    [SerializeField]
     protected float tankCurrentArmor;
     protected float lastDamageTime;
 
@@ -77,6 +78,10 @@ public class TankResources : MonoBehaviour
     public float GetCurrentEn()
     {
         return tankCurrentEnergy;
+    }
+    public float GetCurrentArmor()
+    {
+        return tankCurrentArmor;
     }
 
 

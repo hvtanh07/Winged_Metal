@@ -17,7 +17,7 @@ public class CheckRemainEn : DecoratorNode
 
     protected override State OnUpdate()
     {
-        if (blackboard.currentEn >= energyLevelThreshold)
+        if (blackboard.resources.GetCurrentEn() >= energyLevelThreshold)
         {
             var state = child.Update();
             return state;
