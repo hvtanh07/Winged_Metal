@@ -9,7 +9,7 @@ public class CheckBeingFired : DecoratorNode
     public LayerMask projectile;
     protected override void OnStart()
     {
-
+        
     }
 
     protected override void OnStop()
@@ -19,7 +19,7 @@ public class CheckBeingFired : DecoratorNode
     protected override State OnUpdate()
     {
         Collider2D hit = Physics2D.OverlapCircle(context.transform.position, projectileRadarRadius, projectile);
-        if (hit == null) return State.Failure; 
+        if (hit == null) return State.Success; 
 
         if (hit.gameObject.GetComponent<BulletScript>().bulletOwner == TankAttack.BulletOwner.player)
         {
@@ -28,6 +28,6 @@ public class CheckBeingFired : DecoratorNode
             return state;
         }
 
-        //return State.Failure;
+        return State.Success;
     }
 }

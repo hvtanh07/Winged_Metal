@@ -5,7 +5,6 @@ using TheKiwiCoder;
 
 public class Dash : ActionNode
 {
-    public UnityEvent DashEvent;
     protected override void OnStart() {
     }
 

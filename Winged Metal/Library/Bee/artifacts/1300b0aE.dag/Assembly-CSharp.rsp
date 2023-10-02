@@ -422,6 +422,7 @@
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Composites/RandomSelector.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Composites/Selector.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Composites/Sequencer.cs"
+"Assets/TheKiwiCoder/BehaviourTree/Scripts/Decorators/Alerted.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Decorators/CheckBeingFired.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Decorators/CheckHaveLastSeen.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Decorators/CheckPlayerDetected.cs"

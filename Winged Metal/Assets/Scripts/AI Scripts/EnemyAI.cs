@@ -51,7 +51,7 @@ public class EnemyAI : AIParent
     {
         if (behaviour.tree.blackboard.target == null) return;
 
-        if ((targetLastPos - behaviour.tree.blackboard.target).magnitude > targetOffsetRecalculate) //If target has moved too far from last pos then recalculate the path
+        if (targetLastPos != behaviour.tree.blackboard.target) //If target has moved too far from last pos then recalculate the path
         {
             RecalculatePath();
         }

@@ -16,7 +16,7 @@ namespace TheKiwiCoder {
         public float detectingDistance;   
         public float guardingViewDistance;
         public float attackingDistance;
-        [HideInInspector]
+        //[HideInInspector]
         public Vector2 lastSeenPosition;
         public bool haveLastSeenPos;
         public Transform playerPos;
