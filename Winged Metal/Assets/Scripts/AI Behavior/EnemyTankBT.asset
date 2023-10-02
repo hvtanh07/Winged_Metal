@@ -19,6 +19,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -28,14 +29,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -57,10 +56,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 5c02c66787df3324dad0ff3461039f17
-  position: {x: 1356, y: 846}
+  position: {x: 1374, y: 832}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -70,14 +70,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -102,6 +100,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -111,14 +110,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -126,47 +123,6 @@ MonoBehaviour:
   children:
   - {fileID: 7376962899481565226}
   - {fileID: 6785311346264664767}
---- !u!114 &-6434386032281758074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1625eeec58240b45b5b11a1ec30fed2, type: 3}
-  m_Name: CheckPlayerDetected
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 1
-  guid: b5d1f2ccf7d0aa74cb1390b35a1281a0
-  position: {x: 32.00003, y: 685}
-  blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    currentEn: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  child: {fileID: 3552615407794599456}
 --- !u!114 &-5464259901458567646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +142,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -195,14 +152,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -210,6 +165,46 @@ MonoBehaviour:
   child: {fileID: -1536950340880430774}
   restartOnSuccess: 1
   restartOnFailure: 0
+--- !u!114 &-4495896854219428192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798d0bf513235514f8681fa128919d02, type: 3}
+  m_Name: Alerted
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d2162ada81608f14a90cb3638b0b7c19
+  position: {x: 31.999996, y: 685}
+  blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
+    target: {x: 0, y: 0}
+    detectingDistance: 0
+    guardingViewDistance: 0
+    attackingDistance: 0
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    playerPos: {fileID: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    beingHit: 0
+    bulletPos: {x: 0, y: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: 3552615407794599456}
 --- !u!114 &-3394211539413373595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,10 +220,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8c1a6fd670344f64eb6a91fa29f4afef
-  position: {x: 1029, y: 846}
+  position: {x: 1047, y: 832}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -238,14 +234,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -269,6 +263,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -278,14 +273,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -312,6 +305,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -321,14 +315,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -349,10 +341,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6aa60d32d4be5e546ba7786c975df03a
-  position: {x: 1179, y: 846}
+  position: {x: 1197, y: 832}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -362,14 +355,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -393,6 +384,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -402,20 +394,18 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
   children:
-  - {fileID: -6434386032281758074}
+  - {fileID: -4495896854219428192}
   - {fileID: -3380271202986053396}
 --- !u!114 &-1536950340880430774
 MonoBehaviour:
@@ -436,6 +426,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -445,14 +436,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -481,7 +470,6 @@ MonoBehaviour:
   - {fileID: -5464259901458567646}
   - {fileID: -2477931535577651643}
   - {fileID: 7376962899481565226}
-  - {fileID: -6434386032281758074}
   - {fileID: 1269800544702574624}
   - {fileID: 3552615407794599456}
   - {fileID: -7306593742041954706}
@@ -503,9 +491,11 @@ MonoBehaviour:
   - {fileID: 1769462779950047592}
   - {fileID: 3709142604895544348}
   - {fileID: 6970256378768892782}
+  - {fileID: -4495896854219428192}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 30
     guardingViewDistance: 20
@@ -515,14 +505,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 21.34, y: 2.17}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 128
     viewBlock:
       serializedVersion: 2
       m_Bits: 128
-    currentEn: 1000
     beingHit: 0
     bulletPos: {x: 0, y: 0}
 --- !u!114 &1042115592671385950
@@ -544,6 +532,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -553,14 +542,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -588,6 +575,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -597,14 +585,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -628,6 +614,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -637,14 +624,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -669,6 +654,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -678,14 +664,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -712,6 +696,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -721,14 +706,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -753,6 +736,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -762,14 +746,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -795,6 +777,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -804,14 +787,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -840,6 +821,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -849,14 +831,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -883,6 +863,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -892,14 +873,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -923,6 +902,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -932,14 +912,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -967,6 +945,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -976,14 +955,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -1009,6 +986,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1018,14 +996,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -1049,6 +1025,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1058,14 +1035,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -1089,6 +1064,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1098,19 +1074,17 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
-  duration: 1
+  duration: 7
 --- !u!114 &7376962899481565226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,6 +1104,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1139,14 +1114,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -1170,6 +1143,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1179,14 +1153,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 
@@ -1210,6 +1182,7 @@ MonoBehaviour:
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
+    attack: {fileID: 0}
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1219,14 +1192,12 @@ MonoBehaviour:
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    attack: {fileID: 0}
     bulletBlock:
       serializedVersion: 2
       m_Bits: 0
     viewBlock:
       serializedVersion: 2
       m_Bits: 0
-    currentEn: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
   description: 

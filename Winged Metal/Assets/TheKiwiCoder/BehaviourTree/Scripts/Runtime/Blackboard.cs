@@ -9,14 +9,19 @@ namespace TheKiwiCoder {
     // Add other properties here that make sense for your specific use case.
     [System.Serializable]
     public class Blackboard {
-        [Header("Movement data--------")]
+        [HideInInspector]
         public TankResources resources;
+        [HideInInspector]
         public TankMovement movement;
+        [HideInInspector]
+        public TankAttack attack;
+
+        [Header("Movement data--------")]
         public Vector2 target;
         public float detectingDistance;   
         public float guardingViewDistance;
         public float attackingDistance;
-        //[HideInInspector]
+        [HideInInspector]
         public Vector2 lastSeenPosition;
         public bool haveLastSeenPos;
         public Transform playerPos;
@@ -25,10 +30,8 @@ namespace TheKiwiCoder {
         public Vector2 randomPosition;
 
         [Header("Combat data--------")]
-        public TankAttack attack;
         public LayerMask bulletBlock;
         public LayerMask viewBlock;
-        public float currentEn;
         public bool beingHit;
         [HideInInspector]
         public Vector2 bulletPos;

@@ -74,10 +74,6 @@ public class EnemyAI : AIParent
         {
             movementS.direction = Vector3.zero; //if there's no path or AI have reached target then don't move around
         }
-
-
-        //Update BT data
-        behaviour.tree.blackboard.currentEn = GetComponent<TankResources>().GetCurrentEn();
     }
     public void Dash()
     {
