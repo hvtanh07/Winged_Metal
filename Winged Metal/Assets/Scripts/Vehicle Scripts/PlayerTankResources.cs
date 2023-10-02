@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerTankResources : TankResources
 {
     public int recoveryEfficiency;
+    public LayerMask damageDealer;
 
     
     // Start is called before the first frame update
@@ -14,7 +15,8 @@ public class PlayerTankResources : TankResources
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (!col.CompareTag("Bullet")) return;
+        //if (!col.CompareTag("Bullet")) return;
+        if (!((damageDealer.value & (1 << col.gameObject.layer)) > 0)) return;
 
         BulletScript bullet = col.gameObject.GetComponent<BulletScript>();
         if (bullet == null) return;

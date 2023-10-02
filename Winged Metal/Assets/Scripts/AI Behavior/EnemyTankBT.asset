@@ -40,7 +40,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   children:
-  - {fileID: 8660968929561085194}
+  - {fileID: 6457100662190702972}
 --- !u!114 &-7656846187745920301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   children:
-  - {fileID: 7376962899481565226}
+  - {fileID: 3939410962012866231}
   - {fileID: 6785311346264664767}
 --- !u!114 &-5464259901458567646
 MonoBehaviour:
@@ -427,12 +427,10 @@ MonoBehaviour:
   - {fileID: 6855194441862281800}
   - {fileID: -5464259901458567646}
   - {fileID: -2477931535577651643}
-  - {fileID: 7376962899481565226}
   - {fileID: 1269800544702574624}
   - {fileID: 3552615407794599456}
   - {fileID: -7306593742041954706}
   - {fileID: 6785311346264664767}
-  - {fileID: 8660968929561085194}
   - {fileID: -8404802319423541279}
   - {fileID: -1536950340880430774}
   - {fileID: 1042115592671385950}
@@ -448,6 +446,8 @@ MonoBehaviour:
   - {fileID: 3709142604895544348}
   - {fileID: 6970256378768892782}
   - {fileID: -4495896854219428192}
+  - {fileID: 6457100662190702972}
+  - {fileID: 3939410962012866231}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -758,6 +758,46 @@ MonoBehaviour:
   projectile:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &3939410962012866231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9e411f4095d0a44acd9a25323f5e73, type: 3}
+  m_Name: Log
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a85aa8bb70ff4024ab25d71ee23f6bc6
+  position: {x: 156.00008, y: 1114}
+  blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
+    target: {x: 0, y: 0}
+    detectingDistance: 0
+    guardingViewDistance: 0
+    attackingDistance: 0
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    playerPos: {fileID: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    beingHit: 0
+    bulletPos: {x: 0, y: 0}
+  description: 
+  drawGizmos: 0
+  message: 
 --- !u!114 &3976025970289811109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,6 +922,45 @@ MonoBehaviour:
   - {fileID: -3394211539413373595}
   - {fileID: -2607415212526695931}
   - {fileID: -7656846187745920301}
+--- !u!114 &6457100662190702972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25138bfaba277045bb7220f6bedddfc, type: 3}
+  m_Name: SecondWeapon
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e4bcf79f8263f344d9a9a6bb13c6ab65
+  position: {x: 306.0001, y: 1376.2003}
+  blackboard:
+    resources: {fileID: 0}
+    movement: {fileID: 0}
+    attack: {fileID: 0}
+    target: {x: 0, y: 0}
+    detectingDistance: 0
+    guardingViewDistance: 0
+    attackingDistance: 0
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    playerPos: {fileID: 0}
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    bulletBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    viewBlock:
+      serializedVersion: 2
+      m_Bits: 0
+    beingHit: 0
+    bulletPos: {x: 0, y: 0}
+  description: 
+  drawGizmos: 0
 --- !u!114 &6785311346264664767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,45 +1080,6 @@ MonoBehaviour:
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
---- !u!114 &7376962899481565226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 994b5d23df7cff94a98123082fb9077d, type: 3}
-  m_Name: ShootTarget
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 11844e1ac47466a4cbe5c79ba30de248
-  position: {x: 156.00005, y: 1114}
-  blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
 --- !u!114 &7539700167854075536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1079,43 +1119,3 @@ MonoBehaviour:
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
---- !u!114 &8660968929561085194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df9e411f4095d0a44acd9a25323f5e73, type: 3}
-  m_Name: Log
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 3cec8334a19560f48802cd967adc111f
-  position: {x: 306.1076, y: 1367}
-  blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  message: Fire Missile

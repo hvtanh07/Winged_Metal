@@ -11,16 +11,28 @@ public class TankAttack : MonoBehaviour
         ally
     }
     [HideInInspector]
+    [Header("Cannon Stats--------")]
     public Vector2 direction;
-    public int enConsum;
+
     public BulletOwner bulletOwner;
-    public int damage;
-    public Transform shootingPoint;
+
     public float rotatingSpeed;
+    [Header("Main Cannon--------")]
+    public Transform shootingPoint;
+    public int damage;
+    public float fireRate;
+    public int enConsum;
+    [Header("2nd Weapon--------")]
+
+    public Transform[] missileShootingPoint;
+    public int secondEnConsum;
+    public float secondCooldown;
+
     private Quaternion toRotation;
     private TankResources resources;
-    public float fireRate;
+
     private float lastShotTime;
+    private float last2ShotTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,5 +66,28 @@ public class TankAttack : MonoBehaviour
         }
         lastShotTime = Time.time;
         //print("shoot");
+    }
+    public void ShootMissile(Transform target)
+    {
+        if (Time.time - last2ShotTime < secondCooldown) return;
+
+        foreach (Transform Point in missileShootingPoint)
+        {
+            print("he");
+            GameObject missile = ObjectPooler.SharedInstance.GetPooledObject("Missile");
+            if (missile != null)
+            {
+                if (resources.ConsumeEnergy(enConsum))
+                {
+                    missile.transform.position = Point.transform.position;
+                    missile.transform.rotation = Point.transform.rotation;
+                    missile.SetActive(true);
+                    missile.GetComponent<BulletScript>().SetParameter(damage, bulletOwner);
+                    missile.GetComponent<MissileScript>().AssignTarget(target);
+                }
+            }
+            last2ShotTime = Time.time;
+        }
+
     }
 }
