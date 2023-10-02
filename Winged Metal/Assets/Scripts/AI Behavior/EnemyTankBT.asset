@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 461aa9e7ce5793e4dae09e343ce2d5e6
-  position: {x: 107.00005, y: 1237}
+  position: {x: 306.1076, y: 1237.0001}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -56,7 +56,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 5c02c66787df3324dad0ff3461039f17
-  position: {x: 1374, y: 832}
+  position: {x: 1272.1252, y: 832}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: dd42259e34a41244fa278ffc8ca050bd
-  position: {x: 32.00003, y: 948}
+  position: {x: 231.10759, y: 948}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -180,7 +180,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d2162ada81608f14a90cb3638b0b7c19
-  position: {x: 31.999996, y: 685}
+  position: {x: 231.10759, y: 685}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -220,7 +220,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8c1a6fd670344f64eb6a91fa29f4afef
-  position: {x: 1047, y: 832}
+  position: {x: 945.1252, y: 832}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -244,48 +244,6 @@ MonoBehaviour:
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
---- !u!114 &-3380271202986053396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
-  m_Name: Sequencer
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 63fff3f2073423740966825b28d52428
-  position: {x: 342, y: 685}
-  blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  children:
-  - {fileID: 1269800544702574624}
-  - {fileID: 7189231209223300308}
 --- !u!114 &-3149218573423280174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +299,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6aa60d32d4be5e546ba7786c975df03a
-  position: {x: 1197, y: 832}
+  position: {x: 1095.1252, y: 832}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -402,11 +360,11 @@ MonoBehaviour:
       m_Bits: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
-  description: 
+  description: Canon Control
   drawGizmos: 0
   children:
   - {fileID: -4495896854219428192}
-  - {fileID: -3380271202986053396}
+  - {fileID: 1269800544702574624}
 --- !u!114 &-1536950340880430774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,8 +435,6 @@ MonoBehaviour:
   - {fileID: 8660968929561085194}
   - {fileID: -8404802319423541279}
   - {fileID: -1536950340880430774}
-  - {fileID: -3380271202986053396}
-  - {fileID: 7189231209223300308}
   - {fileID: 1042115592671385950}
   - {fileID: 3031321792646179376}
   - {fileID: 4237024048356510416}
@@ -528,7 +484,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6d36eb7e7acdab24e8768e5c1d45bb54
-  position: {x: 793.48114, y: 483.26837}
+  position: {x: 695.8516, y: 483.00006}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -550,7 +506,7 @@ MonoBehaviour:
       m_Bits: 0
     beingHit: 0
     bulletPos: {x: 0, y: 0}
-  description: 
+  description: Movement Control
   drawGizmos: 0
   children:
   - {fileID: 1652449810437900057}
@@ -571,7 +527,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0915a35e0f92e6941bc6c9ac948ef07f
-  position: {x: 252.00006, y: 831.99994}
+  position: {x: 401.4425, y: 685}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -610,7 +566,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 81446624483447040b71b8d13c1f6eb4
-  position: {x: 691, y: 685}
+  position: {x: 593.85156, y: 685.00006}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -650,7 +606,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 40b525a48d1892b4f827137d59c6d565
-  position: {x: 691.0001, y: 832}
+  position: {x: 593.85156, y: 832.00006}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -692,7 +648,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b86abb5685a3fb446852000287e9a793
-  position: {x: 867, y: 685}
+  position: {x: 769.8516, y: 685.00006}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -732,7 +688,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a12b193485ab8ac4cb34c283a4707567
-  position: {x: 32.00003, y: 808}
+  position: {x: 231.10759, y: 808}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -773,7 +729,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 4b24097d1e73e944ab8f26fad44cc5cf
-  position: {x: 778.68, y: 1002.0001}
+  position: {x: 681.8517, y: 1002.0001}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -859,7 +815,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a095e00dc5afa3145b4b06b70c4c21eb
-  position: {x: 870, y: 832}
+  position: {x: 772.8516, y: 832.00006}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -898,7 +854,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0749f092c5a22ce4c843ce7f1949bd10
-  position: {x: 1046, y: 685}
+  position: {x: 958.12524, y: 685}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -941,7 +897,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 30a7657f7e891fe40bc623ae355e7a46
-  position: {x: 107.00005, y: 1114}
+  position: {x: 306.1076, y: 1114}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -1021,7 +977,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: fb25d7bc38ce5144d9db4399d14ed9e8
-  position: {x: 779.00006, y: 1138}
+  position: {x: 681.8517, y: 1138}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -1045,46 +1001,6 @@ MonoBehaviour:
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
---- !u!114 &7189231209223300308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
-  m_Name: Wait
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 0a73bf3ebdfd74a45b22e2e3dfb49767
-  position: {x: 433.00012, y: 831.99994}
-  blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    bulletBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    beingHit: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  duration: 7
 --- !u!114 &7376962899481565226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1100,7 +1016,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 11844e1ac47466a4cbe5c79ba30de248
-  position: {x: -70.99992, y: 1114}
+  position: {x: 156.00005, y: 1114}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -1139,7 +1055,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: aca43e7f750f1954ca4b976724869fdb
-  position: {x: 616, y: 1001.5275}
+  position: {x: 518.8516, y: 1002.0001}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
@@ -1178,7 +1094,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3cec8334a19560f48802cd967adc111f
-  position: {x: 107.00005, y: 1367}
+  position: {x: 306.1076, y: 1367}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}
