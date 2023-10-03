@@ -1004,13 +1004,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankMaxArmor: 100
   tankCurrentArmor: 0
+  damageDealers: 01000000
   tankMaxEnergy: 1000
   energySupply: 100
   slider: {fileID: 582372407}
   recoveryEfficiency: 15
-  damageDealer:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!61 &827623738
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39180,6 +39178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankMaxArmor: 100
   tankCurrentArmor: 0
+  damageDealers: 0000000002000000
   tankMaxEnergy: 1000
   energySupply: 100
   slider: {fileID: 0}

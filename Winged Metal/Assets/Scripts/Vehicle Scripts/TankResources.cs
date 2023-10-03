@@ -11,7 +11,7 @@ public class TankResources : MonoBehaviour
     [SerializeField]
     protected float tankCurrentArmor;
     protected float lastDamageTime;
-
+    public TankAttack.BulletOwner[] damageDealers;
 
     //Energy
     public int tankMaxEnergy;
@@ -28,6 +28,22 @@ public class TankResources : MonoBehaviour
 
         if (slider != null)
             slider.maxValue = tankMaxEnergy;
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        BulletScript bullet = col.gameObject.GetComponent<BulletScript>();
+        if (bullet == null) return; //if object is not bullet then no need to do anything
+        foreach (TankAttack.BulletOwner damageDealer in damageDealers)
+        {
+            if (damageDealer == bullet.bulletOwner)
+            {
+                TakeDamage(bullet.GetDamage());
+                col.gameObject.SetActive(false);
+                break;
+            }
+        }
+
     }
 
     private void Update()
@@ -64,10 +80,11 @@ public class TankResources : MonoBehaviour
         tankCurrentArmor -= damage;
         lastDamageTime = Time.time;
         BehaviourTreeRunner bt = GetComponent<BehaviourTreeRunner>();
-        if (bt != null){
+        if (bt != null)
+        {
             GetComponent<BehaviourTreeRunner>().tree.blackboard.beingHit = true;
         }
-        
+
 
         if (tankCurrentArmor <= 0)
         {

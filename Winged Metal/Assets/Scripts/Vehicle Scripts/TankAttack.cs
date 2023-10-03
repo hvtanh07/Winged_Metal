@@ -22,7 +22,7 @@ public class TankAttack : MonoBehaviour
     public int damage;
     public float fireRate;
     public int enConsum;
-    [Header("2nd Weapon--------")]
+    [Header("2nd Weapon--------")]//will move this to seperate script
 
     public Transform[] missileShootingPoint;
     public int secondEnConsum;
