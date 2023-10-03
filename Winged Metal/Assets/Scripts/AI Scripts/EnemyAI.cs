@@ -75,15 +75,8 @@ public class EnemyAI : AIParent
             movementS.direction = Vector3.zero; //if there's no path or AI have reached target then don't move around
         }
     }
-    public void Dash()
-    {
-        if (movementS.IsAbleToDash())
-        {
-            StartCoroutine(movementS.DashToggle());
-            RecalculatePath();
-        }
-    }
-    public void Dash(Vector2 dashDirection)
+
+    public void Dash(Vector2 dashDirection = default)
     {
         if (movementS.IsAbleToDash())
         {

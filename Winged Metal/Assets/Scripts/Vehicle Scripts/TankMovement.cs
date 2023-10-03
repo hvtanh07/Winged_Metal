@@ -55,52 +55,37 @@ public class TankMovement : MonoBehaviour
         }
     }
 
-    public bool Dash()
-    {
-        if(!IsAbleToDash()) return false;
 
-        StartCoroutine(DashToggle());
-        return true;
-    }
-
-     public bool Dash(Vector2 dashDirection)
+    public bool Dash(Vector2 dashDirection = default)
     {
-        if(!IsAbleToDash()) return false;
+        if (!IsAbleToDash()) return false;
         StartCoroutine(DashToggle(dashDirection));
         return true;
     }
-    
+
     public bool IsAbleToDash()
     {
         if (dashing) return false; //already dashing? nothing to do here
         if (!resources.ConsumeEnergy(weight)) return false;//insufficient energy? nothing to do here
         return true;
     }
-    public IEnumerator DashToggle()
+    public IEnumerator DashToggle(Vector2 dashDirection = default)
     {
+
         dashing = true;
-        if (direction != Vector2.zero) // if player is holding joystick then dash with it
+        if (dashDirection != default)//if npc have target direction to dash then dash on that direction
+        {
+            rb.AddForce(dashDirection.normalized * thursterForce / weight, ForceMode2D.Impulse);
+        }
+        else if (direction != Vector2.zero) // if player is holding joystick then dash with it
         {
             rb.AddForce(direction.normalized * thursterForce / weight, ForceMode2D.Impulse);
         }
-        else
+        else //if there's no target direction then just dash forward
         {
             rb.AddForce(transform.up * thursterForce / weight, ForceMode2D.Impulse);
         }
         yield return new WaitForSeconds(dashingTime);
         dashing = false;
-    }
-    public IEnumerator DashToggle(Vector2 dashDirection)
-    {
-        if (!dashing)
-        {
-            dashing = true;
-            if (dashDirection != Vector2.zero)
-            {
-                rb.AddForce(dashDirection.normalized * thursterForce / weight, ForceMode2D.Impulse);
-            }
-            yield return new WaitForSeconds(dashingTime);
-            dashing = false;
-        }
     }
 }
