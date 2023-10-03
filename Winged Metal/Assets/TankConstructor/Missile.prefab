@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3588577562831430214}
   - component: {fileID: 7520227492290113345}
-  - component: {fileID: 3207520112791319112}
   - component: {fileID: 7294798489731928402}
   - component: {fileID: 542603252989841090}
+  - component: {fileID: 3207520112791319112}
   - component: {fileID: 2553837928462976685}
   m_Layer: 8
   m_Name: Missile
@@ -88,22 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3207520112791319112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2770259683038034069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63a029d667d462b4bbd7d585043625b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletOwner: 0
-  bulletBlock:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!61 &7294798489731928402
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -176,6 +160,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3207520112791319112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2770259683038034069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a029d667d462b4bbd7d585043625b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletOwner: 0
+  bulletBlock:
+    serializedVersion: 2
+    m_Bits: 384
 --- !u!114 &2553837928462976685
 MonoBehaviour:
   m_ObjectHideFlags: 0

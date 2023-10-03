@@ -405,6 +405,7 @@
 "Assets/Scripts/Vehicle Scripts/TankBaseData.cs"
 "Assets/Scripts/Vehicle Scripts/TankMovement.cs"
 "Assets/Scripts/Vehicle Scripts/TankResources.cs"
+"Assets/Scripts/Vehicle Scripts/TankSecondAttack.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/Breakpoint.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/Dash.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/GetPlayerPosition.cs"
