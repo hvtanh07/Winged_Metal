@@ -398,6 +398,7 @@
 "Assets/Scripts/AI Scripts/EnemyAI.cs"
 "Assets/Scripts/Level Scripts/ObjectPooler.cs"
 "Assets/Scripts/Player Scripts/HandleInput.cs"
+"Assets/Scripts/Tank2AttackScript/HomingMissile.cs"
 "Assets/Scripts/Vehicle Scripts/BulletScript.cs"
 "Assets/Scripts/Vehicle Scripts/MissileScript.cs"
 "Assets/Scripts/Vehicle Scripts/PlayerTankResources.cs"

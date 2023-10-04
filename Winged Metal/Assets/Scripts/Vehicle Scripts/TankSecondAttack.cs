@@ -10,10 +10,13 @@ public class TankSecondAttack : MonoBehaviour
         Mine
     }
     public WeaponType weaponType;
+    public int damage;
     public int enConsum;
     public float cooldown;
+    protected float lastAttackTime;
+    protected TankAttack tankAttack;
   
-    public virtual void Attack(){
+    public virtual void Attack(Transform target){
         
     }
 }

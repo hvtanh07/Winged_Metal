@@ -73,7 +73,6 @@ public class TankAttack : MonoBehaviour
 
         foreach (Transform Point in missileShootingPoint)
         {
-            print("he");
             GameObject missile = ObjectPooler.SharedInstance.GetPooledObject("Missile");
             if (missile != null)
             {

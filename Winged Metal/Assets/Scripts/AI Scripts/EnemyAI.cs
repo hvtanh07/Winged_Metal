@@ -34,6 +34,9 @@ public class EnemyAI : AIParent
         //agent.updateUpAxis = false;
     }
 
+    public void ConsumeEnergy(int amountEnergy){
+        resourcesS.ConsumeEnergy(amountEnergy);
+    }
     
 
     void Update()

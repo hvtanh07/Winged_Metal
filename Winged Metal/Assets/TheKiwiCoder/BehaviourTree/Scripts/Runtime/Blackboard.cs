@@ -30,9 +30,9 @@ namespace TheKiwiCoder {
         public Vector2 randomPosition;
 
         [Header("Combat data--------")]
-        public LayerMask bulletBlock;
         public LayerMask viewBlock;
         public bool beingHit;
+        public bool enlessChase;
         [HideInInspector]
         public Vector2 bulletPos;
     }
