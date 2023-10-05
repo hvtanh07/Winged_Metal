@@ -4,14 +4,14 @@ using TheKiwiCoder;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TankResources : MonoBehaviour
+public class VehicleResources : VehicleSystem
 {
     //Armor
     public int tankMaxArmor;
     [SerializeField]
     protected float tankCurrentArmor;
     protected float lastDamageTime;
-    public TankAttack.BulletOwner[] damageDealers;
+    public VehicleAttack.BulletOwner[] damageDealers;
 
     //Energy
     public int tankMaxEnergy;
@@ -34,7 +34,7 @@ public class TankResources : MonoBehaviour
     {
         BulletScript bullet = col.gameObject.GetComponent<BulletScript>();
         if (bullet == null) return; //if object is not bullet then no need to do anything
-        foreach (TankAttack.BulletOwner damageDealer in damageDealers)
+        foreach (VehicleAttack.BulletOwner damageDealer in damageDealers)
         {
             if (damageDealer == bullet.bulletOwner)
             {

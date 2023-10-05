@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerTankResources : TankResources
+public class PlayerTankResources : VehicleResources
 {
     public int recoveryEfficiency;
     

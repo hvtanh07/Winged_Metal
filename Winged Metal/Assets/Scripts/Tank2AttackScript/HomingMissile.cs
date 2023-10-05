@@ -6,7 +6,7 @@ public class HomingMissile : TankSecondAttack
 {
     public Transform[] missileShootingPoint;
     void Start(){
-        tankAttack = GetComponent<TankAttack>();
+        tankAttack = GetComponent<VehicleAttack>();
     }
     public override void Attack(Transform target){
         if (Time.time - lastAttackTime < cooldown) return;

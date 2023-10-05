@@ -540,7 +540,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6d36eb7e7acdab24e8768e5c1d45bb54
-  position: {x: 695.8516, y: 483.00006}
+  position: {x: 696.00006, y: 483.00012}
   blackboard:
     resources: {fileID: 0}
     movement: {fileID: 0}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-public class TankMovement : MonoBehaviour
+public class VehicleMovement : VehicleSystem
 {
     public float enginePower;
     public float thursterForce;
@@ -14,7 +14,7 @@ public class TankMovement : MonoBehaviour
     public float sideSlideAllowance;
     [HideInInspector]
     public Vector2 direction;
-    private TankResources resources;
+    private VehicleResources resources;
     private Rigidbody2D rb;
     private bool dashing;
 
@@ -26,10 +26,11 @@ public class TankMovement : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         rb = GetComponent<Rigidbody2D>();
-        resources = GetComponent<TankResources>();
+        resources = GetComponent<VehicleResources>();
         dashing = false;
     }
 

@@ -18,6 +18,10 @@ public class ObjectPooler : MonoBehaviour
 
     void Awake()
     {
+        if(SharedInstance && SharedInstance != this){
+            Destroy(this);
+            return;
+        }
         SharedInstance = this;
     }
     void Start()

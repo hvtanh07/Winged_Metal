@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-[RequireComponent(typeof(TankMovement))]
+[RequireComponent(typeof(VehicleMovement))]
 public class HandleInput : MonoBehaviour
 {
     public Joystick moveJoystick;
     public Joystick shootJoystick;
-    private TankMovement playerTankMovement;
-    private TankAttack playerTankAttack;
+    private VehicleMovement playerTankMovement;
+    private VehicleAttack playerTankAttack;
     public CinemachineVirtualCamera cinemachine;
     public Transform viewMarker;
     [Range(0, 10)]
@@ -17,8 +17,8 @@ public class HandleInput : MonoBehaviour
     private void Awake()
     {
         cinemachine = FindObjectOfType<CinemachineVirtualCamera>();
-        playerTankMovement = GetComponent<TankMovement>();
-        playerTankAttack = GetComponentInChildren<TankAttack>();
+        playerTankMovement = GetComponent<VehicleMovement>();
+        playerTankAttack = GetComponentInChildren<VehicleAttack>();
         moveJoystick = GameObject.FindGameObjectWithTag("Move joystick").GetComponent<Joystick>();
         shootJoystick = GameObject.FindGameObjectWithTag("Shoot joystick").GetComponent<Joystick>();
     }

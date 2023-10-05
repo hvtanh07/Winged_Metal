@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class AIParent : MonoBehaviour
 {
+    public VehicleID ID;
     public float targetOffsetRecalculate;
     public Vector2 target;
     protected Vector2 targetLastPos;

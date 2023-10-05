@@ -10,11 +10,11 @@ namespace TheKiwiCoder {
     [System.Serializable]
     public class Blackboard {
         [HideInInspector]
-        public TankResources resources;
+        public VehicleResources resources;
         [HideInInspector]
-        public TankMovement movement;
+        public VehicleMovement movement;
         [HideInInspector]
-        public TankAttack attack;
+        public VehicleAttack attack;
 
         [Header("Movement data--------")]
         public Vector2 target;

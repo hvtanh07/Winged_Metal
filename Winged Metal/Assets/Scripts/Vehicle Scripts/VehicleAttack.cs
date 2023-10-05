@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankAttack : MonoBehaviour
+public class VehicleAttack : VehicleSystem
 {
     public enum BulletOwner
     {
@@ -29,14 +29,18 @@ public class TankAttack : MonoBehaviour
     public float secondCooldown;
 
     private Quaternion toRotation;
-    private TankResources resources;
+    private VehicleResources resources;
 
     private float lastShotTime;
     private float last2ShotTime;
     // Start is called before the first frame update
+    protected override void Awake()
+    {
+        base.Awake();
+    }
     void Start()
     {
-        resources = GetComponentInParent<TankResources>();
+        //resources = GetComponentInParent<TankResources>();
     }
     private void FixedUpdate()
     {

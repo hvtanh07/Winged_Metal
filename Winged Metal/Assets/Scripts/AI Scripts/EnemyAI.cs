@@ -6,18 +6,19 @@ using UnityEngine.AI;
 
 public class EnemyAI : AIParent
 {
-    private TankMovement movementS;
-    private TankAttack attackS;
-    private TankResources resourcesS;
+    
+    private VehicleMovement movementS;
+    private VehicleAttack attackS;
+    private VehicleResources resourcesS;
     public BehaviourTreeRunner behaviourTree;
     //private bool openFire;
 
     // Start is called before the first frame update
     void Awake()
     {
-        movementS = GetComponent<TankMovement>();
-        attackS = GetComponentInChildren<TankAttack>();
-        resourcesS = GetComponent<TankResources>();
+        movementS = GetComponent<VehicleMovement>();
+        attackS = GetComponentInChildren<VehicleAttack>();
+        resourcesS = GetComponent<VehicleResources>();
         behaviourTree = GetComponent<BehaviourTreeRunner>();
     }
 
