@@ -71,10 +71,9 @@ public class EnemyAI : AIParent
 
     public void Dash(Vector2 dashDirection = default)
     {
-        if (movementS.IsAbleToDash())
-        {
+        
             StartCoroutine(movementS.DashToggle(dashDirection));
             RecalculatePath();
-        }
+        
     }
 }

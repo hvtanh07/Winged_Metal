@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj": {}
+    "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj": {}
   },
   "projects": {
-    "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj": {
+    "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj",
+        "projectUniqueName": "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj",
         "projectName": "Assembly-CSharp-Editor",
-        "projectPath": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj",
+        "projectPath": "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj",
         "packagesPath": "C:\\Users\\C8\\.nuget\\packages\\",
-        "outputPath": "d:\\Github\\Winged_Metal\\Winged Metal\\obj\\",
+        "outputPath": "D:\\Github\\Winged_Metal\\Winged Metal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\C8\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj": {
-                "projectPath": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj"
+              "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj": {
+                "projectPath": "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj"
               }
             }
           }
@@ -56,14 +56,14 @@
         }
       }
     },
-    "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj": {
+    "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj",
+        "projectUniqueName": "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj",
         "projectName": "Assembly-CSharp",
-        "projectPath": "d:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj",
+        "projectPath": "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj",
         "packagesPath": "C:\\Users\\C8\\.nuget\\packages\\",
-        "outputPath": "d:\\Github\\Winged_Metal\\Winged Metal\\obj\\",
+        "outputPath": "D:\\Github\\Winged_Metal\\Winged Metal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\C8\\AppData\\Roaming\\NuGet\\NuGet.Config"

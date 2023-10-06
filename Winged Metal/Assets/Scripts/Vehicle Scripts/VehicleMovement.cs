@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using System;
 
 public class VehicleMovement : VehicleSystem
 {
@@ -14,9 +15,20 @@ public class VehicleMovement : VehicleSystem
     public float sideSlideAllowance;
     [HideInInspector]
     public Vector2 direction;
-    private VehicleResources resources;
     private Rigidbody2D rb;
     private bool dashing;
+    private Vector2 localDashDirection = default;
+    void OnEnable()
+    {
+        vehicle.ID.events.CallToDash += InitDash;
+        vehicle.ID.events.OnDash += Dash;
+        vehicle.ID.events.OnDirectionChange += ChangeDirection;
+    }
+
+    private void ChangeDirection(Vector2 newdirection)
+    {
+        direction = newdirection;
+    }
 
     public void InitiateParameter(float EnginePower, float ThursterForce, int TurretWeight, int SecWeponWeight, int BodyWeight, int AutoGunWeight, int EngineWeight, int GeneratorWeight, int RepairKitWeight)
     {
@@ -30,7 +42,6 @@ public class VehicleMovement : VehicleSystem
     {
         base.Awake();
         rb = GetComponent<Rigidbody2D>();
-        resources = GetComponent<VehicleResources>();
         dashing = false;
     }
 
@@ -57,18 +68,16 @@ public class VehicleMovement : VehicleSystem
     }
 
 
-    public bool Dash(Vector2 dashDirection = default)
+    public void InitDash()
     {
-        if (!IsAbleToDash()) return false;
-        StartCoroutine(DashToggle(dashDirection));
-        return true;
+        StartCoroutine(DashToggle(localDashDirection));
     }
 
-    public bool IsAbleToDash()
+    public void Dash(Vector2 dashDirection = default)
     {
-        if (dashing) return false; //already dashing? nothing to do here
-        if (!resources.ConsumeEnergy(weight)) return false;//insufficient energy? nothing to do here
-        return true;
+        if (dashing) return; //already dashing? nothing to do here
+        localDashDirection = dashDirection;
+        vehicle.ID.events.CallToDash?.Invoke();
     }
     public IEnumerator DashToggle(Vector2 dashDirection = default)
     {

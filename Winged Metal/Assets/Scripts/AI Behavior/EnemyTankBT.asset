@@ -474,17 +474,17 @@ MonoBehaviour:
     movement: {fileID: 0}
     attack: {fileID: 0}
     target: {x: 0, y: 0}
-    detectingDistance: 30
-    guardingViewDistance: 20
-    attackingDistance: 30
+    detectingDistance: 0
+    guardingViewDistance: 0
+    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
-    randomPosition: {x: 21.34, y: 2.17}
+    randomPosition: {x: 0, y: 0}
     viewBlock:
       serializedVersion: 2
-      m_Bits: 128
+      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}

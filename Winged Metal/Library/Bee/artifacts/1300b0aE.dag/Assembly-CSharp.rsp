@@ -406,6 +406,7 @@
 "Assets/Scripts/Vehicle Scripts/TankSecondAttack.cs"
 "Assets/Scripts/Vehicle Scripts/Vehicle.cs"
 "Assets/Scripts/Vehicle Scripts/VehicleAttack.cs"
+"Assets/Scripts/Vehicle Scripts/VehicleEvents.cs"
 "Assets/Scripts/Vehicle Scripts/VehicleID.cs"
 "Assets/Scripts/Vehicle Scripts/VehicleMovement.cs"
 "Assets/Scripts/Vehicle Scripts/VehicleResources.cs"

@@ -29,7 +29,11 @@ public class VehicleResources : VehicleSystem
         if (slider != null)
             slider.maxValue = tankMaxEnergy;
     }
-
+    void OnEnable()
+    {
+        vehicle.ID.events.GetEntoDash += CheckDashSquence;
+        vehicle.ID.events.GetEntoShoot += CheckShootSquence;
+    }
     void OnTriggerEnter2D(Collider2D col)
     {
         BulletScript bullet = col.gameObject.GetComponent<BulletScript>();
@@ -74,7 +78,16 @@ public class VehicleResources : VehicleSystem
         lastEnergyUsedTime = Time.time;
         return true;
     }
-
+    public void CheckShootSquence(int amountEnergyComsumned)
+    {
+        if (ConsumeEnergy(amountEnergyComsumned))
+            vehicle.ID.events.CallToShoot?.Invoke();
+    }
+    public void CheckDashSquence(int amountEnergyComsumned)
+    {
+        if (ConsumeEnergy(amountEnergyComsumned))
+            vehicle.ID.events.CallToDash?.Invoke();
+    }
     public void TakeDamage(int damage)
     {
         tankCurrentArmor -= damage;
@@ -91,7 +104,6 @@ public class VehicleResources : VehicleSystem
             //death
         }
     }
-
     public float GetCurrentEn()
     {
         return tankCurrentEnergy;

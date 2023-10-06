@@ -4,8 +4,9 @@ using UnityEngine;
 using Cinemachine;
 
 [RequireComponent(typeof(VehicleMovement))]
-public class HandleInput : MonoBehaviour
+public class HandleInput : VehicleSystem
 {
+    public VehicleID ID;
     public Joystick moveJoystick;
     public Joystick shootJoystick;
     private VehicleMovement playerTankMovement;
@@ -14,8 +15,9 @@ public class HandleInput : MonoBehaviour
     public Transform viewMarker;
     [Range(0, 10)]
     public float lookAheadDistance;
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         cinemachine = FindObjectOfType<CinemachineVirtualCamera>();
         playerTankMovement = GetComponent<VehicleMovement>();
         playerTankAttack = GetComponentInChildren<VehicleAttack>();
@@ -29,11 +31,13 @@ public class HandleInput : MonoBehaviour
         //MOVEMENT
         if (keyboardInput != Vector2.zero) //if there's keyboard input then use it
         {
-            playerTankMovement.direction = keyboardInput;
+            vehicle.ID.events.OnDirectionChange?.Invoke(keyboardInput);
+            //playerTankMovement.direction = keyboardInput;
         }
         else //if not use the joystick
         {
-            playerTankMovement.direction = moveJoystick.Direction;
+            vehicle.ID.events.OnDirectionChange?.Invoke(moveJoystick.Direction);
+            //playerTankMovement.direction = moveJoystick.Direction;
         }
 
 
@@ -43,19 +47,18 @@ public class HandleInput : MonoBehaviour
             viewMarker.position = Vector3.MoveTowards(viewMarker.position, transform.position + (Vector3)shootJoystick.Direction.normalized * lookAheadDistance, 0.5f);
         else // if not. move back to the tank
             viewMarker.position = transform.position;
-        
+
     }
     public void Dash()
     {
-        if (playerTankMovement.IsAbleToDash())
-        {
-            cinemachine.GetCinemachineComponent<CinemachineFramingTransposer>().m_XDamping = 0.2f;
-            cinemachine.GetCinemachineComponent<CinemachineFramingTransposer>().m_YDamping = 0.2f;
-            playerTankMovement.Dash();
-            StartCoroutine(ResetDamping());
-        }
-
+        //cinemachine.GetCinemachineComponent<CinemachineFramingTransposer>().m_XDamping = 0.2f;
+        //cinemachine.GetCinemachineComponent<CinemachineFramingTransposer>().m_YDamping = 0.2f;
+        vehicle.ID.events.OnDash?.Invoke(default);
+        //StartCoroutine(ResetDamping());
     }
+
+
+
     public IEnumerator ResetDamping()
     {
         yield return new WaitForSeconds(playerTankMovement.dashingTime);
