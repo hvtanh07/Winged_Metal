@@ -47,12 +47,10 @@ public class VehicleResources : VehicleSystem
                 break;
             }
         }
-
     }
 
     private void Update()
     {
-
         if (tankCurrentEnergy < tankMaxEnergy && Time.time - lastEnergyUsedTime > 3.0f)
         {
             tankCurrentEnergy += energySupply * Time.deltaTime;

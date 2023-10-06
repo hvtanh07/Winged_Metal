@@ -36,6 +36,12 @@ public class VehicleAttack : VehicleSystem
     
     void OnEnable(){
         vehicle.ID.events.CallToShoot += Shoot;
+        vehicle.ID.events.OnAttackDirectionChange += ChangeDirection;
+    }
+
+    private void ChangeDirection(Vector2 newdirection)
+    {
+        direction = newdirection;
     }
     
     private void FixedUpdate()
