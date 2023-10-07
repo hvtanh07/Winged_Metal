@@ -11,12 +11,7 @@ namespace TheKiwiCoder
     [System.Serializable]
     public class Blackboard
     {
-        [HideInInspector]
-        public VehicleResources resources;
-        [HideInInspector]
-        public VehicleMovement movement;
-        [HideInInspector]
-        public VehicleAttack attack;
+        public AI ai;
 
         [Header("Movement data--------")]
         public Vector2 target;

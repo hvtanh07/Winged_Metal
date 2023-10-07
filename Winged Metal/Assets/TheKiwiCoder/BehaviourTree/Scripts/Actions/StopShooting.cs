@@ -12,7 +12,8 @@ public class StopShooting : ActionNode
     }
 
     protected override State OnUpdate() {
-        blackboard.attack.direction = Vector2.zero;
+        //blackboard.attack.direction = Vector2.zero;
+        blackboard.ai.GiveAttackDirection(Vector2.zero);
         return State.Success;
     }
 }

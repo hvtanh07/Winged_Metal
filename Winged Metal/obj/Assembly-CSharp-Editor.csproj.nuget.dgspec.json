@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj",
         "projectName": "Assembly-CSharp-Editor",
         "projectPath": "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj",
-        "packagesPath": "C:\\Users\\C8\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\hvtan\\.nuget\\packages\\",
         "outputPath": "D:\\Github\\Winged_Metal\\Winged Metal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\C8\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hvtan\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -47,12 +47,11 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -62,11 +61,11 @@
         "projectUniqueName": "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj",
         "projectName": "Assembly-CSharp",
         "projectPath": "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj",
-        "packagesPath": "C:\\Users\\C8\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\hvtan\\.nuget\\packages\\",
         "outputPath": "D:\\Github\\Winged_Metal\\Winged Metal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\C8\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hvtan\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -95,12 +94,11 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

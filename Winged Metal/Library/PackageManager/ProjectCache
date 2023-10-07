@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638301683280635995
-    m_Hash: 115013454
+      ticks: 638296496017824388
+    m_Hash: 795868734
   m_LockFileStatus:
     m_FilePath: D:/Github/Winged_Metal/Winged Metal/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638301683280635995
-    m_Hash: 1858369702
+      ticks: 638296496018394930
+    m_Hash: 15890310
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -3423,7 +3423,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: 
   description: "Android Logcat package provides support for:\n - Android log messages\n
     - Android application memory statistics\n - Android Screen Capture\n - Android
     Screen Recorder\n - Stacktrace Utility\n\nClick the 'View documentation' link
@@ -4790,7 +4790,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: 
   description: The Unity Profiling Core package provides an API for code instrumentation
     markup, and for profiling statistic collection.
   status: 0

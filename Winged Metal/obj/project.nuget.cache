@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UyoePtVPuDDTeMhM+64MFejNPocvXTvQAHZqWCfeL5SD9/7qhApScRj5apLUZ1ZHReyUagOVmbO5QbyUvLpMig==",
+  "dgSpecHash": "3k85r1aXYytDXgrg6+1mb/Wszic0ddEu+IZbT+hH0b6Fu4w8E4t6K8KoFQztb06881IhURuZ2eTEU5gPkz7goA==",
   "success": true,
-  "projectFilePath": "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp.csproj",
+  "projectFilePath": "D:\\Github\\Winged_Metal\\Winged Metal\\Assembly-CSharp-Editor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
