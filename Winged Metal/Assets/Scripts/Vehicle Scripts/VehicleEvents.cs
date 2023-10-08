@@ -14,5 +14,6 @@ public struct VehicleEvents
 
     //resource
     public Action<float> OnEnUpdate;
+    public Action<float> OnArmorUpdate;
     public Action OnBeingHit;
 }

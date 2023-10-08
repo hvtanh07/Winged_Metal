@@ -39083,6 +39083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1839519169}
   - component: {fileID: 1839519168}
+  - component: {fileID: 1839519176}
   - component: {fileID: 1839519170}
   - component: {fileID: 1839519167}
   - component: {fileID: 1839519172}
@@ -39096,7 +39097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1839519167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39172,13 +39173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf07b553fae6c44eb15936de625270a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: {fileID: 0}
-  targetOffsetRecalculate: 1
-  target: {x: 0, y: 0}
   behaviour: {fileID: 0}
-  bulletBlock:
-    serializedVersion: 2
-    m_Bits: 128
   patrolArea: {fileID: 2032513999}
   behaviourTree: {fileID: 0}
 --- !u!114 &1839519171
@@ -39315,6 +39310,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 0}
+--- !u!114 &1839519176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839519166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: {fileID: 11400000, guid: 2eb9d49e17f308149943d148e5cf5dc9, type: 2}
 --- !u!1 &2005459953
 GameObject:
   m_ObjectHideFlags: 0

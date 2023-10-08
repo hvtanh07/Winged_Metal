@@ -12,11 +12,8 @@ namespace TheKiwiCoder
     public class Blackboard
     {
         [HideInInspector]
-        public VehicleResources resources;
-        [HideInInspector]
-        public VehicleMovement movement;
-        [HideInInspector]
-        public VehicleAttack attack;
+        public AI ai;
+        public float currentEn;
 
         [Header("Movement data--------")]
         public Vector2 target;

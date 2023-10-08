@@ -25,6 +25,8 @@ public class VehicleResources : VehicleSystem
     {
         tankCurrentArmor = tankMaxArmor;
         tankCurrentEnergy = tankMaxEnergy;
+        vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
+        vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
     }
     void OnEnable()
     {
@@ -57,7 +59,7 @@ public class VehicleResources : VehicleSystem
         if (tankCurrentArmor < tankMaxArmor && Time.time - lastDamageTime > 5.0f)
         {
             tankCurrentArmor += recoveryEfficiency * Time.deltaTime;
-            //vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
+            vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
             if (tankCurrentArmor > tankMaxArmor)
                 tankCurrentArmor = tankMaxArmor;
         }
@@ -68,27 +70,24 @@ public class VehicleResources : VehicleSystem
         tankMaxEnergy = maxEnergy;
         tankCurrentArmor = tankMaxArmor;
         tankCurrentEnergy = tankMaxEnergy;
+        vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
+        vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
     }
 
     public bool ConsumeEnergy(int amountEnergyComsumned)
     {
         if (amountEnergyComsumned > tankCurrentEnergy) return false; //insufficient energy 
         tankCurrentEnergy -= amountEnergyComsumned;
+        vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
         lastEnergyUsedTime = Time.time;
         return true;
     }
     public void TakeDamage(int damage)
     {
         tankCurrentArmor -= damage;
-        vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
+        vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
         vehicle.ID.events.OnBeingHit?.Invoke();
         lastDamageTime = Time.time;
-        BehaviourTreeRunner bt = GetComponent<BehaviourTreeRunner>();
-        if (bt != null)
-        {
-            GetComponent<BehaviourTreeRunner>().tree.blackboard.beingHit = true;
-        }
-
 
         if (tankCurrentArmor <= 0)
         {
