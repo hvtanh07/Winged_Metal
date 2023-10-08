@@ -4,6 +4,7 @@ using Cinemachine;
 using UnityEngine;
 using System;
 
+[RequireComponent(typeof(VehicleResources))]
 public class VehicleMovement : VehicleSystem
 {
     public float enginePower;
@@ -17,12 +18,12 @@ public class VehicleMovement : VehicleSystem
     public Vector2 direction;
     private Rigidbody2D rb;
     private bool dashing;
-    private Vector2 localDashDirection = default;
+    private int enConsum;
+    private VehicleResources resources;
     void OnEnable()
     {
-        vehicle.ID.events.CallToDash += InitDash;
-        vehicle.ID.events.OnDash += Dash;
         vehicle.ID.events.OnDirectionChange += ChangeDirection;
+        vehicle.ID.events.OnDashCalled += Dash;
     }
 
     private void ChangeDirection(Vector2 newdirection)
@@ -30,12 +31,6 @@ public class VehicleMovement : VehicleSystem
         direction = newdirection;
     }
 
-    public void InitiateParameter(float EnginePower, float ThursterForce, int TurretWeight, int SecWeponWeight, int BodyWeight, int AutoGunWeight, int EngineWeight, int GeneratorWeight, int RepairKitWeight)
-    {
-        enginePower = EnginePower;
-        thursterForce = ThursterForce;
-        weight = TurretWeight + SecWeponWeight + BodyWeight + AutoGunWeight + EngineWeight + GeneratorWeight + RepairKitWeight;
-    }
 
     // Start is called before the first frame update
     protected override void Awake()
@@ -43,6 +38,8 @@ public class VehicleMovement : VehicleSystem
         base.Awake();
         rb = GetComponent<Rigidbody2D>();
         dashing = false;
+        resources = transform.root.GetComponent<VehicleResources>();
+        enConsum = weight; //if there's modify stat function then move this to that function
     }
 
     // Update is called once per frame
@@ -68,20 +65,15 @@ public class VehicleMovement : VehicleSystem
     }
 
 
-    public void InitDash()
-    {
-        StartCoroutine(DashToggle(localDashDirection));
-    }
-
     public void Dash(Vector2 dashDirection = default)
     {
         if (dashing) return; //already dashing? nothing to do here
-        localDashDirection = dashDirection;
-        vehicle.ID.events.CallToDash?.Invoke();
+        if (resources.ConsumeEnergy(enConsum)){
+            StartCoroutine(DashToggle(dashDirection));
+        }
     }
     public IEnumerator DashToggle(Vector2 dashDirection = default)
     {
-
         dashing = true;
         if (dashDirection != default)//if npc have target direction to dash then dash on that direction
         {

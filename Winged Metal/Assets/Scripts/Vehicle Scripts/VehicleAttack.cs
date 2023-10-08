@@ -22,6 +22,7 @@ public class VehicleAttack : VehicleSystem
     public int damage;
     public float fireRate;
     public int enConsum;
+    private VehicleResources resources;
     [Header("2nd Weapon--------")]//will move this to seperate script
 
     public Transform[] missileShootingPoint;
@@ -33,17 +34,21 @@ public class VehicleAttack : VehicleSystem
     private float lastShotTime;
     private float last2ShotTime;
     // Start is called before the first frame update
-    
-    void OnEnable(){
-        vehicle.ID.events.CallToShoot += Shoot;
+
+    void OnEnable()
+    {
         vehicle.ID.events.OnAttackDirectionChange += ChangeDirection;
+    }
+
+    void Start(){
+        resources = transform.root.GetComponent<VehicleResources>();
     }
 
     private void ChangeDirection(Vector2 newdirection)
     {
         direction = newdirection;
     }
-    
+
     private void FixedUpdate()
     {
         if (direction != Vector2.zero) // check moving and rotate to the moving direction
@@ -52,25 +57,26 @@ public class VehicleAttack : VehicleSystem
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotatingSpeed * Time.fixedDeltaTime);
             if (toRotation == transform.rotation && Time.time - lastShotTime >= 1 / fireRate) //if canon is allign with shooting direction.
             {
-                InitShoot();
+                Shoot();
             }
         }
     }
-    public void InitShoot(){
-        vehicle.ID.events.GetEntoShoot?.Invoke(enConsum);
-    }
+
     public void Shoot()
     {
-        GameObject bullet = ObjectPooler.SharedInstance.GetPooledObject("Bullet");
-        if (bullet != null)
+        if (resources.ConsumeEnergy(enConsum))
         {
-            bullet.transform.position = shootingPoint.transform.position;
-            bullet.transform.rotation = shootingPoint.transform.rotation;
-            bullet.SetActive(true);
-            bullet.GetComponent<BulletScript>().SetParameter(damage, bulletOwner);
-            bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * 35f;
+            GameObject bullet = ObjectPooler.SharedInstance.GetPooledObject("Bullet");
+            if (bullet != null)
+            {
+                bullet.transform.position = shootingPoint.transform.position;
+                bullet.transform.rotation = shootingPoint.transform.rotation;
+                bullet.SetActive(true);
+                bullet.GetComponent<BulletScript>().SetParameter(damage, bulletOwner);
+                bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * 35f;
+            }
+            lastShotTime = Time.time;
         }
-        lastShotTime = Time.time;
     }
     public void ShootMissile(Transform target)
     {

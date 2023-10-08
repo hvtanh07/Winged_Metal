@@ -12,6 +12,7 @@ public class VehicleResources : VehicleSystem
     protected float tankCurrentArmor;
     protected float lastDamageTime;
     public VehicleAttack.BulletOwner[] damageDealers;
+    public int recoveryEfficiency;
 
     //Energy
     public int tankMaxEnergy;
@@ -19,20 +20,15 @@ public class VehicleResources : VehicleSystem
     protected float lastEnergyUsedTime;
     public int energySupply;
 
-    public Slider slider;
 
     protected void Start() //REMOVE WHEN THERE's SCRIPT TO READ FROM SCRIPTABLE OBJECT
     {
         tankCurrentArmor = tankMaxArmor;
         tankCurrentEnergy = tankMaxEnergy;
-
-        if (slider != null)
-            slider.maxValue = tankMaxEnergy;
     }
     void OnEnable()
     {
-        vehicle.ID.events.GetEntoDash += CheckDashSquence;
-        vehicle.ID.events.GetEntoShoot += CheckShootSquence;
+
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -54,9 +50,16 @@ public class VehicleResources : VehicleSystem
         if (tankCurrentEnergy < tankMaxEnergy && Time.time - lastEnergyUsedTime > 3.0f)
         {
             tankCurrentEnergy += energySupply * Time.deltaTime;
-
+            vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
             if (tankCurrentEnergy > tankMaxEnergy)
                 tankCurrentEnergy = tankMaxEnergy;
+        }
+        if (tankCurrentArmor < tankMaxArmor && Time.time - lastDamageTime > 5.0f)
+        {
+            tankCurrentArmor += recoveryEfficiency * Time.deltaTime;
+            //vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
+            if (tankCurrentArmor > tankMaxArmor)
+                tankCurrentArmor = tankMaxArmor;
         }
     }
     public void InitiateParameter(int maxArmor, int maxEnergy)
@@ -65,8 +68,6 @@ public class VehicleResources : VehicleSystem
         tankMaxEnergy = maxEnergy;
         tankCurrentArmor = tankMaxArmor;
         tankCurrentEnergy = tankMaxEnergy;
-
-        slider.maxValue = tankMaxEnergy;
     }
 
     public bool ConsumeEnergy(int amountEnergyComsumned)
@@ -76,19 +77,11 @@ public class VehicleResources : VehicleSystem
         lastEnergyUsedTime = Time.time;
         return true;
     }
-    public void CheckShootSquence(int amountEnergyComsumned)
-    {
-        if (ConsumeEnergy(amountEnergyComsumned))
-            vehicle.ID.events.CallToShoot?.Invoke();
-    }
-    public void CheckDashSquence(int amountEnergyComsumned)
-    {
-        if (ConsumeEnergy(amountEnergyComsumned))
-            vehicle.ID.events.CallToDash?.Invoke();
-    }
     public void TakeDamage(int damage)
     {
         tankCurrentArmor -= damage;
+        vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
+        vehicle.ID.events.OnBeingHit?.Invoke();
         lastDamageTime = Time.time;
         BehaviourTreeRunner bt = GetComponent<BehaviourTreeRunner>();
         if (bt != null)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-[RequireComponent(typeof(VehicleMovement))]
+
 public class HandleInput : VehicleSystem
 {
     public VehicleID ID;
@@ -53,6 +53,6 @@ public class HandleInput : VehicleSystem
     }
     public void Dash()
     {
-        vehicle.ID.events.OnDash?.Invoke(default);
+        vehicle.ID.events.OnDashCalled?.Invoke(default);
     }
 }

@@ -30,8 +30,6 @@ public class PlayerTankResources : VehicleResources
             if (tankCurrentEnergy > tankMaxEnergy)
                 tankCurrentEnergy = tankMaxEnergy;
         }
-
-        slider.value = tankCurrentEnergy;
     }
 
 }

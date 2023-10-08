@@ -853,9 +853,9 @@ GameObject:
   - component: {fileID: 827623733}
   - component: {fileID: 827623732}
   - component: {fileID: 827623739}
+  - component: {fileID: 827623740}
   - component: {fileID: 827623734}
   - component: {fileID: 827623731}
-  - component: {fileID: 827623737}
   - component: {fileID: 827623736}
   - component: {fileID: 827623738}
   m_Layer: 3
@@ -992,25 +992,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.830534, y: 2.2858462}
   m_EdgeRadius: 0
---- !u!114 &827623737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827623730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c73807ec9be29a244817337331e9662b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tankMaxArmor: 100
-  tankCurrentArmor: 0
-  damageDealers: 01000000
-  tankMaxEnergy: 1000
-  energySupply: 100
-  slider: {fileID: 582372407}
-  recoveryEfficiency: 15
 --- !u!61 &827623738
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1069,6 +1050,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 11400000, guid: c68b7101dbc798743a6e361adc3c251d, type: 2}
+--- !u!114 &827623740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827623730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f68e32596abd3842bc706908966fa0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankMaxArmor: 100
+  tankCurrentArmor: 0
+  damageDealers: 01000000
+  recoveryEfficiency: 0
+  tankMaxEnergy: 1000
+  energySupply: 100
 --- !u!1 &843449002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1163,7 @@ GameObject:
   - component: {fileID: 1104449179}
   - component: {fileID: 1104449181}
   - component: {fileID: 1104449180}
+  - component: {fileID: 1104449182}
   m_Layer: 6
   m_Name: Tower
   m_TagString: Untagged
@@ -1269,6 +1269,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1104449182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104449178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: {fileID: 0}
 --- !u!1 &1119424438
 GameObject:
   m_ObjectHideFlags: 0
@@ -39076,6 +39089,7 @@ GameObject:
   - component: {fileID: 1839519171}
   - component: {fileID: 1839519173}
   - component: {fileID: 1839519174}
+  - component: {fileID: 1839519175}
   m_Layer: 6
   m_Name: Enemy Tank
   m_TagString: Enemy
@@ -39195,9 +39209,9 @@ MonoBehaviour:
   tankMaxArmor: 100
   tankCurrentArmor: 0
   damageDealers: 0000000002000000
+  recoveryEfficiency: 0
   tankMaxEnergy: 1000
   energySupply: 100
-  slider: {fileID: 0}
 --- !u!61 &1839519173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39288,6 +39302,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.616319, y: 1.9908861}
   m_EdgeRadius: 0
+--- !u!114 &1839519175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839519166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: {fileID: 0}
 --- !u!1 &2005459953
 GameObject:
   m_ObjectHideFlags: 0
@@ -39864,6 +39891,7 @@ GameObject:
   - component: {fileID: 2128617874}
   - component: {fileID: 2128617875}
   - component: {fileID: 2128617876}
+  - component: {fileID: 2128617877}
   m_Layer: 3
   m_Name: Tower
   m_TagString: Untagged
@@ -39963,6 +39991,19 @@ MonoBehaviour:
   missileShootingPoint: []
   secondEnConsum: 0
   secondCooldown: 0
+--- !u!114 &2128617877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128617873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
