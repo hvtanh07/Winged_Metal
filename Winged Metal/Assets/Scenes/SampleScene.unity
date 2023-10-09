@@ -668,13 +668,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716232312}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.037, y: 1.47, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.01, y: 0.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2128617874}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &716232314
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -716,7 +716,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: dba2347742dc4884a9f385a783661418, type: 3}
+  m_Sprite: {fileID: -270508446, guid: 66887f2ab3b362f42b826f31985baecb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -852,9 +852,10 @@ GameObject:
   m_Component:
   - component: {fileID: 827623733}
   - component: {fileID: 827623732}
+  - component: {fileID: 827623739}
+  - component: {fileID: 827623740}
   - component: {fileID: 827623734}
   - component: {fileID: 827623731}
-  - component: {fileID: 827623737}
   - component: {fileID: 827623736}
   - component: {fileID: 827623738}
   m_Layer: 3
@@ -940,6 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e15de021d0a35c458995b658d9ecf28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: {fileID: 0}
   moveJoystick: {fileID: 0}
   shootJoystick: {fileID: 0}
   cinemachine: {fileID: 0}
@@ -990,25 +992,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.830534, y: 2.2858462}
   m_EdgeRadius: 0
---- !u!114 &827623737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827623730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c73807ec9be29a244817337331e9662b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tankMaxArmor: 100
-  tankCurrentArmor: 0
-  damageDealers: 01000000
-  tankMaxEnergy: 1000
-  energySupply: 100
-  slider: {fileID: 582372407}
-  recoveryEfficiency: 15
 --- !u!61 &827623738
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1054,6 +1037,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.7305193, y: 2.14329}
   m_EdgeRadius: 0
+--- !u!114 &827623739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827623730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: {fileID: 11400000, guid: c68b7101dbc798743a6e361adc3c251d, type: 2}
+  currentEn: 0
+--- !u!114 &827623740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827623730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f68e32596abd3842bc706908966fa0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankMaxArmor: 100
+  tankCurrentArmor: 0
+  damageDealers: 01000000
+  recoveryEfficiency: 0
+  tankMaxEnergy: 1000
+  tankCurrentEnergy: 0
+  energySupply: 100
 --- !u!1 &843449002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1165,7 @@ GameObject:
   - component: {fileID: 1104449179}
   - component: {fileID: 1104449181}
   - component: {fileID: 1104449180}
+  - component: {fileID: 1104449182}
   m_Layer: 6
   m_Name: Tower
   m_TagString: Untagged
@@ -1254,6 +1271,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1104449182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104449178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: {fileID: 0}
+  currentEn: 0
 --- !u!1 &1119424438
 GameObject:
   m_ObjectHideFlags: 0
@@ -34261,7 +34292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1123865313
 Transform:
   m_ObjectHideFlags: 0
@@ -34354,7 +34385,7 @@ Transform:
   m_GameObject: {fileID: 1136615890}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.447, z: 0}
+  m_LocalPosition: {x: 0, y: 2.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34616,7 +34647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1324499297
 Transform:
   m_ObjectHideFlags: 0
@@ -38946,7 +38977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1776951206
 Transform:
   m_ObjectHideFlags: 0
@@ -39055,12 +39086,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1839519169}
   - component: {fileID: 1839519168}
+  - component: {fileID: 1839519176}
   - component: {fileID: 1839519170}
   - component: {fileID: 1839519167}
   - component: {fileID: 1839519172}
   - component: {fileID: 1839519171}
   - component: {fileID: 1839519173}
   - component: {fileID: 1839519174}
+  - component: {fileID: 1839519175}
   m_Layer: 6
   m_Name: Enemy Tank
   m_TagString: Enemy
@@ -39143,12 +39176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf07b553fae6c44eb15936de625270a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetOffsetRecalculate: 1
-  target: {x: 0, y: 0}
   behaviour: {fileID: 0}
-  bulletBlock:
-    serializedVersion: 2
-    m_Bits: 128
   patrolArea: {fileID: 2032513999}
   behaviourTree: {fileID: 0}
 --- !u!114 &1839519171
@@ -39179,9 +39207,10 @@ MonoBehaviour:
   tankMaxArmor: 100
   tankCurrentArmor: 0
   damageDealers: 0000000002000000
+  recoveryEfficiency: 0
   tankMaxEnergy: 1000
+  tankCurrentEnergy: 0
   energySupply: 100
-  slider: {fileID: 0}
 --- !u!61 &1839519173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39272,6 +39301,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.616319, y: 1.9908861}
   m_EdgeRadius: 0
+--- !u!114 &1839519175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839519166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: {fileID: 0}
+  currentEn: 0
+--- !u!114 &1839519176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839519166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: {fileID: 11400000, guid: 2eb9d49e17f308149943d148e5cf5dc9, type: 2}
+  currentEn: 0
 --- !u!1 &2005459953
 GameObject:
   m_ObjectHideFlags: 0
@@ -39347,7 +39404,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 8c06fc87eec18e646ad87ef59d8ee962, type: 3}
+  m_Sprite: {fileID: 86246228, guid: 66887f2ab3b362f42b826f31985baecb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -39848,6 +39905,7 @@ GameObject:
   - component: {fileID: 2128617874}
   - component: {fileID: 2128617875}
   - component: {fileID: 2128617876}
+  - component: {fileID: 2128617877}
   m_Layer: 3
   m_Name: Tower
   m_TagString: Untagged
@@ -39914,7 +39972,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 31081d7c2be8bc34d8981be9ebf32e0d, type: 3}
+  m_Sprite: {fileID: -1533699720, guid: 66887f2ab3b362f42b826f31985baecb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -39947,12 +40005,26 @@ MonoBehaviour:
   missileShootingPoint: []
   secondEnConsum: 0
   secondCooldown: 0
+--- !u!114 &2128617877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128617873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: {fileID: 0}
+  currentEn: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1839519169}
   - {fileID: 827623733}
+  - {fileID: 1839519169}
   - {fileID: 2098507343}
   - {fileID: 1729637844}
   - {fileID: 519420032}

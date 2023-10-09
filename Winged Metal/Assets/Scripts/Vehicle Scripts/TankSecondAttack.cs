@@ -14,7 +14,7 @@ public class TankSecondAttack : MonoBehaviour
     public int enConsum;
     public float cooldown;
     protected float lastAttackTime;
-    protected TankAttack tankAttack;
+    protected VehicleAttack tankAttack;
   
     public virtual void Attack(Transform target){
         

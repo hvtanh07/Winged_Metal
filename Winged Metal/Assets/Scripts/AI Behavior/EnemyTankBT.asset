@@ -17,9 +17,8 @@ MonoBehaviour:
   guid: 461aa9e7ce5793e4dae09e343ce2d5e6
   position: {x: 306.1076, y: 1237.0001}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -56,9 +55,8 @@ MonoBehaviour:
   guid: 5c02c66787df3324dad0ff3461039f17
   position: {x: 1272.1252, y: 832}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -94,9 +92,8 @@ MonoBehaviour:
   guid: dd42259e34a41244fa278ffc8ca050bd
   position: {x: 231.10759, y: 948}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -134,9 +131,8 @@ MonoBehaviour:
   guid: f5cbd25d1cac2ad468b8afa6aa9b9d7b
   position: {x: 517.99994, y: 174.11357}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -172,11 +168,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: bfe82b64674e84244ac7a902faaf4da9
-  position: {x: 764, y: 1303.685}
+  position: {x: 764, y: 1304}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -212,9 +207,8 @@ MonoBehaviour:
   guid: d2162ada81608f14a90cb3638b0b7c19
   position: {x: 231.10759, y: 685}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -250,9 +244,8 @@ MonoBehaviour:
   guid: 8c1a6fd670344f64eb6a91fa29f4afef
   position: {x: 945.1252, y: 832}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -287,9 +280,8 @@ MonoBehaviour:
   guid: 83ccb18abfe30e54e8b5e6606e043fc4
   position: {x: 516.9999, y: -108.88641}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -325,9 +317,8 @@ MonoBehaviour:
   guid: 6aa60d32d4be5e546ba7786c975df03a
   position: {x: 1095.1252, y: 832}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -362,9 +353,8 @@ MonoBehaviour:
   guid: ecf0b4b0b8817864da0b84715cac6682
   position: {x: 341.9999, y: 483}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -402,9 +392,8 @@ MonoBehaviour:
   guid: 7c0422137b6b9a24fb3792bbf7038669
   position: {x: 517.99994, y: 297.43738}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -470,18 +459,17 @@ MonoBehaviour:
   - {fileID: 6647831661532955607}
   - {fileID: -4807878234776792401}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
-    detectingDistance: 30
+    detectingDistance: 0
     guardingViewDistance: 20
     attackingDistance: 30
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     playerPos: {fileID: 0}
     randomArea: {fileID: 0}
-    randomPosition: {x: 21.34, y: 2.17}
+    randomPosition: {x: 0, y: 0}
     viewBlock:
       serializedVersion: 2
       m_Bits: 128
@@ -505,9 +493,8 @@ MonoBehaviour:
   guid: b3a8c14c6054850499a6f693a15b05ba
   position: {x: 155.99995, y: 1114}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -540,11 +527,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6d36eb7e7acdab24e8768e5c1d45bb54
-  position: {x: 695.8516, y: 483.00006}
+  position: {x: 696.00006, y: 483.00012}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -583,9 +569,8 @@ MonoBehaviour:
   guid: 0915a35e0f92e6941bc6c9ac948ef07f
   position: {x: 401.4425, y: 685}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -620,9 +605,8 @@ MonoBehaviour:
   guid: 81446624483447040b71b8d13c1f6eb4
   position: {x: 593.85156, y: 685.00006}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -658,9 +642,8 @@ MonoBehaviour:
   guid: 40b525a48d1892b4f827137d59c6d565
   position: {x: 593.85156, y: 832.00006}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -698,9 +681,8 @@ MonoBehaviour:
   guid: b86abb5685a3fb446852000287e9a793
   position: {x: 769.8516, y: 685.00006}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -736,9 +718,8 @@ MonoBehaviour:
   guid: 3274e039ecff3ee4e8615730ab3305a8
   position: {x: 669, y: 1141.685}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -776,9 +757,8 @@ MonoBehaviour:
   guid: a12b193485ab8ac4cb34c283a4707567
   position: {x: 231.10759, y: 808}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -815,9 +795,8 @@ MonoBehaviour:
   guid: 4b24097d1e73e944ab8f26fad44cc5cf
   position: {x: 669, y: 1002}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -857,9 +836,8 @@ MonoBehaviour:
   guid: f96837f284ec5984caf3904c1ee9f63c
   position: {x: 516.9999, y: 26.11359}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -897,9 +875,8 @@ MonoBehaviour:
   guid: a095e00dc5afa3145b4b06b70c4c21eb
   position: {x: 771.00006, y: 832}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -934,9 +911,8 @@ MonoBehaviour:
   guid: e4099d616766db3439447cfc693b20df
   position: {x: 579, y: 1303.685}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -971,11 +947,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0749f092c5a22ce4c843ce7f1949bd10
-  position: {x: 1095, y: 685}
+  position: {x: 1108.6879, y: 685}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1012,11 +987,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e4bcf79f8263f344d9a9a6bb13c6ab65
-  position: {x: 305.99994, y: 1364.2533}
+  position: {x: 305.99997, y: 1368}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1051,9 +1025,8 @@ MonoBehaviour:
   guid: 9ececada201004c42b10c91260996a80
   position: {x: 579, y: 1440.685}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1088,9 +1061,8 @@ MonoBehaviour:
   guid: 30a7657f7e891fe40bc623ae355e7a46
   position: {x: 306.1076, y: 1114}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1127,9 +1099,8 @@ MonoBehaviour:
   guid: 41b54b3708e776346a1ee92a6459c5c6
   position: {x: 341.99994, y: 174.11357}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0
@@ -1164,9 +1135,8 @@ MonoBehaviour:
   guid: aca43e7f750f1954ca4b976724869fdb
   position: {x: 518.8516, y: 1002.0001}
   blackboard:
-    resources: {fileID: 0}
-    movement: {fileID: 0}
-    attack: {fileID: 0}
+    ai: {fileID: 0}
+    currentEn: 0
     target: {x: 0, y: 0}
     detectingDistance: 0
     guardingViewDistance: 0

@@ -12,7 +12,7 @@ public class SecondWeapon : ActionNode
     }
 
     protected override State OnUpdate() {
-        blackboard.attack.ShootMissile(blackboard.playerPos);
+        //blackboard.attack.ShootMissile(blackboard.playerPos);
         return State.Success;
     }
 }

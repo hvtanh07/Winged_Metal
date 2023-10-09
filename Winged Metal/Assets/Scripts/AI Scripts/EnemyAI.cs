@@ -2,42 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using TheKiwiCoder;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class EnemyAI : AIParent
+public class EnemyAI : AI
 {
-    private TankMovement movementS;
-    private TankAttack attackS;
-    private TankResources resourcesS;
+    private VehicleResources resourcesS;
     public BehaviourTreeRunner behaviourTree;
     //private bool openFire;
 
     // Start is called before the first frame update
-    void Awake()
+    private void OnEnable()
     {
-        movementS = GetComponent<TankMovement>();
-        attackS = GetComponentInChildren<TankAttack>();
-        resourcesS = GetComponent<TankResources>();
-        behaviourTree = GetComponent<BehaviourTreeRunner>();
+        vehicle.ID.events.OnEnUpdate += updateBTEn;
+        vehicle.ID.events.OnBeingHit += OnBeingHit;
     }
-
     private void Start()
     {
-
         InitParameters();
-        behaviourTree.tree.blackboard.movement = movementS;
-        behaviourTree.tree.blackboard.attack = attackS;
-        behaviourTree.tree.blackboard.resources = resourcesS;
-        //ONLY USE WHEN SWITCHING TO NAVMESH AGENT COMPONENT
-        //var agent = GetComponent<NavMeshAgent>();
-        //agent.updateRotation = false;
-        //agent.updateUpAxis = false;
+        behaviourTree = GetComponent<BehaviourTreeRunner>();
+        behaviourTree.tree.blackboard.ai = this;
     }
 
-    public void ConsumeEnergy(int amountEnergy){
+    public void ConsumeEnergy(int amountEnergy)
+    {
         resourcesS.ConsumeEnergy(amountEnergy);
     }
-    
+
 
     void Update()
     {
@@ -53,8 +42,7 @@ public class EnemyAI : AIParent
         if (path != null && path.corners.Length >= 2 && index <= path.corners.Length - 1)
         {
             path.corners[index].z = 0f;
-            movementS.direction = Vector3.ClampMagnitude(path.corners[index] - transform.position, 1);//move toward points on path
-
+            vehicle.ID.events.OnDirectionChange?.Invoke(Vector3.ClampMagnitude(path.corners[index] - transform.position, 1));//move toward points on path
             float distance = (path.corners[index] - transform.position).magnitude;
             if (distance <= 0.5f) //check if target reached. If yes goes to the next point
             {
@@ -64,16 +52,9 @@ public class EnemyAI : AIParent
         }
         else
         {
-            movementS.direction = Vector3.zero; //if there's no path or AI have reached target then don't move around
+            vehicle.ID.events.OnDirectionChange?.Invoke(Vector2.zero);//if there's no path or AI have reached target then don't move around
         }
     }
 
-    public void Dash(Vector2 dashDirection = default)
-    {
-        if (movementS.IsAbleToDash())
-        {
-            StartCoroutine(movementS.DashToggle(dashDirection));
-            RecalculatePath();
-        }
-    }
+
 }

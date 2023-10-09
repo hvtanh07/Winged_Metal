@@ -2,23 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TheKiwiCoder {
+namespace TheKiwiCoder
+{
 
     // This is the blackboard container shared between all nodes.
     // Use this to store temporary data that multiple nodes need read and write access to.
     // Add other properties here that make sense for your specific use case.
     [System.Serializable]
-    public class Blackboard {
+    public class Blackboard
+    {
         [HideInInspector]
-        public TankResources resources;
-        [HideInInspector]
-        public TankMovement movement;
-        [HideInInspector]
-        public TankAttack attack;
+        public AI ai;
+        public float currentEn;
 
         [Header("Movement data--------")]
         public Vector2 target;
-        public float detectingDistance;   
+        public float detectingDistance;
         public float guardingViewDistance;
         public float attackingDistance;
         [HideInInspector]

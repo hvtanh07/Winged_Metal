@@ -21,7 +21,7 @@ public class CheckBeingFired : DecoratorNode
         Collider2D hit = Physics2D.OverlapCircle(context.transform.position, projectileRadarRadius, projectile);
         if (hit == null) return State.Success; 
 
-        if (hit.gameObject.GetComponent<BulletScript>().bulletOwner == TankAttack.BulletOwner.player)
+        if (hit.gameObject.GetComponent<BulletScript>().bulletOwner == VehicleAttack.BulletOwner.player)
         {
             blackboard.bulletPos = hit.gameObject.transform.position;
             var state = child.Update();
