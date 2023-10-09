@@ -16,6 +16,7 @@ public class VehicleResources : VehicleSystem
 
     //Energy
     public int tankMaxEnergy;
+    [SerializeField]
     protected float tankCurrentEnergy;
     protected float lastEnergyUsedTime;
     public int energySupply;
@@ -30,7 +31,7 @@ public class VehicleResources : VehicleSystem
     }
     void OnEnable()
     {
-
+        vehicle.ID.events.OnEnUsed += ConsumeEnergy;
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -74,13 +75,12 @@ public class VehicleResources : VehicleSystem
         vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
     }
 
-    public bool ConsumeEnergy(int amountEnergyComsumned)
+    public void ConsumeEnergy(int amountEnergyComsumned)
     {
-        if (amountEnergyComsumned > tankCurrentEnergy) return false; //insufficient energy 
+        if (amountEnergyComsumned > tankCurrentEnergy) return; //insufficient energy 
         tankCurrentEnergy -= amountEnergyComsumned;
         vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
         lastEnergyUsedTime = Time.time;
-        return true;
     }
     public void TakeDamage(int damage)
     {

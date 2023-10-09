@@ -1050,6 +1050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 11400000, guid: c68b7101dbc798743a6e361adc3c251d, type: 2}
+  currentEn: 0
 --- !u!114 &827623740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,6 +1068,7 @@ MonoBehaviour:
   damageDealers: 01000000
   recoveryEfficiency: 0
   tankMaxEnergy: 1000
+  tankCurrentEnergy: 0
   energySupply: 100
 --- !u!1 &843449002
 GameObject:
@@ -1282,6 +1284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 0}
+  currentEn: 0
 --- !u!1 &1119424438
 GameObject:
   m_ObjectHideFlags: 0
@@ -39206,6 +39209,7 @@ MonoBehaviour:
   damageDealers: 0000000002000000
   recoveryEfficiency: 0
   tankMaxEnergy: 1000
+  tankCurrentEnergy: 0
   energySupply: 100
 --- !u!61 &1839519173
 BoxCollider2D:
@@ -39310,6 +39314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 0}
+  currentEn: 0
 --- !u!114 &1839519176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39323,6 +39328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 11400000, guid: 2eb9d49e17f308149943d148e5cf5dc9, type: 2}
+  currentEn: 0
 --- !u!1 &2005459953
 GameObject:
   m_ObjectHideFlags: 0
@@ -40012,6 +40018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 0}
+  currentEn: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

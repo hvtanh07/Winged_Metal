@@ -37,7 +37,6 @@ MonoBehaviour:
   description: 
   drawGizmos: 0
   children:
-  - {fileID: 4267269462078141577}
   - {fileID: 6457100662190702972}
 --- !u!114 &-7656846187745920301
 MonoBehaviour:
@@ -169,7 +168,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: bfe82b64674e84244ac7a902faaf4da9
-  position: {x: 764, y: 1303.685}
+  position: {x: 764, y: 1304}
   blackboard:
     ai: {fileID: 0}
     currentEn: 0
@@ -459,7 +458,6 @@ MonoBehaviour:
   - {fileID: 3478616903564738708}
   - {fileID: 6647831661532955607}
   - {fileID: -4807878234776792401}
-  - {fileID: 4267269462078141577}
   blackboard:
     ai: {fileID: 0}
     currentEn: 0
@@ -896,43 +894,6 @@ MonoBehaviour:
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
---- !u!114 &4267269462078141577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df9e411f4095d0a44acd9a25323f5e73, type: 3}
-  m_Name: Log
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 4c64f55c42916be4ebe1c3ebaa6700ab
-  position: {x: 305.60004, y: 1450.4}
-  blackboard:
-    ai: {fileID: 0}
-    currentEn: 0
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    beingHit: 0
-    enlessChase: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  message: 
 --- !u!114 &4576237061209248166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -986,7 +947,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0749f092c5a22ce4c843ce7f1949bd10
-  position: {x: 1095, y: 685}
+  position: {x: 1108.6879, y: 685}
   blackboard:
     ai: {fileID: 0}
     currentEn: 0
@@ -1026,7 +987,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e4bcf79f8263f344d9a9a6bb13c6ab65
-  position: {x: 305.99994, y: 1364.2533}
+  position: {x: 305.99997, y: 1368}
   blackboard:
     ai: {fileID: 0}
     currentEn: 0

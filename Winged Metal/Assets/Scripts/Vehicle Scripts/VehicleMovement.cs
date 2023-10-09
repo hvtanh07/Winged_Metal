@@ -19,18 +19,22 @@ public class VehicleMovement : VehicleSystem
     private Rigidbody2D rb;
     private bool dashing;
     private int enConsum;
-    private VehicleResources resources;
+    bool ableToDash;
     void OnEnable()
     {
         vehicle.ID.events.OnDirectionChange += ChangeDirection;
         vehicle.ID.events.OnDashCalled += Dash;
+        vehicle.ID.events.OnEnUpdate += UpdateAmountEn;
     }
 
     private void ChangeDirection(Vector2 newdirection)
     {
         direction = newdirection;
     }
-
+    private void UpdateAmountEn(float currentEn)
+    {
+        ableToDash = currentEn >= enConsum;
+    }
 
     // Start is called before the first frame update
     protected override void Awake()
@@ -38,7 +42,7 @@ public class VehicleMovement : VehicleSystem
         base.Awake();
         rb = GetComponent<Rigidbody2D>();
         dashing = false;
-        resources = transform.root.GetComponent<VehicleResources>();
+        ableToDash = true;
         enConsum = weight; //if there's modify stat function then move this to that function
     }
 
@@ -68,12 +72,14 @@ public class VehicleMovement : VehicleSystem
     public void Dash(Vector2 dashDirection = default)
     {
         if (dashing) return; //already dashing? nothing to do here
-        if (resources.ConsumeEnergy(enConsum)){
+        if (ableToDash)
+        {
             StartCoroutine(DashToggle(dashDirection));
         }
     }
     public IEnumerator DashToggle(Vector2 dashDirection = default)
     {
+        vehicle.ID.events.OnEnUsed?.Invoke(enConsum);
         dashing = true;
         if (dashDirection != default)//if npc have target direction to dash then dash on that direction
         {

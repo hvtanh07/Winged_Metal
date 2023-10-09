@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class VehicleAttack : VehicleSystem
 {
@@ -22,7 +23,7 @@ public class VehicleAttack : VehicleSystem
     public int damage;
     public float fireRate;
     public int enConsum;
-    private VehicleResources resources;
+    bool ableToShoot;
     [Header("2nd Weapon--------")]//will move this to seperate script
 
     public Transform[] missileShootingPoint;
@@ -38,15 +39,17 @@ public class VehicleAttack : VehicleSystem
     void OnEnable()
     {
         vehicle.ID.events.OnAttackDirectionChange += ChangeDirection;
-    }
-
-    void Start(){
-        resources = transform.root.GetComponent<VehicleResources>();
+        vehicle.ID.events.OnEnUpdate += UpdateAmountEn;
+        ableToShoot = true;
     }
 
     private void ChangeDirection(Vector2 newdirection)
     {
         direction = newdirection;
+    }
+    private void UpdateAmountEn(float currentEn)
+    {
+        ableToShoot = currentEn >= enConsum;
     }
 
     private void FixedUpdate()
@@ -64,11 +67,12 @@ public class VehicleAttack : VehicleSystem
 
     public void Shoot()
     {
-        if (resources.ConsumeEnergy(enConsum))
+        if (ableToShoot)
         {
             GameObject bullet = ObjectPooler.SharedInstance.GetPooledObject("Bullet");
             if (bullet != null)
             {
+                vehicle.ID.events.OnEnUsed?.Invoke(enConsum);
                 bullet.transform.position = shootingPoint.transform.position;
                 bullet.transform.rotation = shootingPoint.transform.rotation;
                 bullet.SetActive(true);
