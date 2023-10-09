@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
+using System;
 
 public class ShootTarget : ActionNode
 {
@@ -12,6 +13,7 @@ public class ShootTarget : ActionNode
     }
 
     protected override State OnUpdate() {
+        
         blackboard.ai.Attack(blackboard.playerPos.position - context.transform.position);
         return State.Success;
     }

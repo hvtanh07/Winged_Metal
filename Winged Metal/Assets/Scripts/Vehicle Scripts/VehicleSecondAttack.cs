@@ -16,7 +16,7 @@ public abstract class VehicleSecondAttack : VehicleSystem
     public VehicleAttack.BulletOwner bulletOwner;
     protected float lastAttackTime;
     protected VehicleAttack tankAttack;
-    bool ableToShoot;
+    protected bool ableToShoot;
   
     public abstract void Attack(Transform target);
     protected void UpdateAmountEn(float currentEn)

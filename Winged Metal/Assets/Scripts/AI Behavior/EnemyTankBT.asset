@@ -168,7 +168,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: bfe82b64674e84244ac7a902faaf4da9
-  position: {x: 764, y: 1304}
+  position: {x: 744, y: 1304}
   blackboard:
     ai: {fileID: 0}
     currentEn: 0
@@ -491,7 +491,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b3a8c14c6054850499a6f693a15b05ba
-  position: {x: 155.99995, y: 1114}
+  position: {x: 156, y: 1114}
   blackboard:
     ai: {fileID: 0}
     currentEn: 0
@@ -909,7 +909,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e4099d616766db3439447cfc693b20df
-  position: {x: 579, y: 1303.685}
+  position: {x: 594, y: 1303.9998}
   blackboard:
     ai: {fileID: 0}
     currentEn: 0
@@ -1023,7 +1023,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9ececada201004c42b10c91260996a80
-  position: {x: 579, y: 1440.685}
+  position: {x: 594, y: 1440.9998}
   blackboard:
     ai: {fileID: 0}
     currentEn: 0

@@ -1065,7 +1065,7 @@ MonoBehaviour:
   tankMaxArmor: 100
   tankCurrentArmor: 0
   damageDealers: 01000000
-  recoveryEfficiency: 0
+  recoveryEfficiency: 10
   tankMaxEnergy: 1000
   tankCurrentEnergy: 0
   energySupply: 100
@@ -1165,7 +1165,6 @@ GameObject:
   - component: {fileID: 1104449181}
   - component: {fileID: 1104449180}
   - component: {fileID: 1104449183}
-  - component: {fileID: 1104449182}
   m_Layer: 6
   m_Name: Tower
   m_TagString: Untagged
@@ -1213,6 +1212,7 @@ MonoBehaviour:
   damage: 10
   fireRate: 2
   enConsum: 10
+  ableToShoot: 0
 --- !u!212 &1104449181
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1265,19 +1265,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1104449182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104449178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: {fileID: 0}
 --- !u!114 &1104449183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,7 +1279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: 0
   damage: 10
-  enConsum: 500
+  enConsum: 100
   cooldown: 7
   bulletOwner: 1
   missileShootingPoint:
@@ -34906,7 +34893,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.6666667
+  m_VoxelSize: 0.8333333
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
   m_NavMeshData: {fileID: 23800000, guid: 4af97ad0f35e874469eef223219a218f, type: 2}
@@ -39223,7 +39210,7 @@ MonoBehaviour:
   recoveryEfficiency: 0
   tankMaxEnergy: 1000
   tankCurrentEnergy: 0
-  energySupply: 100
+  energySupply: 50
 --- !u!61 &1839519173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40000,6 +39987,7 @@ MonoBehaviour:
   damage: 10
   fireRate: 2
   enConsum: 10
+  ableToShoot: 0
 --- !u!114 &2128617877
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class HomingMissile : VehicleSecondAttack
     void Start()
     {
         tankAttack = GetComponent<VehicleAttack>();
+        ableToShoot = true;
     }
     void OnEnable()
     {
@@ -18,7 +19,7 @@ public class HomingMissile : VehicleSecondAttack
     public override void Attack(Transform target)
     {
         if (Time.time - lastAttackTime < cooldown) return;
-
+        if (!ableToShoot) return;
         foreach (Transform Point in missileShootingPoint)
         {
             GameObject missile = ObjectPooler.SharedInstance.GetPooledObject("Missile");

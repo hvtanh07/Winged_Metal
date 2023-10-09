@@ -23,6 +23,7 @@ public class VehicleAttack : VehicleSystem
     public int damage;
     public float fireRate;
     public int enConsum;
+    [SerializeField]
     bool ableToShoot;
     private Quaternion toRotation;
     private float lastShotTime;
