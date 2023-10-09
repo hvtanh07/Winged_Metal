@@ -24,17 +24,9 @@ public class VehicleAttack : VehicleSystem
     public float fireRate;
     public int enConsum;
     bool ableToShoot;
-    [Header("2nd Weapon--------")]//will move this to seperate script
-
-    public Transform[] missileShootingPoint;
-    public int secondEnConsum;
-    public float secondCooldown;
-
     private Quaternion toRotation;
-
     private float lastShotTime;
-    private float last2ShotTime;
-    // Start is called before the first frame update
+
 
     void OnEnable()
     {
@@ -82,26 +74,5 @@ public class VehicleAttack : VehicleSystem
             lastShotTime = Time.time;
         }
     }
-    public void ShootMissile(Transform target)
-    {
-        if (Time.time - last2ShotTime < secondCooldown) return;
 
-        foreach (Transform Point in missileShootingPoint)
-        {
-            GameObject missile = ObjectPooler.SharedInstance.GetPooledObject("Missile");
-            if (missile != null)
-            {
-                //if (resources.ConsumeEnergy(enConsum))
-                {
-                    missile.transform.position = Point.transform.position;
-                    missile.transform.rotation = Point.transform.rotation;
-                    missile.SetActive(true);
-                    missile.GetComponent<BulletScript>().SetParameter(damage, bulletOwner);
-                    missile.GetComponent<MissileScript>().AssignTarget(target);
-                }
-            }
-            last2ShotTime = Time.time;
-        }
-
-    }
 }

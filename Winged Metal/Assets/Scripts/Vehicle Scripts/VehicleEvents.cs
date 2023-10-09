@@ -11,10 +11,14 @@ public struct VehicleEvents
     //movement
     public Action<Vector2> OnDirectionChange;
     public Action<Vector2> OnDashCalled;
+    public Action OnDashComplete;
 
     //resource
     public Action<float> OnEnUpdate;
     public Action<int> OnEnUsed;
     public Action<float> OnArmorUpdate;
     public Action OnBeingHit;
+
+    //second weapon
+    public Action<Transform> On2ndAttackCalled;
 }

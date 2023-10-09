@@ -95,5 +95,6 @@ public class VehicleMovement : VehicleSystem
         }
         yield return new WaitForSeconds(dashingTime);
         dashing = false;
+        vehicle.ID.events.OnDashComplete?.Invoke();
     }
 }

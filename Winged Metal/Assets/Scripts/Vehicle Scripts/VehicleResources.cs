@@ -53,16 +53,16 @@ public class VehicleResources : VehicleSystem
         if (tankCurrentEnergy < tankMaxEnergy && Time.time - lastEnergyUsedTime > 3.0f)
         {
             tankCurrentEnergy += energySupply * Time.deltaTime;
-            vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
             if (tankCurrentEnergy > tankMaxEnergy)
                 tankCurrentEnergy = tankMaxEnergy;
+            vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
         }
         if (tankCurrentArmor < tankMaxArmor && Time.time - lastDamageTime > 5.0f)
         {
             tankCurrentArmor += recoveryEfficiency * Time.deltaTime;
-            vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
             if (tankCurrentArmor > tankMaxArmor)
                 tankCurrentArmor = tankMaxArmor;
+            vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
         }
     }
     public void InitiateParameter(int maxArmor, int maxEnergy)

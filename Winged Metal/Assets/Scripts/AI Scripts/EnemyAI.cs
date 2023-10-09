@@ -14,6 +14,7 @@ public class EnemyAI : AI
     {
         vehicle.ID.events.OnEnUpdate += updateBTEn;
         vehicle.ID.events.OnBeingHit += OnBeingHit;
+        vehicle.ID.events.OnDashComplete += OnDashComplete;
     }
     private void Start()
     {
@@ -25,6 +26,10 @@ public class EnemyAI : AI
     public void ConsumeEnergy(int amountEnergy)
     {
         resourcesS.ConsumeEnergy(amountEnergy);
+    }
+    public void OnDashComplete()
+    {
+        RecalculatePath();
     }
 
 

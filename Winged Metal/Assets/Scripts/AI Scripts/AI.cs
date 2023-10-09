@@ -36,6 +36,10 @@ public class AI : VehicleSystem
         behaviour.tree.blackboard.beingHit = true;
     }
 
+    public void SecondAttackCall(){
+        vehicle.ID.events.On2ndAttackCalled(behaviour.tree.blackboard.playerPos);
+    }
+
 
     public void Attack(Vector2 targetDirection)
     {

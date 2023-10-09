@@ -1050,7 +1050,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 11400000, guid: c68b7101dbc798743a6e361adc3c251d, type: 2}
-  currentEn: 0
 --- !u!114 &827623740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,6 +1164,7 @@ GameObject:
   - component: {fileID: 1104449179}
   - component: {fileID: 1104449181}
   - component: {fileID: 1104449180}
+  - component: {fileID: 1104449183}
   - component: {fileID: 1104449182}
   m_Layer: 6
   m_Name: Tower
@@ -1213,12 +1213,6 @@ MonoBehaviour:
   damage: 10
   fireRate: 2
   enConsum: 10
-  missileShootingPoint:
-  - {fileID: 1836440778}
-  - {fileID: 789639318}
-  - {fileID: 1437098236}
-  secondEnConsum: 100
-  secondCooldown: 7
 --- !u!212 &1104449181
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1284,7 +1278,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 0}
-  currentEn: 0
+--- !u!114 &1104449183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104449178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab670d05c1d2564fba897332b9d609f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponType: 0
+  damage: 10
+  enConsum: 500
+  cooldown: 7
+  bulletOwner: 1
+  missileShootingPoint:
+  - {fileID: 1836440778}
+  - {fileID: 789639318}
+  - {fileID: 1437098236}
 --- !u!1 &1119424438
 GameObject:
   m_ObjectHideFlags: 0
@@ -39088,12 +39102,11 @@ GameObject:
   - component: {fileID: 1839519168}
   - component: {fileID: 1839519176}
   - component: {fileID: 1839519170}
+  - component: {fileID: 1839519171}
   - component: {fileID: 1839519167}
   - component: {fileID: 1839519172}
-  - component: {fileID: 1839519171}
   - component: {fileID: 1839519173}
   - component: {fileID: 1839519174}
-  - component: {fileID: 1839519175}
   m_Layer: 6
   m_Name: Enemy Tank
   m_TagString: Enemy
@@ -39301,20 +39314,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.616319, y: 1.9908861}
   m_EdgeRadius: 0
---- !u!114 &1839519175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839519166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: {fileID: 0}
-  currentEn: 0
 --- !u!114 &1839519176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39328,7 +39327,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 11400000, guid: 2eb9d49e17f308149943d148e5cf5dc9, type: 2}
-  currentEn: 0
 --- !u!1 &2005459953
 GameObject:
   m_ObjectHideFlags: 0
@@ -40002,9 +40000,6 @@ MonoBehaviour:
   damage: 10
   fireRate: 2
   enConsum: 10
-  missileShootingPoint: []
-  secondEnConsum: 0
-  secondCooldown: 0
 --- !u!114 &2128617877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40018,7 +40013,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 0}
-  currentEn: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

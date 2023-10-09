@@ -5,5 +5,4 @@ using UnityEngine;
 public class Vehicle : MonoBehaviour
 {
     public VehicleID ID;
-    public float currentEn;
 }
