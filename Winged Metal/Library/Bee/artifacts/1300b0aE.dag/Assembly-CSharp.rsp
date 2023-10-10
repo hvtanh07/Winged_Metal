@@ -426,6 +426,7 @@
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/UpdateLastSeenPos.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/UpdateTargetPosition.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/Wait.cs"
+"Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/WaitToRegenEn.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Composites/InterruptSelector.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Composites/Parallel.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Composites/RandomSelector.cs"

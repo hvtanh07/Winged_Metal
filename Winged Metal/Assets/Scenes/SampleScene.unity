@@ -39089,9 +39089,9 @@ GameObject:
   - component: {fileID: 1839519168}
   - component: {fileID: 1839519176}
   - component: {fileID: 1839519170}
+  - component: {fileID: 1839519172}
   - component: {fileID: 1839519171}
   - component: {fileID: 1839519167}
-  - component: {fileID: 1839519172}
   - component: {fileID: 1839519173}
   - component: {fileID: 1839519174}
   m_Layer: 6
@@ -39178,6 +39178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviour: {fileID: 0}
   patrolArea: {fileID: 2032513999}
+  mindashCoolDown: 2
+  maxdashCoolDown: 5
   behaviourTree: {fileID: 0}
 --- !u!114 &1839519171
 MonoBehaviour:
@@ -39890,7 +39892,6 @@ GameObject:
   - component: {fileID: 2128617874}
   - component: {fileID: 2128617875}
   - component: {fileID: 2128617876}
-  - component: {fileID: 2128617877}
   m_Layer: 3
   m_Name: Tower
   m_TagString: Untagged
@@ -39988,19 +39989,6 @@ MonoBehaviour:
   fireRate: 2
   enConsum: 10
   ableToShoot: 0
---- !u!114 &2128617877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128617873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

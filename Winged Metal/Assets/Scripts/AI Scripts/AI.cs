@@ -11,39 +11,54 @@ public class AI : VehicleSystem
     protected int index;
     public BehaviourTreeRunner behaviour;
     public Collider2D patrolArea;
+    public float mindashCoolDown;
+    public float maxdashCoolDown;
+    float dashCoolDown;
+    float lastDashedTime;
     // Start is called before the first frame update
     protected void InitParameters()
     { //called in Start() of child class
         path = new NavMeshPath();
         behaviour = GetComponent<BehaviourTreeRunner>();
         behaviour.tree.blackboard.randomArea = patrolArea;
+        dashCoolDown = Random.Range(mindashCoolDown, maxdashCoolDown);
     }
-    private void OnEnable() {
+    private void OnEnable()
+    {
         vehicle.ID.events.OnEnUpdate += updateBTEn;
         vehicle.ID.events.OnBeingHit += OnBeingHit;
     }
 
     public void Dash(Vector2 dashDirection = default)
     {
-        vehicle.ID.events.OnDashCalled?.Invoke(dashDirection);
+        if (Time.time - lastDashedTime >= dashCoolDown)
+        {
+            vehicle.ID.events.OnDashCalled?.Invoke(dashDirection);
+            lastDashedTime = Time.time;
+            dashCoolDown = Random.Range(mindashCoolDown, maxdashCoolDown);
+        }
     }
 
-    public void updateBTEn(float currentEn){
+    public void updateBTEn(float currentEn)
+    {
         behaviour.tree.blackboard.currentEn = currentEn;
     }
 
-    public void OnBeingHit(){
+    public void OnBeingHit()
+    {
         behaviour.tree.blackboard.beingHit = true;
     }
 
-    public void SecondAttackCall(){
+    public void SecondAttackCall()
+    {
         vehicle.ID.events.On2ndAttackCalled(behaviour.tree.blackboard.playerPos);
     }
 
 
-    public void Attack(Vector2 targetDirection)
+    public void Attack(Vector2 targetDirection, bool openFire)
     {
-        vehicle.ID.events.OnAttackDirectionChange?.Invoke(targetDirection);
+        Debug.Log("fire");
+        vehicle.ID.events.OnAttackDirectionChange?.Invoke(targetDirection, openFire);
     }
 
     public void RecalculatePath()

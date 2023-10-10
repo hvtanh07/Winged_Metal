@@ -14,7 +14,7 @@ public class ShootTarget : ActionNode
 
     protected override State OnUpdate() {
         
-        blackboard.ai.Attack(blackboard.playerPos.position - context.transform.position);
+        blackboard.ai.Attack(blackboard.playerPos.position - context.transform.position, true);
         return State.Success;
     }
 }

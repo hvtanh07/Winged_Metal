@@ -12,7 +12,7 @@ public class StopShooting : ActionNode
     }
 
     protected override State OnUpdate() {
-        blackboard.ai.Attack(Vector2.zero);
+        blackboard.ai.Attack(Vector2.zero, false);
         return State.Success;
     }
 }

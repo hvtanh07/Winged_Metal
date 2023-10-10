@@ -25,6 +25,7 @@ public class VehicleAttack : VehicleSystem
     public int enConsum;
     [SerializeField]
     bool ableToShoot;
+    bool openFire;
     private Quaternion toRotation;
     private float lastShotTime;
 
@@ -36,9 +37,10 @@ public class VehicleAttack : VehicleSystem
         ableToShoot = true;
     }
 
-    private void ChangeDirection(Vector2 newdirection)
+    private void ChangeDirection(Vector2 newdirection, bool isOpenFire)
     {
         direction = newdirection;
+        openFire = isOpenFire;
     }
     private void UpdateAmountEn(float currentEn)
     {
@@ -51,7 +53,7 @@ public class VehicleAttack : VehicleSystem
         {
             toRotation = Quaternion.LookRotation(Vector3.forward, direction);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotatingSpeed * Time.fixedDeltaTime);
-            if (toRotation == transform.rotation && Time.time - lastShotTime >= 1 / fireRate) //if canon is allign with shooting direction.
+            if (toRotation == transform.rotation && Time.time - lastShotTime >= 1 / fireRate && openFire) //if canon is allign with shooting direction.
             {
                 Shoot();
             }
