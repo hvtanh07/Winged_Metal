@@ -5,14 +5,18 @@ using TheKiwiCoder;
 
 public class SecondWeapon : ActionNode
 {
-    protected override void OnStart() {
+    protected override void OnStart()
+    {
     }
 
-    protected override void OnStop() {
+    protected override void OnStop()
+    {
     }
 
-    protected override State OnUpdate() {
-        blackboard.ai.SecondAttackCall();
+    protected override State OnUpdate()
+    {
+        if (!blackboard.RegeningEn)
+            blackboard.ai.SecondAttackCall();
         return State.Success;
     }
 }

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1007
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: BehaviourTreeEditor
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -42,7 +42,7 @@ MonoBehaviour:
     x: 553
     y: 0
     width: 475
-    height: 445
+    height: 384
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
@@ -68,13 +68,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 512
+    y: 573
     width: 1028
-    height: 445
+    height: 384
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 947
+  controlID: 64
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 124
+  controlID: 56
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,8 +242,8 @@ MonoBehaviour:
     y: 549
     width: 982
     height: 408
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -292,7 +292,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1028
-    height: 512
+    height: 573
   m_MinSize: {x: 802, y: 621}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
@@ -319,7 +319,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 553
-    height: 445
+    height: 384
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 20}
@@ -478,7 +478,7 @@ MonoBehaviour:
     x: 982
     y: 73
     width: 1026
-    height: 491
+    height: 552
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -884,9 +884,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 10.381718, y: 6.5998454, z: 0.18352093}
+    m_Target: {x: -3.173963, y: 5.849921, z: -0.025185894}
     speed: 2
-    m_Value: {x: 10.381718, y: 6.5998454, z: 0.18352093}
+    m_Value: {x: -3.173963, y: 5.849921, z: -0.025185894}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -936,9 +936,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 17.611542
+    m_Target: 32.615604
     speed: 2
-    m_Value: 17.611542
+    m_Value: 32.615604
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -984,9 +984,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1535
-    y: 585
+    y: 646
     width: 473
-    height: 424
+    height: 363
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1000,23 +1000,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 90430000
-      m_LastClickedID: 0
-      m_ExpandedIDs: fafaffff94590000305a0000
+      m_SelectedIDs: f45a0000
+      m_LastClickedID: 23284
+      m_ExpandedIDs: aaf8ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Virtual Camera
-        m_OriginalName: Virtual Camera
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 23032
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 2}
       m_SearchString: 
@@ -1081,9 +1081,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 982
-    y: 585
+    y: 646
     width: 551
-    height: 424
+    height: 363
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1119,24 +1119,24 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a65b0000
-    m_LastClickedID: 23462
-    m_ExpandedIDs: 00000000425b0000465b0000485b00004a5b00004c5b00004e5b0000505b0000525b0000545b0000565b0000585b00005a5b00005c5b00005e5b0000605b0000625b0000645b0000665b0000685b000000ca9a3b
+    scrollPos: {x: 0, y: 205}
+    m_SelectedIDs: 425c0000
+    m_LastClickedID: 23618
+    m_ExpandedIDs: 00000000025c0000045c0000065c0000085c00000a5c00000c5c00000e5c0000105c0000125c0000145c0000165c0000185c00001a5c00001c5c00001e5c0000205c0000225c0000245c00003c5c0000405c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Vehicle Scripts
+      m_OriginalName: Vehicle Scripts
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 23632
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 13}
     m_SearchString: 
@@ -1150,7 +1150,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000425b0000445b0000465b0000485b00004a5b00004c5b00004e5b0000505b0000525b0000545b0000565b0000585b00005a5b00005c5b00005e5b0000605b0000625b0000645b0000665b0000685b0000
+    m_ExpandedIDs: 00000000025c0000045c0000065c0000085c00000a5c00000c5c00000e5c0000105c0000125c0000145c0000165c0000185c00001a5c00001c5c00001e5c0000205c0000225c0000245c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1227,9 +1227,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 982
-    y: 585
+    y: 646
     width: 551
-    height: 424
+    height: 363
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1327,7 +1327,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 23024
+  m_LastInspectedObjectInstanceID: 23220
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: GlobalObjectId_V1-2-3fc8acdd13e6c734bafef6554d6fdbcd-1380124790-0
   m_InspectorMode: 0
