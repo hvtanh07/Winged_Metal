@@ -7,9 +7,12 @@ public class CheckBeingFired : DecoratorNode
 {
     public float projectileRadarRadius;
     public LayerMask projectile;
+    public VehicleAttack.BulletOwner shooterToFind;
+    [Range(0.0f, 100.0f)]
+    public int radarEfficency;
     protected override void OnStart()
     {
-        
+
     }
 
     protected override void OnStop()
@@ -19,15 +22,14 @@ public class CheckBeingFired : DecoratorNode
     protected override State OnUpdate()
     {
         Collider2D hit = Physics2D.OverlapCircle(context.transform.position, projectileRadarRadius, projectile);
-        if (hit == null) return State.Success; 
+        if (hit == null) return State.Success; //not a bullet? do nothing
 
-        if (hit.gameObject.GetComponent<BulletScript>().bulletOwner == VehicleAttack.BulletOwner.player)
-        {
-            blackboard.bulletPos = hit.gameObject.transform.position;
-            var state = child.Update();
-            return state;
-        }
+        if (hit.gameObject.GetComponent<BulletScript>().bulletOwner != shooterToFind) return State.Success; //doesn't have bullet script with the shooter on the same side? do nothing
 
-        return State.Success;
+        if (Random.Range(0, 101) > radarEfficency) return State.Success;
+
+        blackboard.bulletPos = hit.gameObject.transform.position;
+        var state = child.Update();
+        return state;
     }
 }

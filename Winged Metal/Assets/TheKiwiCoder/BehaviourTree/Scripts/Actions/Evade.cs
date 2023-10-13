@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
 
-public class StopShooting : ActionNode
+public class Evade : ActionNode
 {
     protected override void OnStart() {
     }
@@ -12,7 +12,9 @@ public class StopShooting : ActionNode
     }
 
     protected override State OnUpdate() {
-        blackboard.ai.Attack(Vector2.zero, false);
+        Vector2 moveDirection = Vector2.Perpendicular((Vector2)context.transform.position - blackboard.bulletPos);
+        blackboard.target = (Vector2)context.transform.position + moveDirection;
+        
         return State.Success;
     }
 }

@@ -14,6 +14,7 @@ namespace TheKiwiCoder
         [HideInInspector]
         public AI ai;
         public float currentEn;
+        public bool RegeningEn;
 
         [Header("Movement data--------")]
         public Vector2 target;

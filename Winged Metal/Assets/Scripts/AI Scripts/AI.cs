@@ -11,17 +11,13 @@ public class AI : VehicleSystem
     protected int index;
     public BehaviourTreeRunner behaviour;
     public Collider2D patrolArea;
-    public float mindashCoolDown;
-    public float maxdashCoolDown;
-    float dashCoolDown;
-    float lastDashedTime;
+
     // Start is called before the first frame update
     protected void InitParameters()
     { //called in Start() of child class
         path = new NavMeshPath();
         behaviour = GetComponent<BehaviourTreeRunner>();
         behaviour.tree.blackboard.randomArea = patrolArea;
-        dashCoolDown = Random.Range(mindashCoolDown, maxdashCoolDown);
     }
     private void OnEnable()
     {
@@ -31,12 +27,7 @@ public class AI : VehicleSystem
 
     public void Dash(Vector2 dashDirection = default)
     {
-        if (Time.time - lastDashedTime >= dashCoolDown)
-        {
-            vehicle.ID.events.OnDashCalled?.Invoke(dashDirection);
-            lastDashedTime = Time.time;
-            dashCoolDown = Random.Range(mindashCoolDown, maxdashCoolDown);
-        }
+        vehicle.ID.events.OnDashCalled?.Invoke(dashDirection);
     }
 
     public void updateBTEn(float currentEn)

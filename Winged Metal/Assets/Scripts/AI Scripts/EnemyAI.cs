@@ -6,7 +6,6 @@ using UnityEngine;
 public class EnemyAI : AI
 {
     private VehicleResources resourcesS;
-    public BehaviourTreeRunner behaviourTree;
     //private bool openFire;
 
     // Start is called before the first frame update
@@ -19,8 +18,8 @@ public class EnemyAI : AI
     private void Start()
     {
         InitParameters();
-        behaviourTree = GetComponent<BehaviourTreeRunner>();
-        behaviourTree.tree.blackboard.ai = this;
+        behaviour = GetComponent<BehaviourTreeRunner>();
+        behaviour.tree.blackboard.ai = this;
     }
 
     public void ConsumeEnergy(int amountEnergy)
