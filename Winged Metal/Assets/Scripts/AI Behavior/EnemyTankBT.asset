@@ -158,44 +158,6 @@ MonoBehaviour:
   child: {fileID: -1536950340880430774}
   restartOnSuccess: 1
   restartOnFailure: 0
---- !u!114 &-4807878234776792401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df9e411f4095d0a44acd9a25323f5e73, type: 3}
-  m_Name: Log
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: bfe82b64674e84244ac7a902faaf4da9
-  position: {x: 744, y: 1304}
-  blackboard:
-    ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
-    target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    playerPos: {fileID: 0}
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
-    beingHit: 0
-    enlessChase: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
-  message: Run away from player shoot
 --- !u!114 &-4495896854219428192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,7 +385,6 @@ MonoBehaviour:
   - {fileID: 4576237061209248166}
   - {fileID: 3478616903564738708}
   - {fileID: 6647831661532955607}
-  - {fileID: -4807878234776792401}
   - {fileID: -8957517851973768949}
   - {fileID: -8172014607886212226}
   - {fileID: 2145645621130313822}
@@ -719,7 +680,6 @@ MonoBehaviour:
   drawGizmos: 0
   children:
   - {fileID: 4576237061209248166}
-  - {fileID: -4807878234776792401}
 --- !u!114 &3709142604895544348
 MonoBehaviour:
   m_ObjectHideFlags: 0

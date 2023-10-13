@@ -5,6 +5,7 @@ using TheKiwiCoder;
 
 public class SecondWeapon : ActionNode
 {
+    
     protected override void OnStart()
     {
     }
