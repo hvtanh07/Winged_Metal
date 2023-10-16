@@ -11,8 +11,6 @@ public class VehicleMovement : VehicleSystem
     public float dashingTime;
     public float steeringTorque;
     public int weight;
-    [Range(0.0f, 10.0f)]
-    public float sideSlideAllowance;
     [HideInInspector]
     public Vector2 direction;
     private Rigidbody2D rb;
@@ -39,7 +37,8 @@ public class VehicleMovement : VehicleSystem
     protected override void Awake()
     {
         base.Awake();
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
+        rb = transform.root.GetComponent<Rigidbody2D>();
         dashing = false;
         ableToDash = true;
         enConsum = weight; //if there's modify stat function then move this to that function
@@ -57,14 +56,14 @@ public class VehicleMovement : VehicleSystem
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, direction);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, steeringTorque * Time.fixedDeltaTime);
         }
-        else if (rb.velocity.magnitude > 0) //detect if object is side slide
-        {
-            Vector2 localVelocity = rb.transform.InverseTransformDirection(rb.velocity);
-            if (Mathf.Abs(localVelocity.x) > sideSlideAllowance)
-            {
-                rb.velocity = Vector2.zero;
-            }
-        }
+        //else if (rb.velocity.magnitude > 0) //detect if object is side slide
+        //{
+        //    Vector2 localVelocity = rb.transform.InverseTransformDirection(rb.velocity);
+        //    if (Mathf.Abs(localVelocity.x) > sideSlideAllowance)
+        //    {
+        //        rb.velocity = Vector2.zero;
+        //    }
+        //}
     }
 
 
