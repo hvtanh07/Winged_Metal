@@ -22,10 +22,6 @@ public class EnemyAI : AI
         behaviour.tree.blackboard.ai = this;
     }
 
-    public void ConsumeEnergy(int amountEnergy)
-    {
-        resourcesS.ConsumeEnergy(amountEnergy);
-    }
     public void OnDashComplete()
     {
         RecalculatePath();

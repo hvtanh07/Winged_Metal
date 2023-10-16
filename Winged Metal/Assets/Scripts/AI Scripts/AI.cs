@@ -12,9 +12,8 @@ public class AI : VehicleSystem
     public BehaviourTreeRunner behaviour;
     public Collider2D patrolArea;
 
-    // Start is called before the first frame update
-    protected void InitParameters()
-    { //called in Start() of child class
+    protected void InitParameters() //called in Start() of child class
+    {
         path = new NavMeshPath();
         behaviour = GetComponent<BehaviourTreeRunner>();
         behaviour.tree.blackboard.randomArea = patrolArea;
@@ -48,7 +47,6 @@ public class AI : VehicleSystem
 
     public void Attack(Vector2 targetDirection, bool openFire)
     {
-        Debug.Log("fire");
         vehicle.ID.events.OnAttackDirectionChange?.Invoke(targetDirection, openFire);
     }
 

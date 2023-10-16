@@ -403,6 +403,7 @@
 "Assets/Scripts/Tank2AttackScript/HomingMissile.cs"
 "Assets/Scripts/Vehicle Data/TankBaseData.cs"
 "Assets/Scripts/Vehicle Scripts/Vehicle.cs"
+"Assets/Scripts/Vehicle Scripts/VehicleArmor.cs"
 "Assets/Scripts/Vehicle Scripts/VehicleAttack.cs"
 "Assets/Scripts/Vehicle Scripts/VehicleEvents.cs"
 "Assets/Scripts/Vehicle Scripts/VehicleID.cs"

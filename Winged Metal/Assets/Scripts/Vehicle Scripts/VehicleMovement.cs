@@ -4,7 +4,6 @@ using Cinemachine;
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(VehicleResources))]
 public class VehicleMovement : VehicleSystem
 {
     public float enginePower;

@@ -17,6 +17,7 @@ public struct VehicleEvents
     public Action<float> OnEnUpdate;
     public Action<int> OnEnUsed;
     public Action<float> OnArmorUpdate;
+    public Action<int> OnTakeHit;
     public Action OnBeingHit;
 
     //second weapon

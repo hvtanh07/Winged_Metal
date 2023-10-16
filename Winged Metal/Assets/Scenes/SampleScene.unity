@@ -854,6 +854,7 @@ GameObject:
   - component: {fileID: 827623732}
   - component: {fileID: 827623739}
   - component: {fileID: 827623740}
+  - component: {fileID: 827623741}
   - component: {fileID: 827623734}
   - component: {fileID: 827623731}
   - component: {fileID: 827623736}
@@ -1062,13 +1063,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f68e32596abd3842bc706908966fa0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankMaxArmor: 100
-  tankCurrentArmor: 0
-  damageDealers: 01000000
-  recoveryEfficiency: 10
   tankMaxEnergy: 1000
   tankCurrentEnergy: 0
   energySupply: 100
+--- !u!114 &827623741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827623730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2dba267d09055f4d80477fae58d1a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankMaxArmor: 100
+  tankCurrentArmor: 0
+  damageDealers: 01000000
+  recoveryEfficiency: 5
 --- !u!1 &843449002
 GameObject:
   m_ObjectHideFlags: 0
@@ -39089,7 +39102,7 @@ GameObject:
   - component: {fileID: 1839519168}
   - component: {fileID: 1839519176}
   - component: {fileID: 1839519170}
-  - component: {fileID: 1839519172}
+  - component: {fileID: 1839519177}
   - component: {fileID: 1839519171}
   - component: {fileID: 1839519167}
   - component: {fileID: 1839519173}
@@ -39178,9 +39191,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviour: {fileID: 0}
   patrolArea: {fileID: 2032513999}
-  mindashCoolDown: 2
-  maxdashCoolDown: 5
-  behaviourTree: {fileID: 0}
 --- !u!114 &1839519171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39193,26 +39203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c6f9b140a52a14881ec09eaebb66eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tree: {fileID: 11400000, guid: 1d71f3251cd2b2a42a557398bd8426f0, type: 2}
---- !u!114 &1839519172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839519166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f68e32596abd3842bc706908966fa0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tankMaxArmor: 100
-  tankCurrentArmor: 0
-  damageDealers: 0000000002000000
-  recoveryEfficiency: 0
-  tankMaxEnergy: 1000
-  tankCurrentEnergy: 0
-  energySupply: 50
+  tree: {fileID: 11400000, guid: 05c1ad114d32a224cb4a5503199bb13b, type: 2}
 --- !u!61 &1839519173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39316,6 +39307,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 11400000, guid: 2eb9d49e17f308149943d148e5cf5dc9, type: 2}
+--- !u!114 &1839519177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839519166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2dba267d09055f4d80477fae58d1a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankMaxArmor: 100
+  tankCurrentArmor: 0
+  damageDealers: 0000000002000000
+  recoveryEfficiency: 5
 --- !u!1 &2005459953
 GameObject:
   m_ObjectHideFlags: 0
