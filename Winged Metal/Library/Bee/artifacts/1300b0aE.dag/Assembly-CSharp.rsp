@@ -413,6 +413,8 @@
 "Assets/Scripts/Vehicle Scripts/VehicleSystem.cs"
 "Assets/Scripts/Weapon/BulletScript.cs"
 "Assets/Scripts/Weapon/MissileScript.cs"
+"Assets/Target Scanner/Scene (Can Remove)/TestPlayer.cs"
+"Assets/Target Scanner/Script/TargetScanner.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/Breakpoint.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/Dash.cs"
 "Assets/TheKiwiCoder/BehaviourTree/Scripts/Actions/Evade.cs"

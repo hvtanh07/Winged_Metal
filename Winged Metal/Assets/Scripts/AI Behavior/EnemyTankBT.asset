@@ -478,7 +478,7 @@ MonoBehaviour:
   projectile:
     serializedVersion: 2
     m_Bits: 256
-  shooterToFind: 0
+  shooterToFind: 2
   radarEfficency: 50
 --- !u!114 &2237500339944836953
 MonoBehaviour:

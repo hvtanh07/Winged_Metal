@@ -21,5 +21,5 @@ public struct VehicleEvents
     public Action OnBeingHit;
 
     //second weapon
-    public Action<Transform> On2ndAttackCalled;
+    public Action<Transform[]> On2ndAttackCalled;
 }

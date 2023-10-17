@@ -5,17 +5,12 @@ using UnityEngine.PlayerLoop;
 
 public class VehicleAttack : VehicleSystem
 {
-    public enum BulletOwner
-    {
-        player,
-        enemy,
-        ally
-    }
+
     [HideInInspector]
     [Header("Cannon Stats--------")]
     public Vector2 direction;
 
-    public BulletOwner bulletOwner;
+    public VehicleSide bulletOwner;
 
     public float rotatingSpeed;
     [Header("Main Cannon--------")]

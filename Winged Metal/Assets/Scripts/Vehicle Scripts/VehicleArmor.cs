@@ -9,7 +9,7 @@ public class VehicleArmor : VehicleSystem
     [SerializeField]
     protected float tankCurrentArmor;
     protected float lastDamageTime;
-    public VehicleAttack.BulletOwner[] damageDealers;
+    public VehicleSide[] damageDealers;
     public int recoveryEfficiency;
 
 
@@ -26,7 +26,7 @@ public class VehicleArmor : VehicleSystem
     {
         BulletScript bullet = col.gameObject.GetComponent<BulletScript>();
         if (bullet == null) return; //if object is not bullet then no need to do anything
-        foreach (VehicleAttack.BulletOwner damageDealer in damageDealers)
+        foreach (VehicleSide damageDealer in damageDealers)
         {
             if (damageDealer == bullet.bulletOwner)
             {

@@ -7,7 +7,7 @@ public class CheckBeingFired : DecoratorNode
 {
     public float projectileRadarRadius;
     public LayerMask projectile;
-    public VehicleAttack.BulletOwner shooterToFind;
+    public VehicleSide shooterToFind;
     [Range(0.0f, 100.0f)]
     public int radarEfficency;
     protected override void OnStart()

@@ -41,7 +41,8 @@ public class AI : VehicleSystem
 
     public void SecondAttackCall()
     {
-        vehicle.ID.events.On2ndAttackCalled(behaviour.tree.blackboard.playerPos);
+        Transform[] target = {behaviour.tree.blackboard.playerPos};
+        vehicle.ID.events.On2ndAttackCalled(target);
     }
 
 
