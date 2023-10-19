@@ -5,6 +5,8 @@ using UnityEngine;
 
 public struct VehicleEvents
 {
+    //ai
+    public Action<Transform[]> OnTargetDetected; 
     //attack
     public Action<Vector2, bool> OnAttackDirectionChange;
   

@@ -1146,6 +1146,7 @@ GameObject:
   - component: {fileID: 1104449181}
   - component: {fileID: 1104449180}
   - component: {fileID: 1104449183}
+  - component: {fileID: 1104449184}
   m_Layer: 6
   m_Name: Tower
   m_TagString: Untagged
@@ -1267,6 +1268,27 @@ MonoBehaviour:
   - {fileID: 1836440778}
   - {fileID: 789639318}
   - {fileID: 1437098236}
+--- !u!114 &1104449184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104449178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04af5ec2f2de2a489cc0eda8f97fa2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 10
+  viewAngle: 104
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 8
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 128
+  visibleTargets: []
 --- !u!1 &1119424438
 GameObject:
   m_ObjectHideFlags: 0
@@ -39248,20 +39270,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviour: {fileID: 0}
   patrolArea: {fileID: 2032513999}
-  scanner:
-    ScannerGizmos: 1
-    transform: {fileID: 1468267047}
-    alertRadius: 3
-    viewRadius: 10
-    viewAngle: 60
-    targetLayer:
-      serializedVersion: 2
-      m_Bits: 8
-    obstacleLayer:
-      serializedVersion: 2
-      m_Bits: 128
-    heightOffset: 0
-    maxHeightDifference: 1
 --- !u!114 &1839519171
 MonoBehaviour:
   m_ObjectHideFlags: 0

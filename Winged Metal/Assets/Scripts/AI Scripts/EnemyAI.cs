@@ -2,13 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TheKiwiCoder;
 using UnityEngine;
-using Scanner;
 
 public class EnemyAI : AI
 {
-    private VehicleResources resourcesS;
     
-        public TargetScanner scanner;
     //private bool openFire;
 
     // Start is called before the first frame update

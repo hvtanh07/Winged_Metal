@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using TheKiwiCoder;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class AI : VehicleSystem
 {
+
     protected Vector2 targetLastPos;
     protected NavMeshPath path;
     protected int index;
@@ -41,7 +40,7 @@ public class AI : VehicleSystem
 
     public void SecondAttackCall()
     {
-        Transform[] target = {behaviour.tree.blackboard.playerPos};
+        Transform[] target = { behaviour.tree.blackboard.playerPos };
         vehicle.ID.events.On2ndAttackCalled(target);
     }
 
