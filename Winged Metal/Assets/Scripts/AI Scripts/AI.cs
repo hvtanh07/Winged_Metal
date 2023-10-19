@@ -17,8 +17,10 @@ public class AI : VehicleSystem
         behaviour = GetComponent<BehaviourTreeRunner>();
         behaviour.tree.blackboard.randomArea = patrolArea;
     }
-    private void OnEnable()
+    public void OnEnable()
     {
+        vehicle.ID.events.OnEnUpdate += updateBTEn;
+        vehicle.ID.events.OnBeingHit += OnBeingHit;
         vehicle.ID.events.OnEnUpdate += updateBTEn;
         vehicle.ID.events.OnBeingHit += OnBeingHit;
     }

@@ -11,8 +11,7 @@ public class EnemyAI : AI
     // Start is called before the first frame update
     private void OnEnable()
     {
-        vehicle.ID.events.OnEnUpdate += updateBTEn;
-        vehicle.ID.events.OnBeingHit += OnBeingHit;
+        base.OnEnable();
         vehicle.ID.events.OnDashComplete += OnDashComplete;
     }
     private void Start()
