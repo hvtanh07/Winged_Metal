@@ -18,15 +18,10 @@ MonoBehaviour:
   position: {x: 0, y: 436}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -58,15 +53,10 @@ MonoBehaviour:
   position: {x: -295.0001, y: 762.9999}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -96,15 +86,10 @@ MonoBehaviour:
   position: {x: 74.99991, y: 813.10547}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -134,15 +119,10 @@ MonoBehaviour:
   position: {x: 241, y: 813}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -172,15 +152,10 @@ MonoBehaviour:
   position: {x: -220.00008, y: 608.3501}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -212,15 +187,10 @@ MonoBehaviour:
   position: {x: 241, y: 956}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -249,15 +219,10 @@ MonoBehaviour:
   position: {x: -178.95999, y: 294}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -286,15 +251,10 @@ MonoBehaviour:
   position: {x: 0, y: 1105.08}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -323,15 +283,10 @@ MonoBehaviour:
   position: {x: -220.00006, y: 1085}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -360,15 +315,10 @@ MonoBehaviour:
   position: {x: 414, y: 956}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -419,15 +369,10 @@ MonoBehaviour:
   - {fileID: -1721887810881989037}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 20
-    attackingDistance: 30
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -454,15 +399,10 @@ MonoBehaviour:
   position: {x: 153, y: 1105}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -498,15 +438,10 @@ MonoBehaviour:
   position: {x: 741, y: 956}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -536,15 +471,10 @@ MonoBehaviour:
   position: {x: 241.00005, y: 628}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -577,15 +507,10 @@ MonoBehaviour:
   position: {x: 75.00002, y: 956}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -617,15 +542,10 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -655,15 +575,10 @@ MonoBehaviour:
   position: {x: 0, y: 134}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -695,15 +610,10 @@ MonoBehaviour:
   position: {x: -295.0001, y: 900.9999}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -735,15 +645,10 @@ MonoBehaviour:
   position: {x: -145.00003, y: 762.9999}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -773,15 +678,10 @@ MonoBehaviour:
   position: {x: 0, y: 294}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -813,15 +713,10 @@ MonoBehaviour:
   position: {x: 152.99994, y: 1244.0375}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -850,15 +745,10 @@ MonoBehaviour:
   position: {x: 564, y: 956}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -887,15 +777,10 @@ MonoBehaviour:
   position: {x: -370.00006, y: 1085}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:
@@ -926,15 +811,10 @@ MonoBehaviour:
   position: {x: 578, y: 813}
   blackboard:
     ai: {fileID: 0}
-    currentEn: 0
-    RegeningEn: 0
+    targets: []
     target: {x: 0, y: 0}
-    detectingDistance: 0
-    guardingViewDistance: 0
-    attackingDistance: 0
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
-    playerPos: {fileID: 0}
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
     viewBlock:

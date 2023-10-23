@@ -66,7 +66,7 @@ public class VehicleAttack : VehicleSystem
                 bullet.transform.position = shootingPoint.transform.position;
                 bullet.transform.rotation = shootingPoint.transform.rotation;
                 bullet.SetActive(true);
-                bullet.GetComponent<BulletScript>().SetParameter(damage, bulletOwner);
+                bullet.GetComponent<BulletScript>().SetParameter(damage, bulletOwner, shootingPoint.transform.position);
                 bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * 35f;
             }
             lastShotTime = Time.time;

@@ -13,18 +13,14 @@ namespace TheKiwiCoder
     {
         [HideInInspector]
         public AI ai;
-        public float currentEn;
-        public bool RegeningEn;
+        public List<Transform> targets;
 
         [Header("Movement data--------")]
         public Vector2 target;
-        public float detectingDistance;
-        public float guardingViewDistance;
-        public float attackingDistance;
-        [HideInInspector]
+        //[HideInInspector]
         public Vector2 lastSeenPosition;
         public bool haveLastSeenPos;
-        public Transform playerPos;
+        //public Transform playerPos;
         public Collider2D randomArea;
         [HideInInspector]
         public Vector2 randomPosition;

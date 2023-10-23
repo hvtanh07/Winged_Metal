@@ -9,7 +9,7 @@ public class EnemyAI : AI
     //private bool openFire;
 
     // Start is called before the first frame update
-    private void OnEnable()
+    public void OnEnable()
     {
         base.OnEnable();
         vehicle.ID.events.OnDashComplete += OnDashComplete;

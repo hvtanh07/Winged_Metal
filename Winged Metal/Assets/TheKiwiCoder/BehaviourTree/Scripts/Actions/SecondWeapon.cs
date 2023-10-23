@@ -5,7 +5,7 @@ using TheKiwiCoder;
 
 public class SecondWeapon : ActionNode
 {
-    
+
     protected override void OnStart()
     {
     }
@@ -16,8 +16,7 @@ public class SecondWeapon : ActionNode
 
     protected override State OnUpdate()
     {
-        if (!blackboard.RegeningEn)
-            blackboard.ai.SecondAttackCall();
+        blackboard.ai.SecondAttackCall(blackboard.targets);
         return State.Success;
     }
 }

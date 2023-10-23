@@ -12,7 +12,7 @@ public class UpdateLastSeenPos : ActionNode
     }
 
     protected override State OnUpdate() {
-        blackboard.lastSeenPosition = blackboard.playerPos.position;
+        //blackboard.lastSeenPosition = blackboard.playerPos.position;
         blackboard.haveLastSeenPos = true;
         blackboard.beingHit = false;
         return State.Success;

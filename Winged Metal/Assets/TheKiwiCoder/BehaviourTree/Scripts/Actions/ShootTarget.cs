@@ -21,15 +21,15 @@ public class ShootTarget : ActionNode
 
     protected override State OnUpdate()
     {
-        if (shooting && Time.time - lastSwitch > attackDuration){
-            shooting = false;
-            lastSwitch = Time.time;
-        }else if (!shooting && Time.time - lastSwitch > cooldownDuration){
-            shooting = true;
-            lastSwitch = Time.time;
-        }
+        //if (shooting && Time.time - lastSwitch > attackDuration){
+        //    shooting = false;
+        //    lastSwitch = Time.time;
+        //}else if (!shooting && Time.time - lastSwitch > cooldownDuration){
+        //    shooting = true;
+        //    lastSwitch = Time.time;
+        //}
 
-        blackboard.ai.Attack(blackboard.playerPos.position - context.transform.position, shooting);
+        blackboard.ai.Attack(blackboard.target - (Vector2)context.transform.position, shooting);
         return State.Success;
     }
 }

@@ -7,7 +7,7 @@ public class RandomPosition : ActionNode
 {
 
     protected override void OnStart() {
-        blackboard.detectingDistance = blackboard.guardingViewDistance;
+    
     }
 
     protected override void OnStop() {

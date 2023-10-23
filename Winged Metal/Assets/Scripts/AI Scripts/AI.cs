@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TheKiwiCoder;
 using UnityEngine;
 using UnityEngine.AI;
@@ -19,31 +20,29 @@ public class AI : VehicleSystem
     }
     public void OnEnable()
     {
-        vehicle.ID.events.OnEnUpdate += updateBTEn;
         vehicle.ID.events.OnBeingHit += OnBeingHit;
-        vehicle.ID.events.OnEnUpdate += updateBTEn;
-        vehicle.ID.events.OnBeingHit += OnBeingHit;
+        vehicle.ID.events.OnTargetDetected += OnhaveTargets;
     }
 
+    public void OnhaveTargets(List<Transform> targetsList){
+        behaviour.tree.blackboard.targets = targetsList;
+    }
+    
     public void Dash(Vector2 dashDirection = default)
     {
         vehicle.ID.events.OnDashCalled?.Invoke(dashDirection);
     }
 
-    public void updateBTEn(float currentEn)
-    {
-        behaviour.tree.blackboard.currentEn = currentEn;
-    }
-
-    public void OnBeingHit()
+    public void OnBeingHit(Vector2 shootPoint)
     {
         behaviour.tree.blackboard.beingHit = true;
+        behaviour.tree.blackboard.lastSeenPosition = shootPoint;
     }
 
-    public void SecondAttackCall()
+    public void SecondAttackCall(List<Transform> targets)
     {
-        Transform[] target = { behaviour.tree.blackboard.playerPos };
-        vehicle.ID.events.On2ndAttackCalled(target);
+        //Transform[] target = { behaviour.tree.blackboard.playerPos };
+        //vehicle.ID.events.On2ndAttackCalled(target);
     }
 
 

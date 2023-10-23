@@ -18,10 +18,7 @@ public class VehicleArmor : VehicleSystem
         tankCurrentArmor = tankMaxArmor;
         vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
     }
-    void OnEnable()
-    {
-        vehicle.ID.events.OnTakeHit += TakeDamage;
-    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         BulletScript bullet = col.gameObject.GetComponent<BulletScript>();
@@ -30,7 +27,7 @@ public class VehicleArmor : VehicleSystem
         {
             if (damageDealer == bullet.bulletOwner)
             {
-                TakeDamage(bullet.GetDamage());
+                TakeDamage(bullet.GetDamage(), bullet.shootPoint);
                 col.gameObject.SetActive(false);
                 break;
             }
@@ -53,11 +50,11 @@ public class VehicleArmor : VehicleSystem
         vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Vector3 shootpoint)
     {
         tankCurrentArmor -= damage;
         vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
-        vehicle.ID.events.OnBeingHit?.Invoke();
+        vehicle.ID.events.OnBeingHit?.Invoke(shootpoint);
         lastDamageTime = Time.time;
 
         if (tankCurrentArmor <= 0)
