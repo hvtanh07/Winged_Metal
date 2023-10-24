@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 53bcb4330bb80ca4eb8f711262936034
-  position: {x: 0, y: 436}
+  position: {x: 0.000044703484, y: 452.3707}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -446,7 +446,7 @@ MonoBehaviour:
   projectile:
     serializedVersion: 2
     m_Bits: 256
-  shooterToFind: 2
+  shooterToFind: 0
   radarEfficency: 50
 --- !u!114 &2237500339944836953
 MonoBehaviour:
