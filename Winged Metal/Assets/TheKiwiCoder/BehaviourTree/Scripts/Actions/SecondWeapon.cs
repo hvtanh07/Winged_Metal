@@ -16,7 +16,7 @@ public class SecondWeapon : ActionNode
 
     protected override State OnUpdate()
     {
-        blackboard.ai.SecondAttackCall(blackboard.targets);
+        blackboard.ai.SecondAttackCall(blackboard.targetList);
         return State.Success;
     }
 }

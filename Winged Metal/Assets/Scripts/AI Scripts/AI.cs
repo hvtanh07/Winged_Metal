@@ -25,7 +25,7 @@ public class AI : VehicleSystem
     }
 
     public void OnhaveTargets(List<Transform> targetsList){
-        behaviour.tree.blackboard.targets = targetsList;
+        behaviour.tree.blackboard.targetList = targetsList;
     }
     
     public void Dash(Vector2 dashDirection = default)
@@ -53,8 +53,8 @@ public class AI : VehicleSystem
 
     public void RecalculatePath()
     {
-        NavMesh.CalculatePath(transform.position, behaviour.tree.blackboard.target, NavMesh.AllAreas, path);
-        targetLastPos = behaviour.tree.blackboard.target;
+        NavMesh.CalculatePath(transform.position, behaviour.tree.blackboard.movementTarget, NavMesh.AllAreas, path);
+        targetLastPos = behaviour.tree.blackboard.movementTarget;
         index = 0;
     }
 

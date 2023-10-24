@@ -29,7 +29,7 @@ public class ShootTarget : ActionNode
         //    lastSwitch = Time.time;
         //}
 
-        blackboard.ai.Attack(blackboard.target - (Vector2)context.transform.position, shooting);
+        blackboard.ai.Attack(blackboard.targetList[0].position - context.transform.position, shooting);
         return State.Success;
     }
 }

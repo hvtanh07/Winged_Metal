@@ -29,9 +29,9 @@ public class EnemyAI : AI
 
     void Update()
     {
-        if (behaviour.tree.blackboard.target == null) return;
+        if (behaviour.tree.blackboard.movementTarget == null) return;
 
-        if (targetLastPos != behaviour.tree.blackboard.target) //If target has moved too far from last pos then recalculate the path
+        if (targetLastPos != behaviour.tree.blackboard.movementTarget) //If movement target was updated then recalculate path
         {
             RecalculatePath();
         }

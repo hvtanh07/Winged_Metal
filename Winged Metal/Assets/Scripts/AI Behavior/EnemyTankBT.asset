@@ -18,15 +18,12 @@ MonoBehaviour:
   position: {x: 0, y: 436}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -53,15 +50,12 @@ MonoBehaviour:
   position: {x: -295.0001, y: 762.9999}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -86,21 +80,48 @@ MonoBehaviour:
   position: {x: 74.99991, y: 813.10547}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
   child: {fileID: 2508231213385387078}
+--- !u!114 &-5039465790693213519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e252024a7fcf5458a852a7f430586a, type: 3}
+  m_Name: ScanAround
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5d604c02d584d0342b9cab817329a8d5
+  position: {x: 499.00006, y: 1092.0002}
+  blackboard:
+    ai: {fileID: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    beingHit: 0
+    enlessChase: 0
+    bulletPos: {x: 0, y: 0}
+  description: 
+  drawGizmos: 0
+  duration: 1
 --- !u!114 &-4012464024891422995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,24 +137,53 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 145d79aa967ef9146b675f62ce6df6d8
-  position: {x: 241, y: 813}
+  position: {x: 395.5, y: 813}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
-  child: {fileID: -1703643955225929741}
+  child: {fileID: -2639174516159264895}
+--- !u!114 &-2639174516159264895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 64305f73ff9022f42b0ed6fc9a386598
+  position: {x: 397, y: 956.0001}
+  blackboard:
+    ai: {fileID: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
+    lastSeenPosition: {x: 0, y: 0}
+    haveLastSeenPos: 0
+    randomArea: {fileID: 0}
+    randomPosition: {x: 0, y: 0}
+    beingHit: 0
+    enlessChase: 0
+    bulletPos: {x: 0, y: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -1703643955225929741}
+  - {fileID: -5039465790693213519}
 --- !u!114 &-1721887810881989037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,15 +202,12 @@ MonoBehaviour:
   position: {x: -220.00008, y: 608.3501}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -184,18 +231,15 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: faa27b35b91c4a54da1aadd000a727c6
-  position: {x: 241, y: 956}
+  position: {x: 322, y: 1092.0002}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -219,15 +263,12 @@ MonoBehaviour:
   position: {x: -178.95999, y: 294}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -251,15 +292,12 @@ MonoBehaviour:
   position: {x: 0, y: 1105.08}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -283,15 +321,12 @@ MonoBehaviour:
   position: {x: -220.00006, y: 1085}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -312,18 +347,15 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 2a4370461b8f16242a5f55c299ce807a
-  position: {x: 414, y: 956}
+  position: {x: 587.37976, y: 962.0835}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -367,17 +399,16 @@ MonoBehaviour:
   - {fileID: -975067895518751809}
   - {fileID: 5061525154791394791}
   - {fileID: -1721887810881989037}
+  - {fileID: -2639174516159264895}
+  - {fileID: -5039465790693213519}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 128
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -399,15 +430,12 @@ MonoBehaviour:
   position: {x: 153, y: 1105}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -435,18 +463,15 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 5e18361a51e4f3c48b50dd519645c027
-  position: {x: 741, y: 956}
+  position: {x: 914.37976, y: 962.0835}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -471,15 +496,12 @@ MonoBehaviour:
   position: {x: 241.00005, y: 628}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -507,15 +529,12 @@ MonoBehaviour:
   position: {x: 75.00002, y: 956}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -542,15 +561,12 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -575,15 +591,12 @@ MonoBehaviour:
   position: {x: 0, y: 134}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -610,15 +623,12 @@ MonoBehaviour:
   position: {x: -295.0001, y: 900.9999}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -645,15 +655,12 @@ MonoBehaviour:
   position: {x: -145.00003, y: 762.9999}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -678,15 +685,12 @@ MonoBehaviour:
   position: {x: 0, y: 294}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -713,15 +717,12 @@ MonoBehaviour:
   position: {x: 152.99994, y: 1244.0375}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -742,18 +743,15 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: fdd63ace1b4c0be4aa3e2ddf4ae3d083
-  position: {x: 564, y: 956}
+  position: {x: 737.37976, y: 962.0835}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -777,15 +775,12 @@ MonoBehaviour:
   position: {x: -370.00006, y: 1085}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -808,18 +803,15 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 5563ab20b0f8a134aa2cf5a0ea837f54
-  position: {x: 578, y: 813}
+  position: {x: 751, y: 813}
   blackboard:
     ai: {fileID: 0}
-    targets: []
-    target: {x: 0, y: 0}
+    targetList: []
+    movementTarget: {x: 0, y: 0}
     lastSeenPosition: {x: 0, y: 0}
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    viewBlock:
-      serializedVersion: 2
-      m_Bits: 0
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}

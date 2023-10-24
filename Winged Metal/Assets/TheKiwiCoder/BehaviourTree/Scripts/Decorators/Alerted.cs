@@ -15,17 +15,19 @@ public class Alerted : DecoratorNode
 
     protected override State OnUpdate()
     {
-        if (blackboard.targets.Count > 0)
+        if (blackboard.targetList.Count > 0)
         {
             //blackboard.target = blackboard.targets[0].position;
-            blackboard.lastSeenPosition = blackboard.target;
-            blackboard.target = context.transform.position;
+            blackboard.lastSeenPosition = blackboard.targetList[0].position;
+            blackboard.movementTarget = context.transform.position;
             if (!blackboard.haveLastSeenPos) blackboard.haveLastSeenPos = true;
             var state = child.Update();
             return state;
         }
         else if (blackboard.beingHit){
-            blackboard.target = blackboard.lastSeenPosition;
+            if (!blackboard.haveLastSeenPos) blackboard.haveLastSeenPos = true;
+            blackboard.movementTarget = blackboard.lastSeenPosition;
+            blackboard.beingHit = false;
         }
         return State.Failure;
     }

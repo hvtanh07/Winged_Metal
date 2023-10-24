@@ -13,7 +13,7 @@ public class Evade : ActionNode
 
     protected override State OnUpdate() {
         Vector2 moveDirection = Vector2.Perpendicular((Vector2)context.transform.position - blackboard.bulletPos);
-        blackboard.target = (Vector2)context.transform.position + moveDirection;
+        //blackboard.target = (Vector2)context.transform.position + moveDirection;
         
         return State.Success;
     }

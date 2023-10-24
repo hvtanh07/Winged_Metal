@@ -5,9 +5,10 @@ using TheKiwiCoder;
 
 public class MoveToLastSeen : ActionNode
 {
+    
     protected override void OnStart()
     {
-        blackboard.target = blackboard.lastSeenPosition;
+        blackboard.movementTarget = blackboard.lastSeenPosition;
     }
 
     protected override void OnStop()
@@ -16,10 +17,11 @@ public class MoveToLastSeen : ActionNode
 
     protected override State OnUpdate()
     {
-        blackboard.ai.Attack(blackboard.lastSeenPosition - (Vector2)context.transform.position, false);
-        if (((Vector2)context.transform.position - blackboard.lastSeenPosition).magnitude <= 0.5f) // gotta check this again sometime, 
+        blackboard.ai.Attack(blackboard.movementTarget - (Vector2)context.transform.position, false);
+        Debug.Log(((Vector2)context.transform.position - blackboard.movementTarget).magnitude);
+        if (((Vector2)context.transform.position - blackboard.movementTarget).magnitude <= 2f) // gotta check this again sometime, 
         {
-            blackboard.haveLastSeenPos = false;
+            //blackboard.haveLastSeenPos = false;
             return State.Success;
         }
         else
