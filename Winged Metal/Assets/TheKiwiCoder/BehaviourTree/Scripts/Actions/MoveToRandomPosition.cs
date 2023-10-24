@@ -7,7 +7,7 @@ public class MoveToRandomPosition : ActionNode
 {
     protected override void OnStart()
     {
-        blackboard.target = blackboard.randomPosition;
+        blackboard.movementTarget = blackboard.randomPosition;
     }
 
     protected override void OnStop()
@@ -16,8 +16,9 @@ public class MoveToRandomPosition : ActionNode
 
     protected override State OnUpdate()
     {
-        blackboard.ai.Attack(blackboard.randomPosition - (Vector2)context.transform.position, false);
-        if (((Vector2)context.transform.position - blackboard.randomPosition).magnitude <= 1f)
+        blackboard.ai.Attack(blackboard.movementTarget - (Vector2)context.transform.position, false);
+        Debug.Log(((Vector2)context.transform.position - blackboard.movementTarget).magnitude);
+        if (((Vector2)context.transform.position - blackboard.movementTarget).magnitude <= 1f)
             return State.Success;
         else
             return State.Running;

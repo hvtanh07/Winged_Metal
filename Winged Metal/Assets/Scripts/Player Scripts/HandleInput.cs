@@ -55,4 +55,8 @@ public class HandleInput : VehicleSystem
     {
         vehicle.ID.events.OnDashCalled?.Invoke(default);
     }
+    public void SecondAttack()
+    {
+        vehicle.ID.events.On2ndAttackCalled?.Invoke(default);
+    }
 }

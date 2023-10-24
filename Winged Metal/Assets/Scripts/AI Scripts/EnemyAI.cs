@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class EnemyAI : AI
 {
-    private VehicleResources resourcesS;
+    
     //private bool openFire;
 
     // Start is called before the first frame update
-    private void OnEnable()
+    public void OnEnable()
     {
-        vehicle.ID.events.OnEnUpdate += updateBTEn;
-        vehicle.ID.events.OnBeingHit += OnBeingHit;
+        base.OnEnable();
         vehicle.ID.events.OnDashComplete += OnDashComplete;
     }
     private void Start()
@@ -22,10 +21,6 @@ public class EnemyAI : AI
         behaviour.tree.blackboard.ai = this;
     }
 
-    public void ConsumeEnergy(int amountEnergy)
-    {
-        resourcesS.ConsumeEnergy(amountEnergy);
-    }
     public void OnDashComplete()
     {
         RecalculatePath();
@@ -34,9 +29,9 @@ public class EnemyAI : AI
 
     void Update()
     {
-        if (behaviour.tree.blackboard.target == null) return;
+        if (behaviour.tree.blackboard.movementTarget == null) return;
 
-        if (targetLastPos != behaviour.tree.blackboard.target) //If target has moved too far from last pos then recalculate the path
+        if (targetLastPos != behaviour.tree.blackboard.movementTarget) //If movement target was updated then recalculate path
         {
             RecalculatePath();
         }

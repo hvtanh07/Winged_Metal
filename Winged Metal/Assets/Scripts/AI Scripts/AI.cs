@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TheKiwiCoder;
 using UnityEngine;
@@ -6,56 +5,56 @@ using UnityEngine.AI;
 
 public class AI : VehicleSystem
 {
+
     protected Vector2 targetLastPos;
     protected NavMeshPath path;
     protected int index;
     public BehaviourTreeRunner behaviour;
     public Collider2D patrolArea;
 
-    // Start is called before the first frame update
-    protected void InitParameters()
-    { //called in Start() of child class
+    protected void InitParameters() //called in Start() of child class
+    {
         path = new NavMeshPath();
         behaviour = GetComponent<BehaviourTreeRunner>();
         behaviour.tree.blackboard.randomArea = patrolArea;
     }
-    private void OnEnable()
+    public void OnEnable()
     {
-        vehicle.ID.events.OnEnUpdate += updateBTEn;
         vehicle.ID.events.OnBeingHit += OnBeingHit;
+        vehicle.ID.events.OnTargetDetected += OnhaveTargets;
     }
 
+    public void OnhaveTargets(List<Transform> targetsList){
+        behaviour.tree.blackboard.targetList = targetsList;
+    }
+    
     public void Dash(Vector2 dashDirection = default)
     {
         vehicle.ID.events.OnDashCalled?.Invoke(dashDirection);
     }
 
-    public void updateBTEn(float currentEn)
-    {
-        behaviour.tree.blackboard.currentEn = currentEn;
-    }
-
-    public void OnBeingHit()
+    public void OnBeingHit(Vector2 shootPoint)
     {
         behaviour.tree.blackboard.beingHit = true;
+        behaviour.tree.blackboard.lastSeenPosition = shootPoint;
     }
 
-    public void SecondAttackCall()
+    public void SecondAttackCall(List<Transform> targets)
     {
-        vehicle.ID.events.On2ndAttackCalled(behaviour.tree.blackboard.playerPos);
+        //Transform[] target = { behaviour.tree.blackboard.playerPos };
+        //vehicle.ID.events.On2ndAttackCalled(target);
     }
 
 
     public void Attack(Vector2 targetDirection, bool openFire)
     {
-        Debug.Log("fire");
         vehicle.ID.events.OnAttackDirectionChange?.Invoke(targetDirection, openFire);
     }
 
     public void RecalculatePath()
     {
-        NavMesh.CalculatePath(transform.position, behaviour.tree.blackboard.target, NavMesh.AllAreas, path);
-        targetLastPos = behaviour.tree.blackboard.target;
+        NavMesh.CalculatePath(transform.position, behaviour.tree.blackboard.movementTarget, NavMesh.AllAreas, path);
+        targetLastPos = behaviour.tree.blackboard.movementTarget;
         index = 0;
     }
 

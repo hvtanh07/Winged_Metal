@@ -5,17 +5,12 @@ using UnityEngine.PlayerLoop;
 
 public class VehicleAttack : VehicleSystem
 {
-    public enum BulletOwner
-    {
-        player,
-        enemy,
-        ally
-    }
+
     [HideInInspector]
     [Header("Cannon Stats--------")]
     public Vector2 direction;
 
-    public BulletOwner bulletOwner;
+    public VehicleSide bulletOwner;
 
     public float rotatingSpeed;
     [Header("Main Cannon--------")]
@@ -71,7 +66,7 @@ public class VehicleAttack : VehicleSystem
                 bullet.transform.position = shootingPoint.transform.position;
                 bullet.transform.rotation = shootingPoint.transform.rotation;
                 bullet.SetActive(true);
-                bullet.GetComponent<BulletScript>().SetParameter(damage, bulletOwner);
+                bullet.GetComponent<BulletScript>().SetParameter(damage, bulletOwner, shootingPoint.transform.position);
                 bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up * 35f;
             }
             lastShotTime = Time.time;

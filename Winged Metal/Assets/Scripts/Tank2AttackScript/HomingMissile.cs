@@ -16,10 +16,11 @@ public class HomingMissile : VehicleSecondAttack
         vehicle.ID.events.OnEnUpdate += UpdateAmountEn;
     }
 
-    public override void Attack(Transform target)
+    public override void Attack(Transform[] target)
     {
         if (Time.time - lastAttackTime < cooldown) return;
         if (!ableToShoot) return;
+        int i = 0;
         foreach (Transform Point in missileShootingPoint)
         {
             GameObject missile = ObjectPooler.SharedInstance.GetPooledObject("Missile");
@@ -30,7 +31,10 @@ public class HomingMissile : VehicleSecondAttack
                 missile.transform.rotation = Point.transform.rotation;
                 missile.SetActive(true);
                 missile.GetComponent<BulletScript>().SetParameter(damage, bulletOwner);
-                missile.GetComponent<MissileScript>().AssignTarget(target);
+                missile.GetComponent<MissileScript>().AssignTarget(target[i]);
+                i++;
+                if (i > target.Length - 1)
+                    i = 0;
             }
             lastAttackTime = Time.time;
         }

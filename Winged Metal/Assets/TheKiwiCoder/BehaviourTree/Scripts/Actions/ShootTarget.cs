@@ -6,11 +6,13 @@ using System;
 
 public class ShootTarget : ActionNode
 {
-    public float energyLevelThreshold;
-    public int amountOfEnergyToRestore;
-    bool shouldFiring;
+    public float attackDuration;
+    public float cooldownDuration;
+    float lastSwitch;
+    bool shooting;
     protected override void OnStart()
     {
+        shooting = true;
     }
 
     protected override void OnStop()
@@ -19,16 +21,15 @@ public class ShootTarget : ActionNode
 
     protected override State OnUpdate()
     {
-        if (blackboard.currentEn < energyLevelThreshold)
-        {
-            blackboard.RegeningEn = true;
-        }
-        else if (blackboard.currentEn >= amountOfEnergyToRestore)
-        {
-            blackboard.RegeningEn = false;
-        }
+        //if (shooting && Time.time - lastSwitch > attackDuration){
+        //    shooting = false;
+        //    lastSwitch = Time.time;
+        //}else if (!shooting && Time.time - lastSwitch > cooldownDuration){
+        //    shooting = true;
+        //    lastSwitch = Time.time;
+        //}
 
-        blackboard.ai.Attack(blackboard.playerPos.position - context.transform.position, !blackboard.RegeningEn);
+        blackboard.ai.Attack(blackboard.targetList[0].position - context.transform.position, shooting);
         return State.Success;
     }
 }

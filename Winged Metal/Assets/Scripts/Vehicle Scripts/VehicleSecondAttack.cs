@@ -4,21 +4,16 @@ using UnityEngine;
 
 public abstract class VehicleSecondAttack : VehicleSystem
 {
-    public enum WeaponType {
-        HomingMissile,
-        Blade,
-        Mine
-    }
-    public WeaponType weaponType;
+    public VehicleSide weaponType;
     public int damage;
     public int enConsum;
     public float cooldown;
-    public VehicleAttack.BulletOwner bulletOwner;
+    public VehicleSide bulletOwner;
     protected float lastAttackTime;
     protected VehicleAttack tankAttack;
     protected bool ableToShoot;
   
-    public abstract void Attack(Transform target);
+    public abstract void Attack(Transform[] target);
     protected void UpdateAmountEn(float currentEn)
     {
         ableToShoot = currentEn >= enConsum;

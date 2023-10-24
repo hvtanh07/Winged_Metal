@@ -5,22 +5,29 @@ using TheKiwiCoder;
 
 public class Alerted : DecoratorNode
 {
-    protected override void OnStart() {
+    protected override void OnStart()
+    {
     }
 
-    protected override void OnStop() {
+    protected override void OnStop()
+    {
     }
 
-    protected override State OnUpdate() {
-        if ((blackboard.playerPos.position - context.transform.position).magnitude <= blackboard.detectingDistance &&
-            !Physics2D.Linecast(blackboard.playerPos.position,context.transform.position, blackboard.viewBlock) || blackboard.beingHit)
+    protected override State OnUpdate()
+    {
+        if (blackboard.targetList.Count > 0)
         {
-            blackboard.detectingDistance = blackboard.attackingDistance;
-            blackboard.target = context.transform.position;//check if target is still needed
-            blackboard.lastSeenPosition = blackboard.playerPos.position;
-            if(!blackboard.haveLastSeenPos) blackboard.haveLastSeenPos = true;
+            //blackboard.target = blackboard.targets[0].position;
+            blackboard.lastSeenPosition = blackboard.targetList[0].position;
+            blackboard.movementTarget = context.transform.position;
+            if (!blackboard.haveLastSeenPos) blackboard.haveLastSeenPos = true;
             var state = child.Update();
             return state;
+        }
+        else if (blackboard.beingHit){
+            if (!blackboard.haveLastSeenPos) blackboard.haveLastSeenPos = true;
+            blackboard.movementTarget = blackboard.lastSeenPosition;
+            blackboard.beingHit = false;
         }
         return State.Failure;
     }

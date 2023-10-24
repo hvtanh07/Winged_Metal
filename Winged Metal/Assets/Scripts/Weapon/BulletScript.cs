@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public VehicleAttack.BulletOwner bulletOwner;
+    public VehicleSide bulletOwner;
     private int damage;
     public LayerMask bulletBlock;
     public LayerMask bulletLayer;
+    public Vector2 shootPoint;
 
 
     // Start is called before the first frame update
-    public void SetParameter(int damageSet, VehicleAttack.BulletOwner owner)
+    public void SetParameter(int damageSet, VehicleSide owner, Vector3 shootingPoint = default)
     {
         StartCoroutine(DestroyBullet());
         bulletOwner = owner;
         damage = damageSet;
+        shootPoint = shootingPoint;
     }
 
     IEnumerator DestroyBullet()
