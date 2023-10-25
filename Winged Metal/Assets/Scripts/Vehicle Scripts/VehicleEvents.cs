@@ -9,6 +9,7 @@ public struct VehicleEvents
     public Action<List <Transform>> OnTargetDetected; 
     //attack
     public Action<Vector2, bool> OnAttackDirectionChange;
+    public Action<VehicleSide> OnVehicleSideAssigned;
   
     //movement
     public Action<Vector2> OnDirectionChange;

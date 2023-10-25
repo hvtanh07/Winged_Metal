@@ -8,8 +8,11 @@ public enum VehicleSide
     ally
 }
 
+
 public class Vehicle : MonoBehaviour
 {
     public VehicleID ID;
     public VehicleSide side;
 }
+
+

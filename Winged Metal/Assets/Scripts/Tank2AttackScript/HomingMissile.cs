@@ -14,6 +14,7 @@ public class HomingMissile : VehicleSecondAttack
     {
         vehicle.ID.events.On2ndAttackCalled += Attack;
         vehicle.ID.events.OnEnUpdate += UpdateAmountEn;
+        bulletOwner = vehicle.side;
     }
 
     public override void Attack(Transform[] target)
@@ -36,7 +37,7 @@ public class HomingMissile : VehicleSecondAttack
                 if (i > target.Length - 1)
                     i = 0;
             }
-            lastAttackTime = Time.time;
         }
+        lastAttackTime = Time.time;
     }
 }

@@ -29,6 +29,7 @@ public class VehicleAttack : VehicleSystem
     {
         vehicle.ID.events.OnAttackDirectionChange += ChangeDirection;
         vehicle.ID.events.OnEnUpdate += UpdateAmountEn;
+        bulletOwner = vehicle.side;
         ableToShoot = true;
     }
 

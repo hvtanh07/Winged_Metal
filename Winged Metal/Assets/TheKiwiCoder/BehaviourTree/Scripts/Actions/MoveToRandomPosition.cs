@@ -17,7 +17,6 @@ public class MoveToRandomPosition : ActionNode
     protected override State OnUpdate()
     {
         blackboard.ai.Attack(blackboard.movementTarget - (Vector2)context.transform.position, false);
-        Debug.Log(((Vector2)context.transform.position - blackboard.movementTarget).magnitude);
         if (((Vector2)context.transform.position - blackboard.movementTarget).magnitude <= 1f)
             return State.Success;
         else

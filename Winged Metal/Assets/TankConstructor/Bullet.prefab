@@ -174,4 +174,8 @@ MonoBehaviour:
   bulletOwner: 0
   bulletBlock:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 128
+  bulletLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  shootPoint: {x: 0, y: 0}

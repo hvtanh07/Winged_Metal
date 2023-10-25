@@ -42,7 +42,6 @@ public class VehiclePointOfView : VehicleSystem
                 if (!visibleTargets.Contains(target))
                 {
                     visibleTargets.Add(target);
-                    Debug.Log("Run once");
                     vehicle.ID.events.OnTargetDetected?.Invoke(visibleTargets);
                 }
             }
