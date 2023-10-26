@@ -17,6 +17,20 @@ public class VehicleArmor : VehicleSystem
     {
         tankCurrentArmor = tankMaxArmor;
         vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
+        switch (vehicle.side)
+        {
+            case VehicleSide.player:
+            case VehicleSide.ally:
+                {
+                    damageDealers = new VehicleSide[] { VehicleSide.enemy };
+                    break;
+                }
+            case VehicleSide.enemy:
+                {
+                    damageDealers = new VehicleSide[] { VehicleSide.ally, VehicleSide.player };
+                    break;
+                }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
