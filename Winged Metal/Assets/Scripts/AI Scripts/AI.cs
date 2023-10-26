@@ -42,7 +42,7 @@ public class AI : VehicleSystem
     public void SecondAttackCall(List<Transform> targets)
     {
         Transform[] target = behaviour.tree.blackboard.targetList.ToArray();
-        vehicle.ID.events.On2ndAttackCalled(target);
+        vehicle.ID.events.On2ndAttackCalled?.Invoke(target);
     }
 
 

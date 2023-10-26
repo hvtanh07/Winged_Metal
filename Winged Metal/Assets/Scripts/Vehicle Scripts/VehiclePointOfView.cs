@@ -59,12 +59,14 @@ public class VehiclePointOfView : VehicleSystem
             if (target == null)
             {
                 visibleTargets.RemoveAt(i);
+                vehicle.ID.events.OnTargetDetected?.Invoke(visibleTargets);
             }
 
             //not active in hierarchy
             if (!target.gameObject.activeInHierarchy)
             {
                 visibleTargets.Remove(target);
+                vehicle.ID.events.OnTargetDetected?.Invoke(visibleTargets);
                 continue;
             }
 
@@ -72,6 +74,7 @@ public class VehiclePointOfView : VehicleSystem
             if (Vector3.Distance(transform.position, target.position) > frontViewRadius)
             {
                 visibleTargets.Remove(target);
+                vehicle.ID.events.OnTargetDetected?.Invoke(visibleTargets);
                 continue;
             }
 
@@ -79,6 +82,7 @@ public class VehiclePointOfView : VehicleSystem
             if (Physics2D.Linecast(transform.position, target.position, obstacle))
             {
                 visibleTargets.Remove(target);
+                vehicle.ID.events.OnTargetDetected?.Invoke(visibleTargets);
                 continue;
             }
 
@@ -88,13 +92,14 @@ public class VehiclePointOfView : VehicleSystem
             if ((Vector3.Angle(transform.up, dirToTarget) > viewAngle / 2) && ((target.position - transform.position).magnitude > nearViewRadius))
             {
                 visibleTargets.Remove(target);
+                vehicle.ID.events.OnTargetDetected?.Invoke(visibleTargets);
             }
         }
 
     }
     void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, frontViewRadius);
-        Gizmos.DrawWireSphere(transform.position, nearViewRadius);
+        //Gizmos.DrawWireSphere(transform.position, frontViewRadius);
+        //Gizmos.DrawWireSphere(transform.position, nearViewRadius);
     }
 }

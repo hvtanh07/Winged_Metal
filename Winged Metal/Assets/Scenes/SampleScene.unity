@@ -35080,7 +35080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1204446546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35137,7 +35137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: {fileID: 11400000, guid: 806dc2a6938bb874aa059346f54c4305, type: 2}
-  side: 0
+  side: 2
 --- !u!50 &1204446550
 Rigidbody2D:
   serializedVersion: 4
