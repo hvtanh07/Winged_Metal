@@ -27,7 +27,7 @@ public class VehicleResources : VehicleSystem
 
     private void Update()
     {
-        if (tankCurrentEnergy < tankMaxEnergy && Time.time - lastEnergyUsedTime > 3.0f)
+        if (tankCurrentEnergy < tankMaxEnergy && Time.time - lastEnergyUsedTime > 1f)
         {
             tankCurrentEnergy += energySupply * Time.deltaTime;
             if (tankCurrentEnergy > tankMaxEnergy)

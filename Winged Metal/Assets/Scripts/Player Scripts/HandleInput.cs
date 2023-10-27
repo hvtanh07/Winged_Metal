@@ -36,6 +36,9 @@ public class HandleInput : VehicleSystem
             //playerTankMovement.direction = moveJoystick.Direction;
         }
 
+        if(Input.GetKeyDown(KeyCode.LeftShift)){
+            Dash();
+        }
 
         //CANON
         if (shootJoystick.Direction != Vector2.zero) //if player is holding the joystick then move the view marker to that direction

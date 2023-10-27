@@ -26,6 +26,8 @@ namespace TheKiwiCoder
         public Vector2 randomPosition;
 
         [Header("Combat data--------")]
+        //[HideInInspector]
+        public Vector2 randomPositionNearTarget;
         public bool beingHit;
         public bool enlessChase;
         [HideInInspector]

@@ -179,6 +179,7 @@ MonoBehaviour:
   bulletLayer:
     serializedVersion: 2
     m_Bits: 256
+  shootPoint: {x: 0, y: 0}
 --- !u!114 &2553837928462976685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,4 +194,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   flyingForce: 20
-  turningTorque: 100
+  turningTorque: 60

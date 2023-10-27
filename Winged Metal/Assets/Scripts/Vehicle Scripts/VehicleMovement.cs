@@ -41,7 +41,7 @@ public class VehicleMovement : VehicleSystem
         rb = transform.root.GetComponent<Rigidbody2D>();
         dashing = false;
         ableToDash = true;
-        enConsum = weight; //if there's modify stat function then move this to that function
+        enConsum = weight * 3; //if there's modify stat function then move this to that function
     }
 
     // Update is called once per frame

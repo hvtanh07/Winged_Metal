@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 53bcb4330bb80ca4eb8f711262936034
-  position: {x: 0.000044703484, y: 452.3707}
+  position: {x: 76.99997, y: 454.66006}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -24,6 +24,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -56,6 +57,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -77,7 +79,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3c2b4b8b111e22946a949e39bf4ce791
-  position: {x: 74.99991, y: 813.10547}
+  position: {x: 77.319, y: 807}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -86,6 +88,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -107,7 +110,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 5d604c02d584d0342b9cab817329a8d5
-  position: {x: 499.00006, y: 1092.0002}
+  position: {x: 501.31897, y: 1086}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -116,6 +119,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -137,7 +141,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 145d79aa967ef9146b675f62ce6df6d8
-  position: {x: 395.5, y: 813}
+  position: {x: 398.31903, y: 807}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -146,6 +150,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -167,7 +172,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 64305f73ff9022f42b0ed6fc9a386598
-  position: {x: 397, y: 956.0001}
+  position: {x: 399.3191, y: 950}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -176,6 +181,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -208,6 +214,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -231,7 +238,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: faa27b35b91c4a54da1aadd000a727c6
-  position: {x: 322, y: 1092.0002}
+  position: {x: 324.319, y: 1086}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -240,35 +247,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
-    beingHit: 0
-    enlessChase: 0
-    bulletPos: {x: 0, y: 0}
-  description: 
-  drawGizmos: 0
---- !u!114 &-1584360995992085253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4304a40b67c6b3f48b98a4e2414c97e2, type: 3}
-  m_Name: GetPlayerPosition
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 4842f0e783c77d94ba09ed8c3c51d961
-  position: {x: -178.95999, y: 294}
-  blackboard:
-    ai: {fileID: 0}
-    targetList: []
-    movementTarget: {x: 0, y: 0}
-    lastSeenPosition: {x: 0, y: 0}
-    haveLastSeenPos: 0
-    randomArea: {fileID: 0}
-    randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -289,7 +268,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 61f4afd61c0ebe447a3d8f8b3db371c1
-  position: {x: 0, y: 1105.08}
+  position: {x: 2.3190613, y: 1106}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -298,6 +277,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -327,6 +307,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -347,7 +328,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 2a4370461b8f16242a5f55c299ce807a
-  position: {x: 587.37976, y: 962.0835}
+  position: {x: 598.3191, y: 956}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -356,6 +337,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -379,7 +361,6 @@ MonoBehaviour:
   - {fileID: 2707095729956054535}
   - {fileID: 2802920132776338726}
   - {fileID: 5375439373109446760}
-  - {fileID: -1584360995992085253}
   - {fileID: -8303034525413885404}
   - {fileID: 2440794952001639132}
   - {fileID: -6003881866647905079}
@@ -409,6 +390,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -427,7 +409,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c44d0d84c8736e94fa69a0290d238887
-  position: {x: 153, y: 1105}
+  position: {x: 152.31903, y: 1106}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -436,6 +418,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -462,7 +445,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 5e18361a51e4f3c48b50dd519645c027
-  position: {x: 914.37976, y: 962.0835}
+  position: {x: 925.31915, y: 956}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -471,6 +454,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -492,7 +476,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b225f270cf7303b4aa9c95eac6a7fd9b
-  position: {x: 241.00005, y: 628}
+  position: {x: 398.99994, y: 608}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -501,6 +485,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -525,7 +510,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8f429ddc129023940906637e9fd83f51
-  position: {x: 75.00002, y: 956}
+  position: {x: 77.319, y: 950}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -534,6 +519,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -557,7 +543,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 30cd3297447ebfb41b5a7dc769853ed4
-  position: {x: 0, y: 0}
+  position: {x: 76.99997, y: 2.6600487}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -566,6 +552,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -587,7 +574,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d6c8d6ce639e1ac44b6cb5f635766b46
-  position: {x: 0, y: 134}
+  position: {x: 76.99997, y: 136.66002}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -596,13 +583,13 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
   children:
-  - {fileID: -1584360995992085253}
   - {fileID: 5375439373109446760}
 --- !u!114 &4554629005483945566
 MonoBehaviour:
@@ -628,6 +615,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -660,6 +648,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -681,7 +670,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 4953b7ba0f4a8604785f33a653edcc43
-  position: {x: 0, y: 294}
+  position: {x: 76.99997, y: 296.66006}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -690,6 +679,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -713,7 +703,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0b2f1d74e8f80174cbc2120e7f089215
-  position: {x: 152.99994, y: 1244.0375}
+  position: {x: 152.31903, y: 1245}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -722,6 +712,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -742,7 +733,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: fdd63ace1b4c0be4aa3e2ddf4ae3d083
-  position: {x: 737.37976, y: 962.0835}
+  position: {x: 748.319, y: 956}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -751,6 +742,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -780,6 +772,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}
@@ -802,7 +795,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 5563ab20b0f8a134aa2cf5a0ea837f54
-  position: {x: 751, y: 813}
+  position: {x: 762.319, y: 807}
   blackboard:
     ai: {fileID: 0}
     targetList: []
@@ -811,6 +804,7 @@ MonoBehaviour:
     haveLastSeenPos: 0
     randomArea: {fileID: 0}
     randomPosition: {x: 0, y: 0}
+    randomPositionNearTarget: {x: 0, y: 0}
     beingHit: 0
     enlessChase: 0
     bulletPos: {x: 0, y: 0}

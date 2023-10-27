@@ -17,7 +17,6 @@ public class Alerted : DecoratorNode
     {
         if (blackboard.targetList.Count > 0)
         {
-            //blackboard.target = blackboard.targets[0].position;
             blackboard.lastSeenPosition = blackboard.targetList[0].position;
             blackboard.movementTarget = context.transform.position;
             if (!blackboard.haveLastSeenPos) blackboard.haveLastSeenPos = true;
