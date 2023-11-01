@@ -14,7 +14,6 @@ public class HomingMissile : VehicleSecondAttack
     {
         vehicle.ID.events.On2ndAttackCalled += Attack;
         vehicle.ID.events.OnEnUpdate += UpdateAmountEn;
-        bulletOwner = vehicle.side;
     }
 
     public override void Attack(Transform[] target)
@@ -31,7 +30,7 @@ public class HomingMissile : VehicleSecondAttack
                 missile.transform.position = Point.transform.position;
                 missile.transform.rotation = Point.transform.rotation;
                 missile.SetActive(true);
-                missile.GetComponent<BulletScript>().SetParameter(damage, bulletOwner);
+                missile.GetComponent<BulletScript>().SetParameter(damage, vehicle.side);
                 missile.GetComponent<MissileScript>().AssignTarget(target[i]);
                 i++;
                 if (i > target.Length - 1)

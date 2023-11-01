@@ -8,7 +8,6 @@ public abstract class VehicleSecondAttack : VehicleSystem
     public int damage;
     public int enConsum;
     public float cooldown;
-    public VehicleSide bulletOwner;
     protected float lastAttackTime;
     protected VehicleAttack tankAttack;
     protected bool ableToShoot;
