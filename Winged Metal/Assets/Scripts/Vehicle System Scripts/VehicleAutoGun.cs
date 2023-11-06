@@ -11,7 +11,6 @@ public class VehicleAutoGun : VehicleSystem
     public LayerMask obstacle;
     [Space]
     [Header("Autogun attack")]
-    public int enConsum;
     public Transform shootingPoint;
     public int damage;
     public float fireRate;
