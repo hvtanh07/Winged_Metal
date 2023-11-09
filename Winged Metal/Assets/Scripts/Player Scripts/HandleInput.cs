@@ -27,12 +27,12 @@ public class HandleInput : VehicleSystem
         //MOVEMENT
         if (keyboardInput != Vector2.zero) //if there's keyboard input then use it
         {
-            vehicle.ID.events.OnDirectionChange?.Invoke(keyboardInput);
+            vehicle.events.OnDirectionChange?.Invoke(keyboardInput);
             //playerTankMovement.direction = keyboardInput;
         }
         else //if not use the joystick
         {
-            vehicle.ID.events.OnDirectionChange?.Invoke(moveJoystick.Direction);
+            vehicle.events.OnDirectionChange?.Invoke(moveJoystick.Direction);
             //playerTankMovement.direction = moveJoystick.Direction;
         }
 
@@ -43,23 +43,23 @@ public class HandleInput : VehicleSystem
         //CANON
         if (shootJoystick.Direction != Vector2.zero) //if player is holding the joystick then move the view marker to that direction
         {
-            vehicle.ID.events.OnAttackDirectionChange?.Invoke(shootJoystick.Direction, true);
+            vehicle.events.OnAttackDirectionChange?.Invoke(shootJoystick.Direction, true);
             viewMarker.position = Vector3.MoveTowards(viewMarker.position, transform.position + (Vector3)shootJoystick.Direction.normalized * lookAheadDistance, 0.5f);
         }
         else
         {
             viewMarker.position = transform.position;// if not. move back to the tank
-            vehicle.ID.events.OnAttackDirectionChange?.Invoke(Vector2.zero, false);
+            vehicle.events.OnAttackDirectionChange?.Invoke(Vector2.zero, false);
         }
 
 
     }
     public void Dash()
     {
-        vehicle.ID.events.OnDashCalled?.Invoke(default);
+        vehicle.events.OnDashCalled?.Invoke(default);
     }
     public void SecondAttack()
     {
-        vehicle.ID.events.On2ndAttackCalled?.Invoke(default);
+        vehicle.events.On2ndAttackCalled?.Invoke(default);
     }
 }

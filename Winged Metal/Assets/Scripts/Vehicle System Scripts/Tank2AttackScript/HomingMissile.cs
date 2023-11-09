@@ -12,8 +12,8 @@ public class HomingMissile : VehicleSecondAttack
     }
     void OnEnable()
     {
-        vehicle.ID.events.On2ndAttackCalled += Attack;
-        vehicle.ID.events.OnEnUpdate += UpdateAmountEn;
+        vehicle.events.On2ndAttackCalled += Attack;
+        vehicle.events.OnEnUpdate += UpdateAmountEn;
     }
 
     public override void Attack(Transform[] target)
@@ -26,7 +26,7 @@ public class HomingMissile : VehicleSecondAttack
             GameObject missile = ObjectPooler.SharedInstance.GetPooledObject("Missile");
             if (missile != null)
             {
-                vehicle.ID.events.OnEnUsed?.Invoke(enConsum);
+                vehicle.events.OnEnUsed?.Invoke(enConsum);
                 missile.transform.position = Point.transform.position;
                 missile.transform.rotation = Point.transform.rotation;
                 missile.SetActive(true);

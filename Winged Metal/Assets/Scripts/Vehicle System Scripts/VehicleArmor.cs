@@ -6,17 +6,21 @@ public class VehicleArmor : VehicleSystem
 {
     //Armor
     public int tankMaxArmor;
+    public int enShield;
+    public float ehp = 0.01f;
     [SerializeField]
     protected float tankCurrentArmor;
     protected float lastDamageTime;
     public VehicleSide[] damageDealers;
     public int recoveryEfficiency;
+    float damageDeduction;
 
 
      protected void Start() //REMOVE WHEN THERE's SCRIPT TO READ FROM SCRIPTABLE OBJECT
     {
+        float damageDeduction = (enShield*ehp)/(1+enShield*ehp);
         tankCurrentArmor = tankMaxArmor;
-        vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
+        vehicle.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
         switch (vehicle.side)
         {
             case VehicleSide.player:
@@ -55,29 +59,27 @@ public class VehicleArmor : VehicleSystem
             tankCurrentArmor += recoveryEfficiency * Time.deltaTime;
             if (tankCurrentArmor > tankMaxArmor)
                 tankCurrentArmor = tankMaxArmor;
-            vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
+            vehicle.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
         }
     }
-    public void InitiateParameter(int maxArmor)
+    public void InitiateParameter(int maxArmor, int Shield)
     {
+        enShield = Shield;
         tankMaxArmor = maxArmor;
-        vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
+        vehicle.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
     }
 
     public void TakeDamage(int damage, Vector3 shootpoint)
     {
-        tankCurrentArmor -= damage;
-        vehicle.ID.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
-        vehicle.ID.events.OnBeingHit?.Invoke(shootpoint);
+        int finalDamage = Mathf.RoundToInt(damage*(1-damageDeduction));
+        tankCurrentArmor -= finalDamage;
+        vehicle.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
+        vehicle.events.OnBeingHit?.Invoke(shootpoint);
         lastDamageTime = Time.time;
 
         if (tankCurrentArmor <= 0)
         {
-            //death
+            vehicle.events.OnDeath?.Invoke();
         }
-    }
-    public float GetCurrentArmor()
-    {
-        return tankCurrentArmor;
     }
 }

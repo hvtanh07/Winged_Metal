@@ -11,7 +11,8 @@ public enum VehicleSide
 
 public class Vehicle : MonoBehaviour
 {
-    public VehicleID ID;
+    //public VehicleID ID;
+    public VehicleEvents events;
     public VehicleSide side;
 }
 
