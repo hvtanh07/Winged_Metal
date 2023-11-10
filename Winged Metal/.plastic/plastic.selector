@@ -1,0 +1,4 @@
+repository "Winged Metal@GoldFish_Studios@cloud"
+  path "/"
+    br "/main"
+    co "/main"

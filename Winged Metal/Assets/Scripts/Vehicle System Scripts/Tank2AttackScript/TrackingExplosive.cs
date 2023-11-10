@@ -9,7 +9,6 @@ public class TrackingExplosive : VehicleSecondAttack
     int currentCall = 1;
     void Start()
     {
-        tankAttack = GetComponent<VehicleAttack>();
         ableToShoot = true;
     }
     void OnEnable()

@@ -662,6 +662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c55bedc5d110c42bc0dddae79b16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   enginePower: 3000
   thursterForce: 3000
   dashingTime: 0.5
@@ -1467,6 +1469,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e15de021d0a35c458995b658d9ecf28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   ID: {fileID: 0}
   moveJoystick: {fileID: 0}
   shootJoystick: {fileID: 0}
@@ -1485,6 +1489,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleWeight: 0
+  vehicleArmor: 0
   side: 0
 --- !u!114 &827623740
 MonoBehaviour:
@@ -1498,6 +1504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f68e32596abd3842bc706908966fa0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 1
+  unitArmor: 0
   tankMaxEnergy: 1000
   tankCurrentEnergy: 0
   energySupply: 250
@@ -1513,6 +1521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dba267d09055f4d80477fae58d1a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 1
+  unitArmor: 0
   tankMaxArmor: 100
   enShield: 0
   ehp: 0.01
@@ -1856,6 +1866,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627f2bdee03a5f848b0285a188ebff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   direction: {x: 0, y: 0}
   rotatingSpeed: 180
   shootingPoint: {fileID: 1255578946}
@@ -1927,6 +1939,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab670d05c1d2564fba897332b9d609f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   damage: 10
   enConsum: 100
   cooldown: 7
@@ -1946,6 +1960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f04af5ec2f2de2a489cc0eda8f97fa2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   frontViewRadius: 30
   nearViewRadius: 12
   viewAngle: 160
@@ -1968,6 +1984,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7482462c8034f724293e28a114fce444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   damage: 20
   enConsum: 14
   cooldown: 2
@@ -35209,6 +35227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dba267d09055f4d80477fae58d1a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   tankMaxArmor: 100
   enShield: 0
   ehp: 0.01
@@ -35227,6 +35247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf07b553fae6c44eb15936de625270a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   behaviour: {fileID: 0}
   patrolArea: {fileID: 0}
 --- !u!114 &1204446549
@@ -35241,6 +35263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleWeight: 0
+  vehicleArmor: 0
   side: 2
 --- !u!50 &1204446550
 Rigidbody2D:
@@ -36055,6 +36079,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c55bedc5d110c42bc0dddae79b16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   enginePower: 3000
   thursterForce: 3000
   dashingTime: 0.5
@@ -39193,6 +39219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f04af5ec2f2de2a489cc0eda8f97fa2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   frontViewRadius: 30
   nearViewRadius: 12
   viewAngle: 160
@@ -39215,6 +39243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab670d05c1d2564fba897332b9d609f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   damage: 10
   enConsum: 100
   cooldown: 7
@@ -39234,6 +39264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627f2bdee03a5f848b0285a188ebff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   direction: {x: 0, y: 0}
   rotatingSpeed: 180
   shootingPoint: {fileID: 637099781}
@@ -39485,6 +39517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf07b553fae6c44eb15936de625270a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   behaviour: {fileID: 0}
   patrolArea: {fileID: 2032513999}
 --- !u!114 &1839519171
@@ -39512,6 +39546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88133201c177a6c4f890e4bd2c070f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehicleWeight: 0
+  vehicleArmor: 0
   side: 1
 --- !u!114 &1839519177
 MonoBehaviour:
@@ -39525,6 +39561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dba267d09055f4d80477fae58d1a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   tankMaxArmor: 100
   enShield: 0
   ehp: 0.01
@@ -39632,6 +39670,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c55bedc5d110c42bc0dddae79b16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 1
+  unitArmor: 0
   enginePower: 3000
   thursterForce: 5000
   dashingTime: 0.5
@@ -39942,6 +39982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a6b4b8138714f46b4f3c5c0b7325f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 0
+  unitArmor: 0
   rotatingSpeed: 180
   RadarRange: 20
   scanTarget:
@@ -40553,6 +40595,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627f2bdee03a5f848b0285a188ebff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitWeight: 1
+  unitArmor: 0
   direction: {x: 0, y: 0}
   rotatingSpeed: 180
   shootingPoint: {fileID: 1136615891}

@@ -9,7 +9,6 @@ public abstract class VehicleSecondAttack : VehicleSystem
     public int enConsum;
     public float cooldown;
     protected float lastAttackTime;
-    protected VehicleAttack tankAttack;
     protected bool ableToShoot;
   
     public abstract void Attack(Transform[] target);

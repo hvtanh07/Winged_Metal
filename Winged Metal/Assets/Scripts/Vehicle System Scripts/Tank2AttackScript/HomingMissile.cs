@@ -7,7 +7,6 @@ public class HomingMissile : VehicleSecondAttack
     public Transform[] missileShootingPoint;
     void Start()
     {
-        tankAttack = GetComponent<VehicleAttack>();
         ableToShoot = true;
     }
     void OnEnable()
