@@ -20,8 +20,8 @@ public class AI : VehicleSystem
     }
     public void OnEnable()
     {
-        vehicle.ID.events.OnBeingHit += OnBeingHit;
-        vehicle.ID.events.OnTargetDetected += OnhaveTargets;
+        vehicle.events.OnBeingHit += OnBeingHit;
+        vehicle.events.OnTargetDetected += OnhaveTargets;
     }
 
     public void OnhaveTargets(List<Transform> targetsList){
@@ -30,7 +30,7 @@ public class AI : VehicleSystem
     
     public void Dash(Vector2 dashDirection = default)
     {
-        vehicle.ID.events.OnDashCalled?.Invoke(dashDirection);
+        vehicle.events.OnDashCalled?.Invoke(dashDirection);
     }
 
     public void OnBeingHit(Vector2 shootPoint)
@@ -42,13 +42,13 @@ public class AI : VehicleSystem
     public void SecondAttackCall(List<Transform> targets)
     {
         Transform[] target = behaviour.tree.blackboard.targetList.ToArray();
-        vehicle.ID.events.On2ndAttackCalled?.Invoke(target);
+        vehicle.events.On2ndAttackCalled?.Invoke(target);
     }
 
 
     public void Attack(Vector2 targetDirection, bool openFire)
     {
-        vehicle.ID.events.OnAttackDirectionChange?.Invoke(targetDirection, openFire);
+        vehicle.events.OnAttackDirectionChange?.Invoke(targetDirection, openFire);
     }
 
     public void RecalculatePath()

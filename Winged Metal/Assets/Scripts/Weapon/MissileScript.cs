@@ -28,9 +28,6 @@ public class MissileScript : MonoBehaviour
 
         rb.velocity = transform.up * flyingForce;
 
-
-        
         transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, turningTorque * Time.fixedDeltaTime); //rotate to that direction
-
     }
 }

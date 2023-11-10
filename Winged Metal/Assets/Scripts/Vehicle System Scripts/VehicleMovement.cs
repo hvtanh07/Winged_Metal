@@ -17,16 +17,22 @@ public class VehicleMovement : VehicleSystem
     private bool dashing;
     private int enConsum;
     bool ableToDash;
+    public bool isShooting;
     void OnEnable()
     {
-        vehicle.ID.events.OnDirectionChange += ChangeDirection;
-        vehicle.ID.events.OnDashCalled += Dash;
-        vehicle.ID.events.OnEnUpdate += UpdateAmountEn;
+        vehicle.events.OnDirectionChange += ChangeDirection;
+        vehicle.events.OnDashCalled += Dash;
+        vehicle.events.OnEnUpdate += UpdateAmountEn;
+        vehicle.events.OnAttackDirectionChange += UpdateAttack;
     }
 
     private void ChangeDirection(Vector2 newdirection)
     {
         direction = newdirection;
+    }
+    private void UpdateAttack(Vector2 direction,bool shooting)
+    {
+        isShooting = shooting && (direction != Vector2.zero);
     }
     private void UpdateAmountEn(float currentEn)
     {
@@ -48,22 +54,15 @@ public class VehicleMovement : VehicleSystem
     private void FixedUpdate()
     {
         if (dashing) return; // if player is dashing we won't do anything related to moving or turning
+        float finalEnginePower = enginePower * (isShooting ? 0.8f:1f);
 
-        rb.AddForce(direction * enginePower / weight, ForceMode2D.Force); //move the tank
+        rb.AddForce(direction * finalEnginePower / weight, ForceMode2D.Force); //move the tank
 
         if (direction != Vector2.zero) // check moving and rotate to the moving direction
         {
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, direction);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, steeringTorque * Time.fixedDeltaTime);
         }
-        //else if (rb.velocity.magnitude > 0) //detect if object is side slide
-        //{
-        //    Vector2 localVelocity = rb.transform.InverseTransformDirection(rb.velocity);
-        //    if (Mathf.Abs(localVelocity.x) > sideSlideAllowance)
-        //    {
-        //        rb.velocity = Vector2.zero;
-        //    }
-        //}
     }
 
 
@@ -77,7 +76,7 @@ public class VehicleMovement : VehicleSystem
     }
     public IEnumerator DashToggle(Vector2 dashDirection = default)
     {
-        vehicle.ID.events.OnEnUsed?.Invoke(enConsum);
+        vehicle.events.OnEnUsed?.Invoke(enConsum);
         dashing = true;
         if (dashDirection != default)//if npc have target direction to dash then dash on that direction
         {
@@ -93,6 +92,6 @@ public class VehicleMovement : VehicleSystem
         }
         yield return new WaitForSeconds(dashingTime);
         dashing = false;
-        vehicle.ID.events.OnDashComplete?.Invoke();
+        vehicle.events.OnDashComplete?.Invoke();
     }
 }

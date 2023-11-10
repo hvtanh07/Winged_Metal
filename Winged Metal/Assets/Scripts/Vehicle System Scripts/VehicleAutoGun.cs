@@ -39,9 +39,7 @@ public class VehicleAutoGun : VehicleSystem
             {
                 Shoot();
             }
-
         }
-
     }
     public void FindVisibleTarget()
     {
@@ -55,7 +53,7 @@ public class VehicleAutoGun : VehicleSystem
             if (!visibleTargets.Contains(target))
             {
                 visibleTargets.Add(target);
-                vehicle.ID.events.OnTargetDetected?.Invoke(visibleTargets);
+                vehicle.events.OnTargetDetected?.Invoke(visibleTargets);
             }
         }
     }
@@ -71,14 +69,14 @@ public class VehicleAutoGun : VehicleSystem
             if (target == null)
             {
                 visibleTargets.RemoveAt(i);
-                vehicle.ID.events.OnTargetDetected?.Invoke(visibleTargets);
+                vehicle.events.OnTargetDetected?.Invoke(visibleTargets);
             }
 
             //not active in hierarchy
             if (!target.gameObject.activeInHierarchy)
             {
                 visibleTargets.Remove(target);
-                vehicle.ID.events.OnTargetDetected?.Invoke(visibleTargets);
+                vehicle.events.OnTargetDetected?.Invoke(visibleTargets);
                 continue;
             }
 
@@ -86,7 +84,7 @@ public class VehicleAutoGun : VehicleSystem
             if (Vector3.Distance(transform.position, target.position) > RadarRange)
             {
                 visibleTargets.Remove(target);
-                vehicle.ID.events.OnTargetDetected?.Invoke(visibleTargets);
+                vehicle.events.OnTargetDetected?.Invoke(visibleTargets);
                 continue;
             }
 
@@ -94,7 +92,7 @@ public class VehicleAutoGun : VehicleSystem
             if (Physics2D.Linecast(transform.position, target.position, obstacle))
             {
                 visibleTargets.Remove(target);
-                vehicle.ID.events.OnTargetDetected?.Invoke(visibleTargets);
+                vehicle.events.OnTargetDetected?.Invoke(visibleTargets);
                 continue;
             }
         }

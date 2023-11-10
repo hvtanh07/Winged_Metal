@@ -23,6 +23,7 @@ public struct VehicleEvents
     //armor
     public Action<float> OnArmorUpdate;
     public Action<Vector2> OnBeingHit;
+    public Action OnDeath;
 
     //second weapon
     public Action<Transform[]> On2ndAttackCalled;

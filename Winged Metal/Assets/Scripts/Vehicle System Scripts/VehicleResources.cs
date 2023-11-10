@@ -17,11 +17,11 @@ public class VehicleResources : VehicleSystem
     protected void Start() //REMOVE WHEN THERE's SCRIPT TO READ FROM SCRIPTABLE OBJECT
     {
         tankCurrentEnergy = tankMaxEnergy;
-        vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
+        vehicle.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
     }
     void OnEnable()
     {
-        vehicle.ID.events.OnEnUsed += ConsumeEnergy;
+        vehicle.events.OnEnUsed += ConsumeEnergy;
     }
 
 
@@ -32,7 +32,7 @@ public class VehicleResources : VehicleSystem
             tankCurrentEnergy += energySupply * Time.deltaTime;
             if (tankCurrentEnergy > tankMaxEnergy)
                 tankCurrentEnergy = tankMaxEnergy;
-            vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
+            vehicle.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
         }
     }
     public void InitiateParameter(int maxEnergy)
@@ -40,14 +40,14 @@ public class VehicleResources : VehicleSystem
 
         tankMaxEnergy = maxEnergy;
         tankCurrentEnergy = tankMaxEnergy;
-        vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
+        vehicle.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
     }
 
     public void ConsumeEnergy(int amountEnergyComsumned)
     {
         if (amountEnergyComsumned > tankCurrentEnergy) return; //insufficient energy 
         tankCurrentEnergy -= amountEnergyComsumned;
-        vehicle.ID.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
+        vehicle.events.OnEnUpdate?.Invoke(tankCurrentEnergy);
         lastEnergyUsedTime = Time.time;
     }
 

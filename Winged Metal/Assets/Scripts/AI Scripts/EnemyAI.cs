@@ -12,7 +12,7 @@ public class EnemyAI : AI
     public void OnEnable()
     {
         base.OnEnable();
-        vehicle.ID.events.OnDashComplete += OnDashComplete;
+        vehicle.events.OnDashComplete += OnDashComplete;
     }
     private void Start()
     {
@@ -41,7 +41,7 @@ public class EnemyAI : AI
         if (path != null && path.corners.Length >= 2 && index <= path.corners.Length - 1)
         {
             path.corners[index].z = 0f;
-            vehicle.ID.events.OnDirectionChange?.Invoke(Vector3.ClampMagnitude(path.corners[index] - transform.position, 1));//move toward points on path
+            vehicle.events.OnDirectionChange?.Invoke(Vector3.ClampMagnitude(path.corners[index] - transform.position, 1));//move toward points on path
             float distance = (path.corners[index] - transform.position).magnitude;
             if (distance <= 0.5f) //check if target reached. If yes goes to the next point
             {
@@ -51,7 +51,7 @@ public class EnemyAI : AI
         }
         else
         {
-            vehicle.ID.events.OnDirectionChange?.Invoke(Vector2.zero);//if there's no path or AI have reached target then don't move around
+            vehicle.events.OnDirectionChange?.Invoke(Vector2.zero);//if there's no path or AI have reached target then don't move around
         }
     }
 
