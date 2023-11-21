@@ -39676,7 +39676,7 @@ MonoBehaviour:
   thursterForce: 5000
   dashingTime: 0.5
   steeringTorque: 160
-  weight: 70
+  weight: 40
   direction: {x: 0, y: 0}
   isShooting: 0
 --- !u!61 &2005459957
