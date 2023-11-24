@@ -19,7 +19,7 @@ public class VehicleArmor : VehicleSystem
      protected void Start() //REMOVE WHEN THERE's SCRIPT TO READ FROM SCRIPTABLE OBJECT
     {
         float damageDeduction = (enShield*ehp)/(1+enShield*ehp);
-        tankCurrentArmor = vehicle.vehicleArmor;
+        tankCurrentArmor = tankMaxArmor;
         vehicle.events.OnArmorUpdate?.Invoke(tankCurrentArmor);
         switch (vehicle.side)
         {

@@ -56,7 +56,6 @@ public class HandleInput : VehicleSystem
     }
     public void Dash()
     {
-        print("Dash");
         vehicle.events.OnDashCalled?.Invoke(default);
     }
     public void SecondAttack()

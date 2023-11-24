@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyAI : AI
 {
-    
+
     //private bool openFire;
 
     // Start is called before the first frame update
@@ -13,6 +13,7 @@ public class EnemyAI : AI
     {
         base.OnEnable();
         vehicle.events.OnDashComplete += OnDashComplete;
+        vehicle.events.OnDeath += OnDeath;
     }
     private void Start()
     {
@@ -26,6 +27,17 @@ public class EnemyAI : AI
         RecalculatePath();
     }
 
+    public void OnDeath()
+    {
+        if (vehicle.side == VehicleSide.enemy)
+        {
+            GameManager.gameManager.SetWinner(false);//enemy is damage tank
+        }
+        else if (vehicle.side == VehicleSide.ally)
+        {
+            GameManager.gameManager.SetWinner(true);//ally is speed tank
+        }
+    }
 
     void Update()
     {

@@ -14,7 +14,6 @@ public class Vehicle : MonoBehaviour
     //public VehicleID ID;
     public VehicleEvents events;
     public int vehicleWeight;
-    public int vehicleArmor;
     public VehicleSide side;
 }
 

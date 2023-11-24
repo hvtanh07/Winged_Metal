@@ -10,7 +10,7 @@ public class VehicleMovementUnit : VehicleSystem
     public float thursterForce;
     public float dashingTime;
     public float steeringTorque;
-    public int weight;
+  
     [HideInInspector]
     public Vector2 direction;
     private Rigidbody2D rb;
@@ -47,7 +47,8 @@ public class VehicleMovementUnit : VehicleSystem
         rb = transform.root.GetComponent<Rigidbody2D>();
         dashing = false;
         ableToDash = true;
-        enConsum = weight * 3; //if there's modify stat function then move this to that function
+        //enConsum = weight * 3; //if there's modify stat function then move this to that function
+        enConsum = vehicle.vehicleWeight * 3 / 1000;
     }
 
     // Update is called once per frame
@@ -56,7 +57,7 @@ public class VehicleMovementUnit : VehicleSystem
         if (dashing) return; // if player is dashing we won't do anything related to moving or turning
         float finalEnginePower = enginePower * (isShooting ? 0.8f:1f);
 
-        rb.AddForce(direction * finalEnginePower / weight, ForceMode2D.Force); //move the tank
+        rb.AddForce(direction * finalEnginePower * 1000 / vehicle.vehicleWeight, ForceMode2D.Force); //move the tank
 
         if (direction != Vector2.zero) // check moving and rotate to the moving direction
         {
@@ -80,15 +81,15 @@ public class VehicleMovementUnit : VehicleSystem
         dashing = true;
         if (dashDirection != default)//if npc have target direction to dash then dash on that direction
         {
-            rb.AddForce(dashDirection.normalized * thursterForce / weight, ForceMode2D.Impulse);
+            rb.AddForce(dashDirection.normalized * thursterForce  * 1000 / vehicle.vehicleWeight, ForceMode2D.Impulse);
         }
         else if (direction != Vector2.zero) // if player is holding joystick then dash with it
         {
-            rb.AddForce(direction.normalized * thursterForce / weight, ForceMode2D.Impulse);
+            rb.AddForce(direction.normalized * thursterForce  * 1000 / vehicle.vehicleWeight, ForceMode2D.Impulse);
         }
         else //if there's no target direction then just dash forward
         {
-            rb.AddForce(transform.up * thursterForce / weight, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * thursterForce  * 1000 / vehicle.vehicleWeight, ForceMode2D.Impulse);
         }
         yield return new WaitForSeconds(dashingTime);
         dashing = false;

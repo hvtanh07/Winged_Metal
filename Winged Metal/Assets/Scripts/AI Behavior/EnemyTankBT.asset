@@ -778,8 +778,8 @@ MonoBehaviour:
     bulletPos: {x: 0, y: 0}
   description: 
   drawGizmos: 0
-  attackDuration: 5
-  cooldownDuration: 3
+  attackDuration: 10
+  cooldownDuration: 0.2
 --- !u!114 &8617180403020674845
 MonoBehaviour:
   m_ObjectHideFlags: 0

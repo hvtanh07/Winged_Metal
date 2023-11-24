@@ -12,6 +12,5 @@ public abstract class VehicleSystem : MonoBehaviour
     protected virtual void Awake(){  
         vehicle = transform.root.GetComponent<Vehicle>();
         vehicle.vehicleWeight += unitWeight;
-        vehicle.vehicleArmor += unitArmor;
     }
 }

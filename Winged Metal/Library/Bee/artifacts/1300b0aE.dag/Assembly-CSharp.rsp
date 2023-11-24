@@ -398,6 +398,7 @@
 "Assets/Scripts/AI Scripts/EnemyAI.cs"
 "Assets/Scripts/AI Scripts/EnemyTank.cs"
 "Assets/Scripts/Level Scripts/GameManager.cs"
+"Assets/Scripts/Level Scripts/MatchScore.cs"
 "Assets/Scripts/Level Scripts/ObjectPooler.cs"
 "Assets/Scripts/Player Scripts/HandleInput.cs"
 "Assets/Scripts/Vehicle Data/TankBaseData.cs"

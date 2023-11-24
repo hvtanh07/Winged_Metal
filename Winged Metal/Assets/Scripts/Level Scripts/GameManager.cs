@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public MatchScore score;
+    public static GameManager gameManager;
+
+    void Awake()
     {
-        
+        if (gameManager && gameManager != this)
+        {
+            Destroy(this);
+            return;
+        }
+        gameManager = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetWinner(bool Damage)
     {
-        
+        if (Damage)
+        {
+            score.DamageScore++;
+        }
+        else
+        {
+            score.SpeedScore++;
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
