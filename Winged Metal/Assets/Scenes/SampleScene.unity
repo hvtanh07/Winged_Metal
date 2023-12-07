@@ -1864,13 +1864,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627f2bdee03a5f848b0285a188ebff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitWeight: 17252
+  unitWeight: 7500
   unitArmor: 0
   direction: {x: 0, y: 0}
   rotatingSpeed: 180
   shootingPoint: {fileID: 1255578946}
   damage: 2
-  fireRate: 5
+  fireRate: 1
   enConsum: 0
   ableToShoot: 0
 --- !u!212 &1104449181
@@ -60604,7 +60604,7 @@ GameObject:
   - component: {fileID: 1204446547}
   - component: {fileID: 1204446546}
   m_Layer: 10
-  m_Name: Ally Tank
+  m_Name: Unit Testing Tank
   m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60968,7 +60968,7 @@ GameObject:
   - component: {fileID: 1324347717}
   - component: {fileID: 1324347716}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Game Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65281,7 +65281,7 @@ MonoBehaviour:
   rotatingSpeed: 180
   shootingPoint: {fileID: 637099781}
   damage: 15
-  fireRate: 0.3
+  fireRate: 1.2
   enConsum: 0
   ableToShoot: 0
 --- !u!212 &1760553380
@@ -65466,7 +65466,7 @@ GameObject:
   - component: {fileID: 1839519177}
   - component: {fileID: 1839519171}
   m_Layer: 6
-  m_Name: Enemy Tank
+  m_Name: Scenerio unit
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

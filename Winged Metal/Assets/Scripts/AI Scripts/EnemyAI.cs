@@ -31,11 +31,11 @@ public class EnemyAI : AI
     {
         if (vehicle.side == VehicleSide.enemy)
         {
-            GameManager.gameManager.SetWinner(false);//enemy is damage tank
+            GameManager.gameManager.SetWinner(false);//testing unit win
         }
         else if (vehicle.side == VehicleSide.ally)
         {
-            GameManager.gameManager.SetWinner(true);//ally is speed tank
+            GameManager.gameManager.SetWinner(true);//scenerio unit win
         }
     }
 

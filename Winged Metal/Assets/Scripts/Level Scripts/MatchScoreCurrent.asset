@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6843a7dfc7791014d88a7797cdbf4548, type: 3}
   m_Name: MatchScoreCurrent
   m_EditorClassIdentifier: 
-  DamageScore: 4
-  SpeedScore: 0
+  Match: 11
+  Win: 11
+  Lose: 0
+  winRate: 1
+  currentAvgTime: 146.395
